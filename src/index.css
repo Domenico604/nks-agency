@@ -4,9 +4,9 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background: linear-gradient(-45deg, #0a122f, #3b0a4c, #0f1c45, #8b0a3b);
+  background: linear-gradient(-45deg, #0a122f, #3b0a4c, #0f1c45, #4b0f4d);
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 20s ease infinite;
   color:white;
   overflow-x:hidden;
 }
@@ -43,7 +43,7 @@ body{
   font-weight:700;
   letter-spacing:4px;
   font-family:'Space Grotesk', sans-serif;
-  background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -67,30 +67,22 @@ body{
   gap:30px;
 }
 
-/* Кнопки с ярким переливающимся градиентом */
+/* Сдержанный градиент кнопок */
 .button{
   padding:18px 36px;
-  font-size:22px; /* увеличенный текст */
+  font-size:22px;
   font-weight:700;
   border:none;
   border-radius:40px;
-  background: linear-gradient(90deg,#38bdf8, #8b5cf6, #06b6d4, #ec4899);
-  background-size: 300% 300%;
-  animation: gradientBtn 3s ease infinite;
+  background: linear-gradient(90deg,#38bdf8, #6366f1, #06b6d4);
   color:white;
   cursor:pointer;
   transition:0.3s;
 }
 
-@keyframes gradientBtn {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
-}
-
 .button:hover{
   transform:translateY(-2px);
-  box-shadow:0 0 20px rgba(139,92,246,0.6),0 0 30px rgba(56,189,248,0.4);
+  box-shadow:0 0 20px rgba(99,102,241,0.6),0 0 30px rgba(56,189,248,0.4);
 }
 
 /* HERO */
@@ -102,7 +94,7 @@ h2{
   font-size:3.6rem;
   font-weight:700;
   line-height:1.2;
-  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#8b5cf6);
+  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#6366f1);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -112,7 +104,7 @@ h3{
   font-size:2.5rem;
   font-weight:700;
   margin-bottom:30px;
-  background:linear-gradient(90deg,#38bdf8,#8b5cf6,#ec4899);
+  background:linear-gradient(90deg,#38bdf8,#6366f1,#06b6d4);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -154,7 +146,7 @@ h3{
   left:0;
   width:100%;
   height:2px;
-  background:linear-gradient(90deg,transparent,#38bdf8,#8b5cf6,#ec4899,transparent);
+  background:linear-gradient(90deg,transparent,#38bdf8,#6366f1,#06b6d4,transparent);
   opacity:0;
   transition:0.4s;
 }
@@ -162,7 +154,7 @@ h3{
 .card:hover{
   transform:translateY(-6px) scale(1.02);
   border:1px solid rgba(255,255,255,0.2);
-  box-shadow:0 0 30px rgba(56,189,248,0.35),0 0 50px rgba(139,92,246,0.35);
+  box-shadow:0 0 30px rgba(56,189,248,0.35),0 0 50px rgba(99,102,241,0.35);
 }
 
 .card:hover::before{
@@ -174,7 +166,7 @@ h3{
   font-size:28px;
   font-weight:700;
   margin-bottom:14px;
-  background: linear-gradient(90deg, #38bdf8, #8b5cf6, #ec4899);
+  background: linear-gradient(90deg, #38bdf8, #6366f1, #06b6d4);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
