@@ -4,7 +4,7 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background: linear-gradient(-45deg, #0a122f, #0f1c45, #1a2035, #0a122f);
+  background: linear-gradient(-45deg, #0a122f, #3b0a4c, #0f1c45, #4b0f4d);
   background-size: 400% 400%;
   animation: gradientBG 20s ease infinite;
   color:white;
@@ -68,24 +68,24 @@ body{
   gap:30px;
 }
 
-/* НЕОНОВЫЕ кнопки */
+/* Кнопки с плавным градиентом слева бирюзовый, справа розовый */
 .button{
   padding:18px 36px;
   font-size:22px;
   font-weight:700;
   border:none;
   border-radius:40px;
-  background: linear-gradient(90deg, #38bdf8, #6366f1, #ec4899, #06b6d4);
+  background: linear-gradient(90deg, #06b6d4, #ec4899);
   color:white;
   cursor:pointer;
-  text-shadow: 0 0 5px rgba(255,255,255,0.7);
-  box-shadow: 0 0 15px rgba(56,189,248,0.6), 0 0 25px rgba(236,72,153,0.6), 0 0 35px rgba(99,102,241,0.6);
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(6,182,212,0.5), 0 0 15px rgba(236,72,153,0.5);
   transition: all 0.3s ease;
 }
 
 .button:hover{
   transform:translateY(-2px);
-  box-shadow: 0 0 25px rgba(56,189,248,0.9), 0 0 40px rgba(236,72,153,0.9), 0 0 55px rgba(99,102,241,0.9);
+  box-shadow: 0 0 20px rgba(6,182,212,0.8), 0 0 30px rgba(236,72,153,0.8);
 }
 
 /* HERO */
