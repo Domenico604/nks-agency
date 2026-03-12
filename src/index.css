@@ -4,9 +4,17 @@
 body{
   margin:0;
   font-family:'Inter',sans-serif;
-  background: radial-gradient(circle at 10% 10%, #060b30, #0a122f 70%), radial-gradient(circle at 90% 5%, #071136, #0a122f 60%);
+  background: linear-gradient(135deg, #0a122f 0%, #0f1c45 40%, #071136 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
   color:white;
   overflow-x:hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
 }
 
 .container{
@@ -36,7 +44,7 @@ body{
   font-weight:700;
   letter-spacing:4px;
   font-family:'Space Grotesk', sans-serif;
-  background:linear-gradient(90deg,#38bdf8,#ec4899,#facc15);
+  background:linear-gradient(90deg,#38bdf8,#ec4899);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -57,15 +65,15 @@ body{
 
 .buttons-group{
   display:flex;
-  gap:30px; /* чуть дальше друг от друга */
+  gap:30px;
 }
 
 .button{
   padding:14px 28px;
-  font-size:18px; /* текст крупнее */
+  font-size:18px;
   border:none;
   border-radius:40px;
-  background:linear-gradient(90deg,#38bdf8,#ec4899,#facc15);
+  background:linear-gradient(90deg,#38bdf8,#ec4899);
   color:white;
   font-weight:600;
   cursor:pointer;
@@ -87,7 +95,7 @@ h2{
   font-size:3.4rem;
   font-weight:700;
   line-height:1.2;
-  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899,#facc15);
+  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -96,7 +104,7 @@ h3{
   font-size:2.4rem;
   font-weight:600;
   margin-bottom:30px;
-  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899,#facc15);
+  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -106,7 +114,7 @@ h3{
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:24px; /* чуть меньше пустого пространства */
+  gap:24px;
   max-width:1000px;
   margin:30px auto 100px auto;
 }
@@ -156,18 +164,18 @@ h3{
 }
 
 .card h4{
-  font-size:22px; /* увеличенный текст */
+  font-size:24px;
   font-weight:600;
-  margin-bottom:12px;
-  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899,#facc15);
+  margin-bottom:14px;
+  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .card p{
-  font-size:16px; /* крупнее текст */
+  font-size:18px; /* почти до краёв ячеек */
   line-height:1.6;
-  opacity:0.85;
+  opacity:0.9;
 }
 
 /* CHART */
