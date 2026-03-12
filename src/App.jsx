@@ -31,7 +31,6 @@ const methodology = [
 export default function App() {
   return (
     <div className="container">
-
       {/* HEADER */}
       <header className="header">
         <div className="logo">
@@ -40,21 +39,10 @@ export default function App() {
           <div className="logo-line"></div>
         </div>
         <div className="buttons-group">
-          {/* Консалтинг */}
-          <a
-            href="https://t.me/NKSmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D0%B8%D1%80%D1%83%D0%B9%D1%82%D0%B5%20%D0%BC%D0%B5%D0%BD%D1%8F"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://t.me/NKSmanager?text=Здравствуйте,%20проконсультируйте%20меня" target="_blank" rel="noopener noreferrer">
             <button className="button">Консалтинг</button>
           </a>
-
-          {/* Прайс-лист */}
-          <a
-            href="https://t.me/NKSmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://t.me/NKSmanager?text=Здравствуйте,%20хочу%20узнать%20прайс-лист" target="_blank" rel="noopener noreferrer">
             <button className="button">Прайс-лист</button>
           </a>
         </div>
@@ -64,15 +52,9 @@ export default function App() {
       <section className="hero">
         <h2>Контент, который превращается<br/>в системный рост</h2>
         <p>Мы создаём стратегию контента, которая масштабирует охваты и превращает просмотры в систему роста.</p>
-
-        <a
-          href="https://t.me/NKSmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BD%D0%B0%D1%87%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B0%D1%81%D1%88%D1%82%D0%B0%D0%B1%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://t.me/NKSmanager?text=Здравствуйте,%20хочу%20начать%20масштабирование" target="_blank" rel="noopener noreferrer">
           <button className="button">Начать масштабирование</button>
         </a>
-
         <div className="chart-box">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data}>
@@ -87,7 +69,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* НАШИ ВОЗМОЖНОСТИ */}
+      {/* SERVICES */}
       <section>
         <h3>Наши возможности</h3>
         <div className="grid">
@@ -100,7 +82,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* КОМУ МЫ ПОМОГАЕМ */}
+      {/* WHO WE HELP */}
       <section>
         <h3>Кому мы помогаем</h3>
         <div className="grid">
@@ -113,7 +95,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* МЕТОДОЛОГИЯ */}
+      {/* METHODOLOGY */}
       <section>
         <h3>Методология успеха</h3>
         <div className="grid">
