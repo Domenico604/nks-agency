@@ -68,7 +68,7 @@ body{
   gap:30px;
 }
 
-/* Кнопки с плавным градиентом с розовым */
+/* Кнопки со статичным градиентом */
 .button{
   padding:18px 36px;
   font-size:22px;
@@ -76,17 +76,9 @@ body{
   border:none;
   border-radius:40px;
   background: linear-gradient(90deg,#38bdf8, #6366f1, #06b6d4, #ec4899);
-  background-size: 300% 300%;
-  animation: gradientBtn 6s ease infinite;
   color:white;
   cursor:pointer;
   transition:0.3s;
-}
-
-@keyframes gradientBtn {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
 }
 
 .button:hover{
