@@ -32,7 +32,6 @@ export default function App() {
   return (
     <div className="container">
 
-      {/* HEADER */}
       <header className="header">
         <div className="logo">
           <div className="logo-main">NKS</div>
@@ -45,7 +44,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* HERO */}
       <section className="hero">
         <h2>Контент, который превращается<br/>в системный рост</h2>
         <p>Мы создаём стратегию контента, которая масштабирует охваты и превращает просмотры в систему роста.</p>
@@ -65,7 +63,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* НАШИ ВОЗМОЖНОСТИ */}
       <section>
         <h3>Наши возможности</h3>
         <div className="grid">
@@ -78,7 +75,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* КОМУ МЫ ПОМОГАЕМ */}
       <section>
         <h3>Кому мы помогаем</h3>
         <div className="grid">
@@ -91,7 +87,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* МЕТОДОЛОГИЯ */}
       <section>
         <h3>Методология успеха</h3>
         <div className="grid">
