@@ -70,7 +70,7 @@ body{
 
 .button{
   padding:16px 32px;
-  font-size:20px; /* увеличили текст */
+  font-size:20px;
   border:none;
   border-radius:40px;
   background:linear-gradient(90deg,#38bdf8,#ec4899);
@@ -165,13 +165,16 @@ h3{
 
 .card h4{
   font-size:26px;
-  font-weight:600;
+  font-weight:700;
   margin-bottom:14px;
-  color:white; /* убрали градиент */
+  /* новый стиль заголовка */
+  background: linear-gradient(90deg, #38bdf8, #a855f7); /* синий → фиолетовый градиент */
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .card p{
-  font-size:20px; /* увеличили текст */
+  font-size:20px;
   line-height:1.6;
   color:rgba(255,255,255,0.95); /* единый цвет текста */
 }
