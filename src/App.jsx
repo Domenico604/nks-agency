@@ -39,7 +39,7 @@ export default function App() {
           <div className="logo-sub">CREATIVE AGENCY</div>
           <div className="logo-line"></div>
         </div>
-        <div>
+        <div className="buttons-group">
           <button className="button">Консалтинг</button>
           <button className="button">Прайс-лист</button>
         </div>
