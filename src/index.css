@@ -68,17 +68,25 @@ body{
   gap:30px;
 }
 
-/* Кнопки с синий → фиолетовый градиентом */
+/* Кнопки с ярким переливающимся градиентом */
 .button{
-  padding:16px 32px;
-  font-size:20px;
+  padding:18px 36px;
+  font-size:22px; /* увеличили текст */
+  font-weight:700;
   border:none;
   border-radius:40px;
-  background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6, #06b6d4);
+  background-size: 200% 200%;
+  animation: gradientBtn 3s ease infinite;
   color:white;
-  font-weight:600;
   cursor:pointer;
   transition:0.3s;
+}
+
+@keyframes gradientBtn {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
 }
 
 .button:hover{
@@ -101,11 +109,12 @@ h2{
   -webkit-text-fill-color:transparent;
 }
 
+/* Заголовки секций */
 h3{
   font-size:2.5rem;
-  font-weight:600;
+  font-weight:700;
   margin-bottom:30px;
-  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#8b5cf6);
+  background:linear-gradient(90deg,#38bdf8,#8b5cf6,#06b6d4);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -164,9 +173,9 @@ h3{
   opacity:1;
 }
 
-/* Заголовки карточек градиент синий → фиолетовый */
+/* Заголовки карточек */
 .card h4{
-  font-size:28px; /* немного увеличили */
+  font-size:28px;
   font-weight:700;
   margin-bottom:14px;
   background: linear-gradient(90deg, #38bdf8, #8b5cf6);
@@ -176,7 +185,7 @@ h3{
 
 /* Текст карточек почти до краёв */
 .card p{
-  font-size:22px; /* увеличили текст */
+  font-size:24px; /* увеличили текст */
   line-height:1.5;
   color:rgba(255,255,255,0.95);
 }
