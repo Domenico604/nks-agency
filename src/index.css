@@ -69,8 +69,8 @@ body{
 }
 
 .button{
-  padding:14px 28px;
-  font-size:18px;
+  padding:16px 32px;
+  font-size:20px; /* увеличили текст */
   border:none;
   border-radius:40px;
   background:linear-gradient(90deg,#38bdf8,#ec4899);
@@ -167,15 +167,13 @@ h3{
   font-size:26px;
   font-weight:600;
   margin-bottom:14px;
-  background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  color:white; /* убрали градиент */
 }
 
 .card p{
-  font-size:18px;
+  font-size:20px; /* увеличили текст */
   line-height:1.6;
-  opacity:0.95;
+  color:rgba(255,255,255,0.95); /* единый цвет текста */
 }
 
 /* CHART */
