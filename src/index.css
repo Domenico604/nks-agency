@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 body{
   margin:0;
-  font-family:'Inter',sans-serif;
-  background: linear-gradient(135deg, #0a122f 0%, #0f1c45 40%, #071136 100%);
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(-45deg, #0a122f, #3b0a4c, #0f1c45, #240b3a);
   background-size: 400% 400%;
-  animation: gradientMove 20s ease infinite;
+  animation: gradientBG 15s ease infinite;
   color:white;
   overflow-x:hidden;
 }
 
-@keyframes gradientMove {
+@keyframes gradientBG {
   0% {background-position:0% 50%;}
   50% {background-position:100% 50%;}
   100% {background-position:0% 50%;}
@@ -40,7 +40,7 @@ body{
 }
 
 .logo-main{
-  font-size:52px;
+  font-size:54px;
   font-weight:700;
   letter-spacing:4px;
   font-family:'Space Grotesk', sans-serif;
@@ -50,10 +50,10 @@ body{
 }
 
 .logo-sub{
-  font-size:16px;
+  font-size:18px;
   letter-spacing:3px;
-  color:rgba(255,255,255,0.8);
-  font-family:'Inter', sans-serif;
+  color:rgba(255,255,255,0.9);
+  font-family:'Poppins',sans-serif;
 }
 
 .logo-line{
@@ -92,7 +92,7 @@ body{
 }
 
 h2{
-  font-size:3.4rem;
+  font-size:3.6rem;
   font-weight:700;
   line-height:1.2;
   background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899);
@@ -101,7 +101,7 @@ h2{
 }
 
 h3{
-  font-size:2.4rem;
+  font-size:2.5rem;
   font-weight:600;
   margin-bottom:30px;
   background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899);
@@ -130,7 +130,7 @@ h3{
 /* CARD */
 
 .card{
-  background:linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.01));
+  background:linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02));
   border:1px solid rgba(255,255,255,0.08);
   padding:28px;
   border-radius:18px;
@@ -164,7 +164,7 @@ h3{
 }
 
 .card h4{
-  font-size:24px;
+  font-size:26px;
   font-weight:600;
   margin-bottom:14px;
   background:linear-gradient(90deg,#7dd3fc,#38bdf8,#ec4899);
@@ -173,9 +173,9 @@ h3{
 }
 
 .card p{
-  font-size:18px; /* почти до краёв ячеек */
+  font-size:18px;
   line-height:1.6;
-  opacity:0.9;
+  opacity:0.95;
 }
 
 /* CHART */
@@ -193,5 +193,5 @@ h3{
 
 footer{
   margin-top:80px;
-  color:rgba(255,255,255,0.6);
+  color:rgba(255,255,255,0.7);
 }
