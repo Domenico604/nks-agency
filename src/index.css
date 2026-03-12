@@ -4,7 +4,7 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background: linear-gradient(-45deg, #0a122f, #3b0a4c, #0f1c45, #4b0f4d);
+  background: linear-gradient(-45deg, #0a122f, #0f1c45, #1a2035, #0a122f);
   background-size: 400% 400%;
   animation: gradientBG 20s ease infinite;
   color:white;
@@ -46,7 +46,7 @@ body{
   background:linear-gradient(90deg,#38bdf8,#6366f1);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
 .logo-sub{
@@ -68,22 +68,24 @@ body{
   gap:30px;
 }
 
-/* Кнопки с градиентом 50/50 */
+/* НЕОНОВЫЕ кнопки */
 .button{
   padding:18px 36px;
   font-size:22px;
   font-weight:700;
   border:none;
   border-radius:40px;
-  background: linear-gradient(90deg,#38bdf8 50%, #ec4899 50%);
+  background: linear-gradient(90deg, #38bdf8, #6366f1, #ec4899, #06b6d4);
   color:white;
   cursor:pointer;
-  transition:0.3s;
+  text-shadow: 0 0 5px rgba(255,255,255,0.7);
+  box-shadow: 0 0 15px rgba(56,189,248,0.6), 0 0 25px rgba(236,72,153,0.6), 0 0 35px rgba(99,102,241,0.6);
+  transition: all 0.3s ease;
 }
 
 .button:hover{
   transform:translateY(-2px);
-  box-shadow:0 0 20px rgba(236,72,153,0.6),0 0 30px rgba(56,189,248,0.4);
+  box-shadow: 0 0 25px rgba(56,189,248,0.9), 0 0 40px rgba(236,72,153,0.9), 0 0 55px rgba(99,102,241,0.9);
 }
 
 /* HERO */
@@ -99,7 +101,7 @@ h2{
   background:linear-gradient(90deg,#7dd3fc,#38bdf8,#6366f1);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6); /* выделение */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
 /* Заголовки секций */
@@ -135,7 +137,7 @@ h3{
 .card{
   background:linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02));
   border:1px solid rgba(255,255,255,0.08);
-  padding:20px 28px; /* уменьшили сверху/снизу */
+  padding:20px 28px;
   border-radius:18px;
   backdrop-filter:blur(16px);
   transition:all 0.45s ease;
@@ -166,7 +168,6 @@ h3{
   opacity:1;
 }
 
-/* Заголовки карточек */
 .card h4{
   font-size:28px;
   font-weight:700;
@@ -177,14 +178,12 @@ h3{
   text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
-/* Текст карточек */
 .card p{
   font-size:22px;
   line-height:1.4;
   color:rgba(255,255,255,0.95);
 }
 
-/* CHART */
 .chart-box{
   height:300px;
   margin-top:30px;
@@ -194,7 +193,6 @@ h3{
   backdrop-filter:blur(12px);
 }
 
-/* FOOTER */
 footer{
   margin-top:60px;
   color:rgba(255,255,255,0.7);
