@@ -142,3 +142,55 @@ footer {
 .button:hover {
   transform: scale(1.05);
 }
+/* ===== COLOR GAME UPGRADE ===== */
+
+.logo-sub {
+  text-transform: lowercase;
+  opacity: 0.8;
+}
+
+.hero-text {
+  color: rgba(255,255,255,0.75);
+  font-size: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* SECOND BUTTON (контраст) */
+.button.secondary {
+  background: linear-gradient(90deg, #6366f1, #38bdf8);
+  box-shadow: 0 0 15px rgba(99,102,241,0.4);
+}
+
+/* GLOW BUTTON */
+.button.glow {
+  background: linear-gradient(90deg, #06b6d4, #a78bfa, #ec4899);
+  box-shadow: 0 0 25px rgba(56,189,248,0.5);
+}
+
+/* CARD COLOR DEPTH */
+.card {
+  background: linear-gradient(145deg,
+    rgba(99,102,241,0.08),
+    rgba(6,182,212,0.03),
+    rgba(236,72,153,0.02)
+  );
+}
+
+/* TEXT HOVER ENERGY */
+h3, h4 {
+  transition: 0.3s;
+}
+
+h3:hover, h4:hover {
+  transform: translateX(4px);
+  text-shadow: 0 0 15px rgba(56,189,248,0.4);
+}
+
+/* CTA SECTION GLOW */
+.cta {
+  margin-top: 80px;
+  padding: 40px;
+  border-radius: 20px;
+  background: radial-gradient(circle, rgba(99,102,241,0.15), transparent);
+}
