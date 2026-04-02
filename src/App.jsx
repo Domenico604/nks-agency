@@ -47,9 +47,11 @@ export default function App() {
     <div className="container">
 
       {/* HEADER */}
-     <header className="header">
+    <header className="header">
   <div className="logo">
     <div className="logo-main">NKS</div>
+    <div className="logo-sub">creative agency</div>
+    <div className="logo-line"></div>
   </div>
 
   <div className="buttons-group">
