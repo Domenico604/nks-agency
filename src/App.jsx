@@ -8,7 +8,14 @@ import {
   CartesianGrid,
   ResponsiveContainer
 } from "recharts";
+
+import { motion } from "framer-motion";
 import "./index.css";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+};
 
 const data = [
   { name: "Неделя 1", До: 1200, После: 1200 },
@@ -19,27 +26,30 @@ const data = [
 ];
 
 const services = [
-  { title: "Вирусная аналитика", text: "Мы анализируем тренды и находим форматы, которые набирают миллионы просмотров." },
-  { title: "Сценарии удержания", text: "Создаём сценарии, где каждая секунда удерживает внимание аудитории." },
-  { title: "Монтаж высокого темпа", text: "Монтаж, который увеличивает удержание и вовлечённость зрителя." },
-  { title: "Контент-стратегия", text: "Создаём систему публикаций, которая стабильно масштабирует охваты." },
-  { title: "Рост бренда", text: "Помогаем брендам становиться узнаваемыми через вирусный контент." },
-  { title: "Контент-аналитика", text: "Отслеживаем метрики и оптимизируем контент для максимального роста." }
-];
-
-const methodology = [
-  { title: "Research", text: "Анализ трендов, ниши и конкурентов." },
-  { title: "Script", text: "Сценарий с психологией удержания." },
-  { title: "Edit", text: "Динамичный монтаж и высокий уровень вовлечённости." },
-  { title: "Hook", text: "Первые секунды сконструированы для максимального удержания аудитории." },
-  { title: "Analytics", text: "Отслеживание метрик и оптимизация контента." },
-  { title: "Testing", text: "Проверка вовлечённости и A/B тесты контента." }
+  { title: "Вирусная аналитика", text: "Мы анализируем тренды и находим форматы, которые стабильно выходят в рекомендации и формируют массовые охваты." },
+  { title: "Сценарии удержания", text: "Каждое видео строится вокруг психологии внимания, чтобы зритель досматривал ролик до конца." },
+  { title: "Монтаж высокого темпа", text: "Динамичный монтаж усиливает вовлечение и увеличивает retention аудитории." },
+  { title: "Контент-стратегия", text: "Система публикаций превращает хаотичный контент в стабильный рост." },
+  { title: "Рост бренда", text: "Формируем узнаваемость через вирусные форматы и системный контент." },
+  { title: "Контент-аналитика", text: "Постоянная оптимизация контента через метрики и A/B тестирование." }
 ];
 
 const testimonials = [
-  { name: "Алексей", text: "Рост канала x10 после стратегии.", img: "https://i.pravatar.cc/100?img=12" },
-  { name: "Мария", text: "Контент стал стабильно вирусным.", img: "https://i.pravatar.cc/100?img=5" },
-  { name: "Илья", text: "Каждый ролик теперь залетает.", img: "https://i.pravatar.cc/100?img=8" }
+  {
+    name: "Алексей",
+    text: "После внедрения стратегии контент начал работать как система. Просмотры выросли в 10 раз, а каждый ролик стабильно попадает в рекомендации.",
+    img: "https://i.pravatar.cc/100?img=12"
+  },
+  {
+    name: "Мария",
+    text: "Контент стал структурированным и предсказуемым по результатам. Раньше это была случайность — сейчас это система роста.",
+    img: "https://i.pravatar.cc/100?img=5"
+  },
+  {
+    name: "Илья",
+    text: "Каждый ролик теперь удерживает внимание и приносит стабильные охваты без дополнительного продвижения.",
+    img: "https://i.pravatar.cc/100?img=8"
+  }
 ];
 
 export default function App() {
@@ -47,29 +57,29 @@ export default function App() {
     <div className="container">
 
       {/* HEADER */}
-    <header className="header">
-  <div className="logo">
-    <div className="logo-main">NKS</div>
-    <div className="logo-sub">creative agency</div>
-    <div className="logo-line"></div>
-  </div>
+      <header className="header">
+        <div className="logo">
+          <div className="logo-main">NKS</div>
+          <div className="logo-line"></div>
+        </div>
 
-  <div className="buttons-group">
-    <a href="https://t.me/NKSmanager">
-      <button className="button">Консалтинг</button>
-    </a>
-    <a href="https://t.me/NKSmanager">
-      <button className="button secondary">Прайс-лист</button>
-    </a>
-  </div>
-</header>
+        <div className="buttons-group">
+          <a href="https://t.me/NKSmanager">
+            <button className="button">Консалтинг</button>
+          </a>
+          <a href="https://t.me/NKSmanager">
+            <button className="button secondary">Прайс-лист</button>
+          </a>
+        </div>
+      </header>
 
       {/* HERO */}
-      <section className="hero">
-        <h2>
-          Контент, который превращается<br />
-          в системный рост
-        </h2>
+      <motion.section
+        initial="hidden"
+        animate="show"
+        variants={fadeUp}
+      >
+        <h2>Контент, который превращается<br />в системный рост</h2>
 
         <p className="hero-text">
           Мы создаём стратегию контента, которая масштабирует охваты и превращает просмотры в систему роста.
@@ -92,77 +102,83 @@ export default function App() {
             </LineChart>
           </ResponsiveContainer>
         </div>
-      </section>
+      </motion.section>
 
       {/* SERVICES */}
-      <section>
-        <h3>Наши возможности</h3>
-        <div className="grid">
-          {services.map((item, i) => (
-            <div className="card" key={i}>
-              <h4>{item.title}</h4>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Section title="Наши возможности" data={services} />
 
-      {/* WHO WE HELP */}
-      <section>
-        <h3>Кому мы помогаем</h3>
-        <div className="grid">
-          <div className="card"><h4>Бренды</h4><p>Вирусный контент для роста узнаваемости.</p></div>
-          <div className="card"><h4>Интернет-магазины</h4><p>Контент, который увеличивает продажи.</p></div>
-          <div className="card"><h4>Креаторы</h4><p>Система роста охватов.</p></div>
-          <div className="card"><h4>Инфлюенсеры</h4><p>Масштабируем личный бренд.</p></div>
-          <div className="card"><h4>Агентства</h4><p>Контент для клиентов.</p></div>
-          <div className="card"><h4>Стартапы</h4><p>Быстрый рост аудитории.</p></div>
-        </div>
-      </section>
+      {/* WHO */}
+      <Section
+        title="Кому мы помогаем"
+        data={[
+          { title: "Бренды", text: "Рост узнаваемости через вирусный контент." },
+          { title: "Интернет-магазины", text: "Контент, который увеличивает продажи." },
+          { title: "Креаторы", text: "Стабильный рост охватов." },
+          { title: "Инфлюенсеры", text: "Масштаб личного бренда." },
+          { title: "Агентства", text: "Контент для клиентов." },
+          { title: "Стартапы", text: "Быстрый рост аудитории." }
+        ]}
+      />
 
       {/* METHODOLOGY */}
-      <section>
-        <h3>Методология успеха</h3>
-        <div className="grid">
-          {methodology.map((item, i) => (
-            <div className="card" key={i}>
-              <h4>{item.title}</h4>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Section
+        title="Методология"
+        data={[
+          { title: "Research", text: "Анализ ниши и трендов." },
+          { title: "Script", text: "Сценарий с удержанием внимания." },
+          { title: "Edit", text: "Динамичный монтаж." },
+          { title: "Hook", text: "Сильное начало видео." },
+          { title: "Analytics", text: "Оптимизация через метрики." },
+          { title: "Testing", text: "A/B тестирование форматов." }
+        ]}
+      />
 
       {/* TESTIMONIALS */}
-      <section>
-        <h3>Отзывы</h3>
-        <div className="grid">
-          {testimonials.map((t, i) => (
-            <div className="card testimonial" key={i}>
-              <img src={t.img} className="avatar" alt="" />
-              <h4>{t.name}</h4>
-              <p>{t.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <motion.section className="grid">
+        {testimonials.map((t, i) => (
+          <motion.div
+            key={i}
+            className="card testimonial"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <img src={t.img} className="avatar" />
+            <h4>{t.name}</h4>
+            <p>{t.text}</p>
+          </motion.div>
+        ))}
+      </motion.section>
 
-      {/* CTA */}
-      <section className="cta">
-        <h3>Есть ли вам что сказать?</h3>
-        <p className="hero-text">
-          Мы открыты к идеям, проектам и коллаборациям.
-        </p>
-
-        <a href="https://t.me/NKSmanager">
-          <button className="button glow">Обсудить проект</button>
-        </a>
-      </section>
-
-      <footer>
-        © {new Date().getFullYear()} NKS
-      </footer>
-
+      <footer>© {new Date().getFullYear()} NKS</footer>
     </div>
+  );
+}
+
+/* reusable section */
+function Section({ title, data }) {
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={fadeUp}
+    >
+      <h3>{title}</h3>
+
+      <div className="grid">
+        {data.map((item, i) => (
+          <motion.div
+            key={i}
+            className="card"
+            whileHover={{ scale: 1.03 }}
+          >
+            <h4>{item.title}</h4>
+            <p>{item.text}</p>
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
   );
 }
