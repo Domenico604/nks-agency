@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* ===== BACKGROUND (ОСТАВИЛ ТВОЙ 1:1) ===== */
+/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
   overflow-x: hidden;
-  padding-top: 95px; /* чтобы fixed header не перекрывал */
+  padding-top: 90px;
 
   background: linear-gradient(-45deg,
     #050816,
@@ -36,7 +40,7 @@ body {
   text-align: center;
 }
 
-/* ===== HEADER (FIXED + CUBERTO STYLE) ===== */
+/* ===== HEADER (CUBERTO STYLE FIXED) ===== */
 .header {
   position: fixed;
   top: 0;
@@ -48,17 +52,17 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 18px 50px;
+  padding: 14px 32px;
 
-  background: rgba(5, 8, 22, 0.55);
+  background: rgba(5, 8, 22, 0.35);
   backdrop-filter: blur(22px);
 
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 /* ===== LOGO ===== */
 .logo-main {
-  font-size: 54px;
+  font-size: 52px;
   font-weight: 700;
   letter-spacing: 4px;
   font-family: 'Bebas Neue', sans-serif;
@@ -70,33 +74,29 @@ body {
   text-shadow: 0 0 20px rgba(99,102,241,0.4);
 }
 
-.logo-sub {
-  font-size: 14px;
-  letter-spacing: 3px;
-  color: rgba(255,255,255,0.7);
-}
-
 .logo-line {
-  width: 100px;
+  width: 90px;
   height: 2px;
   margin-top: 6px;
   background: linear-gradient(90deg, transparent, #38bdf8, #a855f7, transparent);
+  opacity: 0.8;
 }
 
-/* ===== BUTTON GROUP ===== */
+/* ===== BUTTONS ===== */
 .buttons-group {
   display: flex;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
-/* ===== BUTTON (MAIN — НЕ ТРОГАЛ ТВОЙ ДИЗАЙН) ===== */
+/* PRIMARY BUTTON */
 .button {
-  padding: 18px 36px;
-  font-size: 18px;
+  padding: 14px 26px;
+  font-size: 16px;
   font-weight: 700;
 
   border: none;
-  border-radius: 40px;
+  border-radius: 999px;
 
   background: linear-gradient(90deg, #06b6d4, #6366f1, #ec4899);
   color: white;
@@ -112,25 +112,32 @@ body {
 
 .button:hover {
   transform: translateY(-3px) scale(1.03);
-
   box-shadow:
     0 0 28px rgba(56,189,248,0.6),
     0 0 45px rgba(168,85,247,0.4);
 }
 
-/* ===== SECONDARY BUTTON (ВОЗВРАЩАЕМ ПРЕМИУМ, НЕ УБИВАЕМ ДИЗАЙН) ===== */
+/* SECONDARY BUTTON (FIXED PREMIUM LOOK) */
 .button.secondary {
-  background: linear-gradient(90deg, rgba(56,189,248,0.2), rgba(168,85,247,0.2));
-  border: 1px solid rgba(168,85,247,0.35);
-  box-shadow: 0 0 18px rgba(99,102,241,0.15);
+  background: linear-gradient(90deg, #06b6d4, #6366f1, #a855f7);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 18px rgba(56,189,248,0.25),
+    0 0 30px rgba(168,85,247,0.15);
+
+  opacity: 0.95;
 }
 
 .button.secondary:hover {
+  opacity: 1;
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 30px rgba(168,85,247,0.35);
+
+  box-shadow:
+    0 0 28px rgba(56,189,248,0.45),
+    0 0 45px rgba(168,85,247,0.3);
 }
 
-/* ===== HERO TEXT ===== */
+/* ===== HEADINGS ===== */
 h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3.6rem;
@@ -144,8 +151,6 @@ h2 {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  text-shadow: 0 0 15px rgba(99,102,241,0.3);
 }
 
 h3 {
@@ -166,11 +171,11 @@ h3 {
   margin: 30px auto 80px auto;
 }
 
-@media (max-width:900px){
+@media (max-width: 900px) {
   .grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width:600px){
+@media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; }
 }
 
@@ -183,18 +188,19 @@ h3 {
   );
 
   border: 1px solid rgba(255,255,255,0.08);
-  padding: 20px 28px;
   border-radius: 18px;
+
+  padding: 20px 28px;
+  min-height: 160px;
 
   backdrop-filter: blur(16px);
 
-  transition: all 0.4s ease;
-
-  min-height: 160px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .card:hover {
   transform: translateY(-6px) scale(1.02);
+
   border: 1px solid rgba(168,85,247,0.3);
 
   box-shadow:
@@ -219,7 +225,8 @@ h3 {
 }
 
 .card p {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.5;
   color: rgba(255,255,255,0.85);
 }
 
@@ -233,6 +240,26 @@ h3 {
   padding: 16px;
 
   backdrop-filter: blur(12px);
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonial {
+  text-align: left;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 /* ===== FOOTER ===== */
