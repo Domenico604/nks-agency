@@ -1,4 +1,51 @@
 import React from "react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  ResponsiveContainer
+} from "recharts";
+import "./index.css";
+
+const data = [
+  { name: "Week 1", before: 1200, after: 1200 },
+  { name: "Week 2", before: 1100, after: 1800 },
+  { name: "Week 3", before: 900, after: 4200 },
+  { name: "Week 4", before: 800, after: 9600 },
+  { name: "Week 5", before: 700, after: 18500 }
+];
+
+const testimonials = [
+  {
+    name: "Алексей",
+    text: "Вышли на 100k+ подписчиков",
+    img: "https://i.pravatar.cc/100?img=3"
+  },
+  {
+    name: "Мария",
+    text: "Просмотры выросли в 10 раз",
+    img: "https://i.pravatar.cc/100?img=5"
+  },
+  {
+    name: "Илья",
+    text: "Миллионы просмотров стабильно",
+    img: "https://i.pravatar.cc/100?img=8"
+  }
+];
+
+export default function App() {
+  return (
+    <div className="container">
+
+      {/* HEADER */}
+      <header className="header">
+        <div className="logo-main">NKS</div>
+
+        <nav className="nav">
+          <a href="#">Services</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
         </nav>
@@ -54,6 +101,7 @@ import React from "react";
       <footer>
         © {new Date().getFullYear()} NKS Vector
       </footer>
+
     </div>
   );
 }
