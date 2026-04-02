@@ -47,22 +47,20 @@ export default function App() {
     <div className="container">
 
       {/* HEADER */}
-      <header className="header">
-        <div className="logo">
-          <div className="logo-main">NKS</div>
-          <div className="logo-sub">creative agency</div>
-          <div className="logo-line"></div>
-        </div>
+     <header className="header">
+  <div className="logo">
+    <div className="logo-main">NKS</div>
+  </div>
 
-        <div className="buttons-group">
-          <a href="https://t.me/NKSmanager">
-            <button className="button">Консалтинг</button>
-          </a>
-          <a href="https://t.me/NKSmanager">
-            <button className="button secondary">Прайс-лист</button>
-          </a>
-        </div>
-      </header>
+  <div className="buttons-group">
+    <a href="https://t.me/NKSmanager">
+      <button className="button">Консалтинг</button>
+    </a>
+    <a href="https://t.me/NKSmanager">
+      <button className="button secondary">Прайс-лист</button>
+    </a>
+  </div>
+</header>
 
       {/* HERO */}
       <section className="hero">
