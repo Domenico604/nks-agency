@@ -1,51 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* ===== BACKGROUND (ТВОЙ СТИЛЬ УСИЛЕННЫЙ) ===== */
+/* чтобы фиксированный header не перекрывал контент */
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  overflow-x: hidden;
-
-  background: linear-gradient(-45deg,
-    #050816,
-    #0a122f,
-    #2a0a3d,
-    #0f1c45,
-    #3b0a4c,
-    #120a2a
-  );
-
-  background-size: 400% 400%;
-  animation: gradientBG 18s ease infinite;
+  padding-top: 90px;
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ===== LAYOUT ===== */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px;
-  text-align: center;
-}
-
-/* ===== HEADER ===== */
+/* ===== HEADER (FIXED GLASS) ===== */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
+
+  padding: 18px 40px;
+
+  background: rgba(10, 12, 25, 0.6);
+  backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* ===== LOGO ===== */
 .logo-main {
-  font-size: 54px;
+  font-size: 48px;
   font-weight: 700;
   letter-spacing: 4px;
   font-family: 'Bebas Neue', sans-serif;
@@ -53,162 +33,60 @@ body {
   background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  text-shadow: 0 0 20px rgba(99,102,241,0.4);
 }
 
 .logo-sub {
-  font-size: 18px;
-  letter-spacing: 3px;
-  color: rgba(255,255,255,0.75);
+  display: none; /* убрали "creative agency" визуально полностью */
 }
 
 .logo-line {
-  width: 120px;
-  height: 2px;
-  margin-top: 6px;
-  background: linear-gradient(90deg, transparent, #38bdf8, #a855f7, transparent);
+  display: none;
 }
 
-/* ===== BUTTONS (НЕОН И ГРАДИЕНТЫ) ===== */
+/* ===== BUTTONS ===== */
+.buttons-group {
+  display: flex;
+  gap: 12px;
+}
+
+/* primary button */
 .button {
-  padding: 18px 36px;
-  font-size: 20px;
+  padding: 14px 28px;
+  font-size: 16px;
   font-weight: 700;
 
   border: none;
-  border-radius: 40px;
+  border-radius: 999px;
 
   background: linear-gradient(90deg, #06b6d4, #6366f1, #ec4899);
   color: white;
 
   cursor: pointer;
 
-  box-shadow:
-    0 0 15px rgba(56,189,248,0.4),
-    0 0 25px rgba(99,102,241,0.3);
+  box-shadow: 0 0 18px rgba(99,102,241,0.35);
 
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .button:hover {
-  transform: translateY(-3px) scale(1.03);
-
-  box-shadow:
-    0 0 25px rgba(56,189,248,0.7),
-    0 0 40px rgba(168,85,247,0.5);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 28px rgba(168,85,247,0.5);
 }
 
-/* ===== HERO TEXT ===== */
-h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3.6rem;
-
-  background: linear-gradient(90deg,
-    #7dd3fc,
-    #38bdf8,
-    #a855f7,
-    #60a5fa
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-shadow: 0 0 15px rgba(99,102,241,0.3);
+/* secondary button */
+.button.secondary {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: none;
 }
 
-h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.5rem;
-
-  background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.button.secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(168,85,247,0.4);
 }
 
-/* ===== GRID ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 30px auto 80px auto;
-}
-
-@media (max-width:900px){
-  .grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width:600px){
-  .grid { grid-template-columns: 1fr; }
-}
-
-/* ===== CARDS (GLASS + NEON DEPTH) ===== */
-.card {
-  background: linear-gradient(145deg,
-    rgba(99,102,241,0.08),
-    rgba(6,182,212,0.05),
-    rgba(168,85,247,0.03)
-  );
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  padding: 20px 28px;
-  border-radius: 18px;
-
-  backdrop-filter: blur(16px);
-
-  transition: all 0.4s ease;
-
-  min-height: 160px;
-}
-
-.card:hover {
-  transform: translateY(-6px) scale(1.02);
-
-  border: 1px solid rgba(168,85,247,0.3);
-
-  box-shadow:
-    0 0 25px rgba(56,189,248,0.3),
-    0 0 45px rgba(168,85,247,0.25);
-}
-
-/* ===== CARD TEXT ===== */
-.card h4 {
-  font-size: 26px;
-  font-weight: 700;
-
-  background: linear-gradient(90deg,
-    #38bdf8,
-    #6366f1,
-    #a855f7,
-    #ec4899
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.card p {
-  font-size: 20px;
-  color: rgba(255,255,255,0.85);
-}
-
-/* ===== CHART BOX ===== */
-.chart-box {
-  height: 300px;
-  margin-top: 30px;
-
-  background: rgba(255,255,255,0.04);
-
-  border-radius: 16px;
-  padding: 16px;
-
-  backdrop-filter: blur(12px);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  margin-top: 60px;
-  color: rgba(255,255,255,0.6);
+/* glow CTA */
+.button.glow {
+  padding: 18px 36px;
+  font-size: 18px;
 }
