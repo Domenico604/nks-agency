@@ -21,9 +21,9 @@ html {
   background: rgba(129, 140, 248, 0.6); 
 }
 
-/* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ АБСОЛЮТНО ВЕЗДЕ */
+/* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ */
 @media (pointer: fine) {
-  * {
+  body, a, button {
     cursor: none !important;
   }
 }
@@ -128,6 +128,7 @@ body {
   border-radius: 100px;
   font-weight: 600;
   border: none;
+  cursor: pointer;
   background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%);
   color: #ffffff;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -481,6 +482,94 @@ footer {
   margin: 0;
 }
 
+/* НОВЫЕ СТИЛИ: IMAGE SHOWCASE */
+.image-showcase-container {
+  width: 100vw; /* На всю ширину окна */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* Центрирование выходящего за контейнер элемента */
+  margin-right: -50vw;
+  height: 90vh; /* Высота блока */
+  overflow: hidden;
+  perspective: 1500px; /* Для 3D эффекта */
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.image-showcase-inner {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d; /* Для 3D трансформаций */
+  
+  /* Эффект гармоничного вписывания в фон (важно для реализма) */
+  mix-blend-mode: multiply; 
+  opacity: 0.8;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Темный градиент поверх изображения для контраста текста */
+  background: linear-gradient(180deg, rgba(5, 5, 8, 0.4) 0%, rgba(5, 5, 8, 0.9) 100%);
+  z-index: 1;
+}
+
+.showcase-text-content {
+  position: relative;
+  z-index: 2; /* Поверх наложения */
+  max-width: 800px;
+  padding: 0 40px;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.showcase-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(129, 140, 248, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  font-size: 11px;
+  color: #a5b4fc;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.showcase-headline {
+  /* Используем тот же премиальный стиль заголовков, но чуть компактнее */
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem; 
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin: 0;
+  
+  /* Глассморфизм для заголовка поверх картинки */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  
+  /* Градиент текста */
+  background-image: linear-gradient(135deg, #ffffff 10%, #d8b4fe 60%, #818cf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   /* Отключаем кастомный курсор на мобильных */
@@ -496,4 +585,8 @@ footer {
   .stat-number { font-size: 3rem; }
   .chart-box { height: 300px; padding: 20px; }
   .chart-header { flex-direction: column; gap: 12px; }
+  
+  /* Адаптация Image Showcase для мобильных */
+  .image-showcase-container { height: 70vh; }
+  .showcase-headline { font-size: 2.5rem; padding: 15px; }
 }
