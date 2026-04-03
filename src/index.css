@@ -6,7 +6,6 @@ html {
   scroll-behavior: auto;
 }
 
-/* КАСТОМНЫЙ СКРОЛЛБАР */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -21,7 +20,6 @@ html {
   background: rgba(14, 165, 233, 0.6); 
 }
 
-/* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ */
 @media (pointer: fine) {
   * {
     cursor: none !important;
@@ -41,7 +39,6 @@ body {
   background-attachment: fixed;
 }
 
-/* СТИЛЬ КАСТОМНОГО КУРСОРA */
 .custom-cursor {
   position: fixed;
   top: 0;
@@ -56,7 +53,6 @@ body {
   will-change: transform;
 }
 
-/* CONTAINER */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -64,7 +60,6 @@ body {
   text-align: center;
 }
 
-/* HEADER FIX */
 .header {
   position: fixed;
   top: 0;
@@ -89,7 +84,6 @@ body {
   gap: 15px;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   flex-direction: column;
@@ -116,7 +110,6 @@ body {
   border-radius: 2px;
 }
 
-/* BUTTONS */
 .buttons-group { 
   display: flex; 
   gap: 16px; 
@@ -169,7 +162,6 @@ body {
   margin-top: 30px;
 }
 
-/* TYPOGRAPHY */
 h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 5.5rem;
@@ -217,14 +209,13 @@ h3 {
   font-weight: 300;
 }
 
-/* СТАТИСТИКА */
 .stats-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
   padding: 60px 0;
-  margin-bottom: 0px; /* Убрали отступ снизу, чтобы партнеры были ближе */
+  margin-bottom: 0px; 
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent);
 }
@@ -252,7 +243,7 @@ h3 {
   font-weight: 500;
 }
 
-/* НОВЫЙ БЛОК: ПАРТНЕРЫ (БЕГУЩАЯ СТРОКА) */
+/* БЕГУЩАЯ СТРОКА ПАРТНЕРОВ */
 .partners-section {
   width: 100vw;
   position: relative;
@@ -273,7 +264,6 @@ h3 {
   width: 100%;
   overflow: hidden;
   user-select: none;
-  /* Градиентные маски по краям, чтобы текст плавно растворялся */
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -310,7 +300,6 @@ h3 {
   padding: 80px 0;
 }
 
-/* GRID & CARDS */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -421,7 +410,6 @@ h3 {
   width: fit-content;
 }
 
-/* CHART BOX */
 .chart-box {
   height: 400px;
   margin-top: 60px;
@@ -474,7 +462,6 @@ h3 {
 .dot-before { background: #64748b; }
 .dot-after { background: #0ea5e9; box-shadow: 0 0 10px rgba(14, 165, 233, 0.5); }
 
-/* TESTIMONIALS */
 .testimonial-card {
   background: linear-gradient(180deg, rgba(14, 165, 233, 0.05) 0%, rgba(15, 23, 42, 0.2) 100%);
   border: 1px solid rgba(14, 165, 233, 0.15);
@@ -509,7 +496,6 @@ h3 {
   margin-top: auto;
 }
 
-/* FOOTER */
 footer {
   padding: 60px 0;
   border-top: 1px solid rgba(255,255,255,0.05);
@@ -535,7 +521,7 @@ footer {
   margin: 0;
 }
 
-/* IMAGE SHOWCASE (ГАРАНТИРОВАННО РАБОЧИЙ) */
+/* БРОНЕБОЙНЫЙ IMAGE SHOWCASE */
 .image-showcase-container {
   width: 100vw;
   position: relative;
@@ -548,21 +534,28 @@ footer {
   perspective: 1500px; 
   margin-top: 60px;
   margin-bottom: 60px;
-  background-color: #050508; /* Подложка на всякий случай */
+  background-color: #050508;
 }
 
 .image-showcase-inner {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   transform-style: preserve-3d;
-  opacity: 1 !important; /* Принудительная видимость */
+}
+
+.showcase-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 0;
+  opacity: 1;
 }
 
 .image-overlay {
@@ -571,14 +564,13 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Мягкое затемнение */
   background: linear-gradient(180deg, rgba(5, 5, 8, 0.2) 0%, rgba(5, 5, 8, 0.8) 100%);
   z-index: 1;
 }
 
 .showcase-text-content {
   position: relative;
-  z-index: 2;
+  z-index: 2; 
   max-width: 800px;
   padding: 0 40px;
   text-align: center;
@@ -616,7 +608,6 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .custom-cursor { display: none; }
   h2 { font-size: 3.2rem; }
