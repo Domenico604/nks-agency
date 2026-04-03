@@ -14,11 +14,11 @@ html {
   background: #050508; 
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(129, 140, 248, 0.3); 
+  background: rgba(14, 165, 233, 0.3); 
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(129, 140, 248, 0.6); 
+  background: rgba(14, 165, 233, 0.6); 
 }
 
 /* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ */
@@ -36,8 +36,8 @@ body {
   padding-top: 100px;
   background-color: #050508;
   background-image: 
-    radial-gradient(circle at 15% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 85% 70%, rgba(56, 189, 248, 0.06) 0%, transparent 40%);
+    radial-gradient(circle at 15% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -100,7 +100,7 @@ body {
   font-size: 46px; 
   font-weight: 700;
   font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
@@ -111,7 +111,7 @@ body {
 .logo-line {
   width: 130%; 
   height: 2px;
-  background: linear-gradient(90deg, transparent, #818cf8, transparent);
+  background: linear-gradient(90deg, transparent, #0ea5e9, transparent);
   margin-top: 6px;
   border-radius: 2px;
 }
@@ -129,7 +129,7 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
   color: #ffffff;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   font-size: 14px;
@@ -176,7 +176,7 @@ h2 {
   margin-bottom: 24px;
   line-height: 1.1;
   letter-spacing: 2px;
-  background: linear-gradient(135deg, #ffffff 10%, #d8b4fe 60%, #818cf8 100%);
+  background: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -185,7 +185,7 @@ h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5rem;
   margin-bottom: 50px;
-  background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
@@ -199,10 +199,10 @@ h3 {
   display: inline-block;
   padding: 8px 16px;
   border-radius: 100px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
   font-size: 13px;
-  color: #a5b4fc;
+  color: #38bdf8;
   margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -284,7 +284,7 @@ h3 {
   top: 0; left: 0; right: 0; bottom: 0;
   border-radius: 24px;
   padding: 2px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent, rgba(99,102,241,0.1));
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent, rgba(14, 165, 233, 0.1));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -321,7 +321,7 @@ h3 {
 .card-subtitle {
   display: block;
   font-size: 12px;
-  color: #818cf8;
+  color: #38bdf8;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 8px;
@@ -419,12 +419,12 @@ h3 {
   border-radius: 50%;
 }
 .dot-before { background: #64748b; }
-.dot-after { background: #818cf8; box-shadow: 0 0 10px rgba(129, 140, 248, 0.5); }
+.dot-after { background: #0ea5e9; box-shadow: 0 0 10px rgba(14, 165, 233, 0.5); }
 
 /* TESTIMONIALS */
 .testimonial-card {
-  background: linear-gradient(180deg, rgba(99, 102, 241, 0.05) 0%, rgba(15, 23, 42, 0.2) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.05) 0%, rgba(15, 23, 42, 0.2) 100%);
+  border: 1px solid rgba(14, 165, 233, 0.15);
 }
 
 .testimonial-header {
@@ -438,7 +438,7 @@ h3 {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 2px solid rgba(129, 140, 248, 0.5);
+  border: 2px solid rgba(14, 165, 233, 0.5);
   object-fit: cover;
 }
 
@@ -508,7 +508,7 @@ footer {
   align-items: center;
   position: relative;
   transform-style: preserve-3d;
-  opacity: 1; /* КАРТИНКА БУДЕТ ВИДНА! */
+  opacity: 1;
 }
 
 .image-overlay {
@@ -517,7 +517,6 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Очень легкое затемнение, чтобы текст читался, но картинку было четко видно */
   background: linear-gradient(180deg, rgba(5, 5, 8, 0.1) 0%, rgba(5, 5, 8, 0.8) 100%);
   z-index: 1;
 }
@@ -535,10 +534,10 @@ footer {
   display: inline-block;
   padding: 6px 14px;
   border-radius: 100px;
-  background: rgba(129, 140, 248, 0.1);
-  border: 1px solid rgba(129, 140, 248, 0.2);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
   font-size: 11px;
-  color: #a5b4fc;
+  color: #38bdf8;
   margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -556,7 +555,7 @@ footer {
   padding: 20px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.05);
-  background-image: linear-gradient(135deg, #ffffff 10%, #d8b4fe 60%, #818cf8 100%);
+  background-image: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
