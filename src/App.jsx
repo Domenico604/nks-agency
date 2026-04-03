@@ -37,7 +37,6 @@ const data = [
   { name: "Неделя 5", До: 700, После: 18500 }
 ];
 
-// Откатили статистику к исходному виду
 const companyStats = [
   { number: "4+", label: "Года на рынке" },
   { number: "120+", label: "Успешных проектов" },
@@ -102,8 +101,9 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-//URLs стилизованных изображений (Абстрактный премиальный продакшн)
-const imgFocusCreation = "https://images.unsplash.com/photo-1619914757643-42ebf53678b8?q=80&w=1600&auto=format&fit=crop"; // Крупный план объектива
+// URLs стилизованных изображений (Абстрактный премиальный продакшн)
+// Заменили imgFocusCreation на изображение вирусного роста просмотров
+const imgViralGrowth = "https://images.unsplash.com/photo-1593377202164-f6558485c7f8?q=80&w=1600&auto=format&fit=crop"; // Изображение стремительного роста просмотров
 const imgRhythmDynamics = "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1600&auto=format&fit=crop"; // Абстрактный звуковой таймлайн
 
 export default function App() {
@@ -241,9 +241,9 @@ export default function App() {
       {/* OUR CAPABILITIES */}
       <Section title="Наши возможности" data={services} />
 
-      {/* IMAGE SHOWCASE 1: FOCUS & CREATION (НОВЫЙ БЛОК) */}
+      {/* IMAGE SHOWCASE 1: VIRAL GROWTH (НОВЫЙ БЛОК) */}
       <ImageShowcase 
-        imgUrl={imgFocusCreation}
+        imgUrl={imgViralGrowth}
         headline="Создаем стратегию контента. Проектируем каждую секунду видео."
       />
 
@@ -253,7 +253,7 @@ export default function App() {
       {/* METHODOLOGY */}
       <Section title="Методология" data={methodology} isNumbered />
 
-      {/* IMAGE SHOWCASE 2: RHYTHM & DYNAMICS (НОВЫЙ БЛОК) */}
+      {/* IMAGE SHOWCASE 2: RHYTHM & DYNAMICS */}
       <ImageShowcase 
         imgUrl={imgRhythmDynamics}
         headline="Премиальный монтаж. Data-driven решения для вирусных охватов."
