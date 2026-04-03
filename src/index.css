@@ -21,9 +21,9 @@ html {
   background: rgba(129, 140, 248, 0.6); 
 }
 
-/* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ */
+/* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ АБСОЛЮТНО ВЕЗДЕ */
 @media (pointer: fine) {
-  body, a, button {
+  * {
     cursor: none !important;
   }
 }
