@@ -101,10 +101,9 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-// URLs стилизованных изображений (Абстрактный премиальный продакшн)
-// Заменили imgFocusCreation на изображение вирусного роста просмотров
-const imgViralGrowth = "https://images.unsplash.com/photo-1593377202164-f6558485c7f8?q=80&w=1600&auto=format&fit=crop"; // Изображение стремительного роста просмотров
-const imgRhythmDynamics = "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1600&auto=format&fit=crop"; // Абстрактный звуковой таймлайн
+// Новые яркие картинки
+const imgViralGrowth = "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1600&auto=format&fit=crop"; 
+const imgRhythmDynamics = "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1600&auto=format&fit=crop"; 
 
 export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -241,7 +240,7 @@ export default function App() {
       {/* OUR CAPABILITIES */}
       <Section title="Наши возможности" data={services} />
 
-      {/* IMAGE SHOWCASE 1: VIRAL GROWTH (НОВЫЙ БЛОК) */}
+      {/* IMAGE SHOWCASE 1: VIRAL GROWTH */}
       <ImageShowcase 
         imgUrl={imgViralGrowth}
         headline="Создаем стратегию контента. Проектируем каждую секунду видео."
@@ -257,7 +256,7 @@ export default function App() {
       <ImageShowcase 
         imgUrl={imgRhythmDynamics}
         headline="Премиальный монтаж. Data-driven решения для вирусных охватов."
-        isReversed // Направление эффекта изменено для разнообразия
+        isReversed 
       />
 
       {/* TESTIMONIALS SECTION */}
@@ -344,19 +343,16 @@ function Section({ title, data, isNumbered }) {
 function ImageShowcase({ imgUrl, headline, isReversed }) {
   const ref = useRef(null);
   
-  // Отслеживание прогресса скролла относительно этого компонента
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"]
   });
 
-  // Физика пружины для плавности искажения
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
-  // Трансформация прогресса скролла в 3D искажение (perspective skew)
-  const yRange = isReversed ? [25, -25] : [-25, 25]; // Направление искажения
+  const yRange = isReversed ? [25, -25] : [-25, 25]; 
   const skewX = useTransform(smoothProgress, [0, 1], yRange);
-  const opacityText = useTransform(smoothProgress, [0.1, 0.5, 0.9], [0, 1, 0]); // Текст появляется и исчезает
+  const opacityText = useTransform(smoothProgress, [0.1, 0.5, 0.9], [0, 1, 0]);
 
   return (
     <div ref={ref} className="image-showcase-container">
@@ -364,16 +360,15 @@ function ImageShowcase({ imgUrl, headline, isReversed }) {
         className="image-showcase-inner"
         style={{
           backgroundImage: `url(${imgUrl})`,
-          rotateX: skewX, // 3D наклон по вертикали
+          rotateX: skewX,
           willChange: "transform"
         }}
       >
-        <div className="image-overlay" /> {/* Темное наложение для контраста */}
+        <div className="image-overlay" />
         
-        {/* Текстовое наложение с эффектом параллакса */}
         <motion.div 
           className="showcase-text-content"
-          style={{ opacity: opacityText, y: isReversed ? 60 : -60 }} // Текст плавно движется
+          style={{ opacity: opacityText, y: isReversed ? 60 : -60 }}
         >
           <span className="showcase-badge">NKS Vector Production</span>
           <h2 className="showcase-headline">{headline}</h2>
