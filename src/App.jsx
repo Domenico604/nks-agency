@@ -9,7 +9,7 @@ import {
   ResponsiveContainer
 } from "recharts";
 import { motion } from "framer-motion";
-import Lenis from "@studio-freight/lenis"; // Импорт плавного скролла
+import Lenis from "@studio-freight/lenis";
 import "./index.css";
 
 const fadeUp = {
@@ -102,12 +102,10 @@ const testimonials = [
 ];
 
 export default function App() {
-  // Состояния для кастомного курсора
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    // Инициализация плавного скролла Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -121,13 +119,11 @@ export default function App() {
     }
     requestAnimationFrame(raf);
 
-    // Логика курсора
     const updateMousePosition = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     const handleMouseOver = (e) => {
-      // Проверяем, наведен ли курсор на кликабельный элемент
       if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card')) {
         setIsHovering(true);
       } else {
@@ -147,16 +143,17 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* КАСТОМНЫЙ КУРСОР */}
+      {/* УСКОРЕННЫЙ КАСТОМНЫЙ КУРСОР */}
       <motion.div
         className="custom-cursor"
         animate={{
-          x: mousePosition.x - (isHovering ? 24 : 10), // Центровка в зависимости от размера
+          x: mousePosition.x - (isHovering ? 24 : 10),
           y: mousePosition.y - (isHovering ? 24 : 10),
           scale: isHovering ? 1.5 : 1,
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
-        transition={{ type: "spring", stiffness: 400, damping: 28, mass: 0.5 }}
+        // Измененные параметры физики: огромная жесткость, малая масса
+        transition={{ type: "spring", stiffness: 1200, damping: 35, mass: 0.1 }}
       />
 
       {/* HEADER */}
