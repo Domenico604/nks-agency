@@ -224,9 +224,8 @@ h3 {
   justify-content: center;
   gap: 60px;
   padding: 60px 0;
-  margin-bottom: 40px;
+  margin-bottom: 0px; /* Убрали отступ снизу, чтобы партнеры были ближе */
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent);
 }
 
@@ -251,6 +250,60 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
+}
+
+/* НОВЫЙ БЛОК: ПАРТНЕРЫ (БЕГУЩАЯ СТРОКА) */
+.partners-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 40px 0;
+  background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.03), transparent);
+  border-top: 1px solid rgba(255,255,255,0.02);
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.marquee-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  /* Градиентные маски по краям, чтобы текст плавно растворялся */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: scroll 30s linear infinite;
+}
+
+.partner-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.15);
+  margin: 0 40px;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.partner-logo:hover {
+  color: rgba(56, 189, 248, 0.8);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 .content-section, .testimonials-section {
@@ -482,7 +535,7 @@ footer {
   margin: 0;
 }
 
-/* IMAGE SHOWCASE */
+/* IMAGE SHOWCASE (ГАРАНТИРОВАННО РАБОЧИЙ) */
 .image-showcase-container {
   width: 100vw;
   position: relative;
@@ -495,6 +548,7 @@ footer {
   perspective: 1500px; 
   margin-top: 60px;
   margin-bottom: 60px;
+  background-color: #050508; /* Подложка на всякий случай */
 }
 
 .image-showcase-inner {
@@ -508,7 +562,7 @@ footer {
   align-items: center;
   position: relative;
   transform-style: preserve-3d;
-  opacity: 1;
+  opacity: 1 !important; /* Принудительная видимость */
 }
 
 .image-overlay {
@@ -517,7 +571,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(5, 5, 8, 0.1) 0%, rgba(5, 5, 8, 0.8) 100%);
+  /* Мягкое затемнение */
+  background: linear-gradient(180deg, rgba(5, 5, 8, 0.2) 0%, rgba(5, 5, 8, 0.8) 100%);
   z-index: 1;
 }
 
@@ -576,4 +631,5 @@ footer {
   .chart-header { flex-direction: column; gap: 12px; }
   .image-showcase-container { height: 70vh; }
   .showcase-headline { font-size: 2.5rem; padding: 15px; }
+  .partner-logo { font-size: 1.8rem; margin: 0 20px; }
 }
