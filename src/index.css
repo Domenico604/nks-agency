@@ -3,7 +3,7 @@
 
 /* BASE */
 html { 
-  scroll-behavior: auto; /* Важно: Lenis сам управляет скроллом, нативный отключаем */
+  scroll-behavior: auto;
 }
 
 /* КАСТОМНЫЙ СКРОЛЛБАР */
@@ -50,9 +50,9 @@ body {
   height: 20px;
   background: #fff;
   border-radius: 50%;
-  pointer-events: none; /* Чтобы курсор не блокировал клики */
+  pointer-events: none;
   z-index: 99999;
-  mix-blend-mode: difference; /* Делает курсор инвертированным на светлом фоне */
+  mix-blend-mode: difference;
   will-change: transform;
 }
 
@@ -482,17 +482,17 @@ footer {
   margin: 0;
 }
 
-/* НОВЫЕ СТИЛИ: IMAGE SHOWCASE */
+/* IMAGE SHOWCASE */
 .image-showcase-container {
-  width: 100vw; /* На всю ширину окна */
+  width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw; /* Центрирование выходящего за контейнер элемента */
+  margin-left: -50vw; 
   margin-right: -50vw;
-  height: 90vh; /* Высота блока */
+  height: 90vh; 
   overflow: hidden;
-  perspective: 1500px; /* Для 3D эффекта */
+  perspective: 1500px; 
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -507,10 +507,8 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  transform-style: preserve-3d; /* Для 3D трансформаций */
-  
-  /* Картинка теперь яркая и четкая */
-  opacity: 1; 
+  transform-style: preserve-3d;
+  opacity: 1; /* КАРТИНКА БУДЕТ ВИДНА! */
 }
 
 .image-overlay {
@@ -519,14 +517,14 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Мягкий темный градиент для контраста с текстом, не перекрывающий саму картинку полностью */
-  background: linear-gradient(180deg, rgba(5, 5, 8, 0.3) 0%, rgba(5, 5, 8, 0.9) 100%);
+  /* Очень легкое затемнение, чтобы текст читался, но картинку было четко видно */
+  background: linear-gradient(180deg, rgba(5, 5, 8, 0.1) 0%, rgba(5, 5, 8, 0.8) 100%);
   z-index: 1;
 }
 
 .showcase-text-content {
   position: relative;
-  z-index: 2; /* Поверх наложения */
+  z-index: 2;
   max-width: 800px;
   padding: 0 40px;
   text-align: center;
@@ -552,16 +550,12 @@ footer {
   line-height: 1.1;
   letter-spacing: 1px;
   margin: 0;
-  
-  /* Глассморфизм для заголовка поверх картинки */
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   padding: 20px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.05);
-  
-  /* Градиент текста */
   background-image: linear-gradient(135deg, #ffffff 10%, #d8b4fe 60%, #818cf8 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -570,9 +564,7 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  /* Отключаем кастомный курсор на мобильных */
   .custom-cursor { display: none; }
-  
   h2 { font-size: 3.2rem; }
   h3 { font-size: 2.5rem; }
   .header-inner { padding: 12px 20px; justify-content: center; }
@@ -583,8 +575,6 @@ footer {
   .stat-number { font-size: 3rem; }
   .chart-box { height: 300px; padding: 20px; }
   .chart-header { flex-direction: column; gap: 12px; }
-  
-  /* Адаптация Image Showcase для мобильных */
   .image-showcase-container { height: 70vh; }
   .showcase-headline { font-size: 2.5rem; padding: 15px; }
 }
