@@ -101,9 +101,11 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-// Новые яркие картинки
-const imgViralGrowth = "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1600&auto=format&fit=crop"; 
-const imgRhythmDynamics = "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1600&auto=format&fit=crop"; 
+// НОВЫЕ ТЕМНЫЕ И ПРОФЕССИОНАЛЬНЫЕ КАРТИНКИ
+// 1. Кинематографичный объектив камеры с синими бликами
+const imgViralGrowth = "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop"; 
+// 2. Темный экран с таймлайном профессионального видеомонтажа
+const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1600&auto=format&fit=crop"; 
 
 export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -215,7 +217,7 @@ export default function App() {
                 itemStyle={{ color: "#fff" }}
               />
               <Line type="monotone" dataKey="До" stroke="#64748b" strokeWidth={2} dot={{ r: 4, fill: "#0f172a", strokeWidth: 2 }} activeDot={{ r: 6 }} />
-              <Line type="monotone" dataKey="После" stroke="#818cf8" strokeWidth={4} dot={{ r: 5, fill: "#0f172a", strokeWidth: 2 }} activeDot={{ r: 8, stroke: "#38bdf8", strokeWidth: 2 }} />
+              <Line type="monotone" dataKey="После" stroke="#0ea5e9" strokeWidth={4} dot={{ r: 5, fill: "#0f172a", strokeWidth: 2 }} activeDot={{ r: 8, stroke: "#38bdf8", strokeWidth: 2 }} />
             </LineChart>
           </ResponsiveContainer>
         </motion.div>
@@ -230,150 +232,4 @@ export default function App() {
         variants={staggerContainer}
       >
         {companyStats.map((stat, idx) => (
-          <motion.div key={idx} className="stat-block" variants={fadeUp}>
-            <div className="stat-number">{stat.number}</div>
-            <div className="stat-label">{stat.label}</div>
-          </motion.div>
-        ))}
-      </motion.section>
-
-      {/* OUR CAPABILITIES */}
-      <Section title="Наши возможности" data={services} />
-
-      {/* IMAGE SHOWCASE 1: VIRAL GROWTH */}
-      <ImageShowcase 
-        imgUrl={imgViralGrowth}
-        headline="Создаем стратегию контента. Проектируем каждую секунду видео."
-      />
-
-      {/* WHO WE HELP */}
-      <Section title="Кому мы помогаем" data={audience} />
-
-      {/* METHODOLOGY */}
-      <Section title="Методология" data={methodology} isNumbered />
-
-      {/* IMAGE SHOWCASE 2: RHYTHM & DYNAMICS */}
-      <ImageShowcase 
-        imgUrl={imgRhythmDynamics}
-        headline="Премиальный монтаж. Data-driven решения для вирусных охватов."
-        isReversed 
-      />
-
-      {/* TESTIMONIALS SECTION */}
-      <motion.section 
-        className="testimonials-section"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-      >
-        <h3>Результаты и отзывы</h3>
-        <div className="grid">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={i}
-              className="card testimonial-card"
-              variants={fadeUp}
-            >
-              <div className="testimonial-header">
-                <img src={t.img} className="avatar" alt={t.name} />
-                <div>
-                  <h4>{t.name}</h4>
-                  <span className="testimonial-role">{t.role}</span>
-                </div>
-              </div>
-              <p>"{t.text}"</p>
-              <div className="stars">★★★★★</div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      <footer>
-        <div className="footer-content">
-          <div className="logo-main footer-logo">NKS</div>
-          <p>© {new Date().getFullYear()} NKS Vector. Системный рост контента.</p>
-        </div>
-      </footer>
-    </div>
-  );
-}
-
-function Section({ title, data, isNumbered }) {
-  return (
-    <motion.section
-      className="content-section"
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={staggerContainer}
-    >
-      <h3>{title}</h3>
-      <div className="grid">
-        {data.map((item, i) => (
-          <motion.div key={i} className="card" variants={fadeUp}>
-            <div className="card-top">
-              {item.subtitle && <span className="card-subtitle">{item.subtitle}</span>}
-              {isNumbered && !item.subtitle && <span className="card-number">0{i + 1}</span>}
-              <h4>{item.title}</h4>
-            </div>
-            <p>{item.text}</p>
-            
-            {item.tags && (
-              <div className="tags-container">
-                {item.tags.map((tag, idx) => (
-                  <span key={idx} className="tag">{tag}</span>
-                ))}
-              </div>
-            )}
-            {item.stats && (
-              <div className="stats-badge">
-                <span className="stats-icon">↗</span> 
-                <span>{item.stats}</span>
-              </div>
-            )}
-          </motion.div>
-        ))}
-      </div>
-    </motion.section>
-  );
-}
-
-// КОМПОНЕНТ: БЛОК С ИЗОБРАЖЕНИЕМ И ЭФФЕКТОМ
-function ImageShowcase({ imgUrl, headline, isReversed }) {
-  const ref = useRef(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-
-  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
-
-  const yRange = isReversed ? [25, -25] : [-25, 25]; 
-  const skewX = useTransform(smoothProgress, [0, 1], yRange);
-  const opacityText = useTransform(smoothProgress, [0.1, 0.5, 0.9], [0, 1, 0]);
-
-  return (
-    <div ref={ref} className="image-showcase-container">
-      <motion.div 
-        className="image-showcase-inner"
-        style={{
-          backgroundImage: `url(${imgUrl})`,
-          rotateX: skewX,
-          willChange: "transform"
-        }}
-      >
-        <div className="image-overlay" />
-        
-        <motion.div 
-          className="showcase-text-content"
-          style={{ opacity: opacityText, y: isReversed ? 60 : -60 }}
-        >
-          <span className="showcase-badge">NKS Vector Production</span>
-          <h2 className="showcase-headline">{headline}</h2>
-        </motion.div>
-      </motion.div>
-    </div>
-  );
-}
+          <motion.div key={idx} className="stat-block"
