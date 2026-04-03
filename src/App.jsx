@@ -44,7 +44,6 @@ const companyStats = [
   { number: "15", label: "Экспертов в команде" }
 ];
 
-// Массив малоизвестных международных "партнеров"
 const partners = [
   "NEXUS GLOBAL", 
   "AURA FINANCE", 
@@ -112,7 +111,6 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-// Картинки для эффекта параллакса (работающие 100%)
 const imgViralGrowth = "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop"; 
 const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1600&auto=format&fit=crop"; 
 
@@ -158,7 +156,6 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* КАСТОМНЫЙ КУРСОР */}
       <motion.div
         className="custom-cursor"
         animate={{
@@ -170,7 +167,6 @@ export default function App() {
         transition={{ type: "spring", stiffness: 1200, damping: 35, mass: 0.1 }}
       />
 
-      {/* HEADER */}
       <header className="header">
         <div className="header-inner">
           <div className="logo">
@@ -189,7 +185,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* HERO SECTION */}
       <motion.section className="hero" initial="hidden" animate="show" variants={fadeUp}>
         <div className="hero-badge">Агентство YouTube & Shorts</div>
         <h2>
@@ -232,7 +227,6 @@ export default function App() {
         </motion.div>
       </motion.section>
 
-      {/* STATS SECTION */}
       <motion.section 
         className="stats-section"
         initial="hidden"
@@ -248,7 +242,6 @@ export default function App() {
         ))}
       </motion.section>
 
-      {/* НОВЫЙ БЛОК: ПАРТНЕРЫ (БЕГУЩАЯ СТРОКА) */}
       <section className="partners-section">
         <div className="marquee-container">
           <div className="marquee-content">
@@ -256,7 +249,6 @@ export default function App() {
               <span key={idx} className="partner-logo">{partner}</span>
             ))}
           </div>
-          {/* Дублируем для плавного бесконечного скролла */}
           <div className="marquee-content" aria-hidden="true">
             {partners.map((partner, idx) => (
               <span key={idx} className="partner-logo">{partner}</span>
@@ -265,29 +257,23 @@ export default function App() {
         </div>
       </section>
 
-      {/* OUR CAPABILITIES */}
       <Section title="Наши возможности" data={services} />
 
-      {/* IMAGE SHOWCASE 1: CAMERA LENS */}
       <ImageShowcase 
         imgUrl={imgViralGrowth}
         headline="Создаем стратегию контента. Проектируем каждую секунду видео."
       />
 
-      {/* WHO WE HELP */}
       <Section title="Кому мы помогаем" data={audience} />
 
-      {/* METHODOLOGY */}
       <Section title="Методология" data={methodology} isNumbered />
 
-      {/* IMAGE SHOWCASE 2: VIDEO EDITING TIMELINE */}
       <ImageShowcase 
         imgUrl={imgRhythmDynamics}
         headline="Премиальный монтаж. Data-driven решения для вирусных охватов."
         isReversed 
       />
 
-      {/* TESTIMONIALS SECTION */}
       <motion.section 
         className="testimonials-section"
         initial="hidden"
@@ -367,7 +353,7 @@ function Section({ title, data, isNumbered }) {
   );
 }
 
-// КОМПОНЕНТ: БЛОК С ИЗОБРАЖЕНИЕМ И ЭФФЕКТОМ
+// БРОНЕБОЙНЫЙ ВАРИАНТ ИЗОБРАЖЕНИЙ (через <img>)
 function ImageShowcase({ imgUrl, headline, isReversed }) {
   const ref = useRef(null);
   
@@ -387,11 +373,12 @@ function ImageShowcase({ imgUrl, headline, isReversed }) {
       <motion.div 
         className="image-showcase-inner"
         style={{
-          backgroundImage: `url(${imgUrl})`,
           rotateX: skewX,
           willChange: "transform"
         }}
       >
+        <img src={imgUrl} alt="Showcase Background" className="showcase-bg-image" />
+
         <div className="image-overlay" />
         
         <motion.div 
