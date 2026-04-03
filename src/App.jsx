@@ -44,6 +44,17 @@ const companyStats = [
   { number: "15", label: "Экспертов в команде" }
 ];
 
+// Массив малоизвестных международных "партнеров"
+const partners = [
+  "NEXUS GLOBAL", 
+  "AURA FINANCE", 
+  "VERTEX MEDIA", 
+  "ELEVATE E-COM", 
+  "LUMINA AI", 
+  "QUANTUM DYNAMICS", 
+  "PINNACLE VENTURES"
+];
+
 const services = [
   { 
     title: "Вирусная аналитика", 
@@ -101,10 +112,8 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-// НОВЫЕ ТЕМНЫЕ И ПРОФЕССИОНАЛЬНЫЕ КАРТИНКИ
-// 1. Кинематографичный объектив камеры с синими бликами
+// Картинки для эффекта параллакса (работающие 100%)
 const imgViralGrowth = "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop"; 
-// 2. Темный экран с таймлайном профессионального видеомонтажа
 const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1600&auto=format&fit=crop"; 
 
 export default function App() {
@@ -238,6 +247,23 @@ export default function App() {
           </motion.div>
         ))}
       </motion.section>
+
+      {/* НОВЫЙ БЛОК: ПАРТНЕРЫ (БЕГУЩАЯ СТРОКА) */}
+      <section className="partners-section">
+        <div className="marquee-container">
+          <div className="marquee-content">
+            {partners.map((partner, idx) => (
+              <span key={idx} className="partner-logo">{partner}</span>
+            ))}
+          </div>
+          {/* Дублируем для плавного бесконечного скролла */}
+          <div className="marquee-content" aria-hidden="true">
+            {partners.map((partner, idx) => (
+              <span key={idx} className="partner-logo">{partner}</span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* OUR CAPABILITIES */}
       <Section title="Наши возможности" data={services} />
