@@ -2,7 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* BASE */
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: auto; /* Важно: Lenis сам управляет скроллом, нативный отключаем */
+}
+
+/* КАСТОМНЫЙ СКРОЛЛБАР */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050508; 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(129, 140, 248, 0.3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(129, 140, 248, 0.6); 
+}
+
+/* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ */
+@media (pointer: fine) {
+  body, a, button {
+    cursor: none !important;
+  }
+}
 
 body {
   margin: 0;
@@ -15,6 +39,21 @@ body {
     radial-gradient(circle at 15% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 85% 70%, rgba(56, 189, 248, 0.06) 0%, transparent 40%);
   background-attachment: fixed;
+}
+
+/* СТИЛЬ КАСТОМНОГО КУРСОРA */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none; /* Чтобы курсор не блокировал клики */
+  z-index: 9999;
+  mix-blend-mode: difference; /* Делает курсор инвертированным на светлом фоне */
+  will-change: transform;
 }
 
 /* CONTAINER */
@@ -58,19 +97,19 @@ body {
 }
 
 .logo-main {
-  font-size: 46px; /* Увеличенный размер */
+  font-size: 46px; 
   font-weight: 700;
   font-family: 'Bebas Neue', sans-serif;
   background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  letter-spacing: 8px; /* Расширенный интервал */
-  margin-right: -8px; /* Компенсация отступа последней буквы для центровки */
+  letter-spacing: 8px; 
+  margin-right: -8px; 
 }
 
 .logo-line {
-  width: 130%; /* Линия чуть шире под большой логотип */
+  width: 130%; 
   height: 2px;
   background: linear-gradient(90deg, transparent, #818cf8, transparent);
   margin-top: 6px;
@@ -89,7 +128,6 @@ body {
   border-radius: 100px;
   font-weight: 600;
   border: none;
-  cursor: pointer;
   background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%);
   color: #ffffff;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -130,14 +168,13 @@ body {
   margin-top: 30px;
 }
 
-/* TYPOGRAPHY - ПРЕМИАЛЬНЫЕ ЗАГОЛОВКИ */
+/* TYPOGRAPHY */
 h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 5.5rem;
   margin-bottom: 24px;
   line-height: 1.1;
   letter-spacing: 2px;
-  /* Единый платиново-индиго градиент для главного текста */
   background: linear-gradient(135deg, #ffffff 10%, #d8b4fe 60%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -147,7 +184,6 @@ h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5rem;
   margin-bottom: 50px;
-  /* Градиент в том же стиле, что и h2 */
   background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 50%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -300,7 +336,6 @@ h3 {
   line-height: 1;
 }
 
-/* ВТОРОСТЕПЕННАЯ ИНФОРМАЦИЯ (ТЕГИ И МЕТРИКИ) */
 .tags-container {
   display: flex;
   flex-wrap: wrap;
@@ -435,7 +470,6 @@ footer {
   opacity: 0.6;
 }
 
-/* Сброс интервала для логотипа в футере */
 .footer-logo {
   font-size: 32px;
   letter-spacing: 4px;
@@ -449,6 +483,9 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  /* Отключаем кастомный курсор на мобильных */
+  .custom-cursor { display: none; }
+  
   h2 { font-size: 3.2rem; }
   h3 { font-size: 2.5rem; }
   .header-inner { padding: 12px 20px; justify-content: center; }
