@@ -111,8 +111,9 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-const imgViralGrowth = "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop"; 
-const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1600&auto=format&fit=crop"; 
+// ТЕПЕРЬ ИСПОЛЬЗУЕМ ЛОКАЛЬНЫЕ ПУТИ К КАРТИНКАМ ИЗ ПАПКИ PUBLIC
+const imgViralGrowth = "/analytics.jpg"; 
+const imgRhythmDynamics = "/timeline.jpg"; 
 
 export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -353,7 +354,6 @@ function Section({ title, data, isNumbered }) {
   );
 }
 
-// БРОНЕБОЙНЫЙ ВАРИАНТ ИЗОБРАЖЕНИЙ (через <img>)
 function ImageShowcase({ imgUrl, headline, isReversed }) {
   const ref = useRef(null);
   
