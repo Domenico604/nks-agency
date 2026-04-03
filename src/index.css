@@ -509,7 +509,7 @@ footer {
   position: relative;
   transform-style: preserve-3d; /* Для 3D трансформаций */
   
-  /* Эффект гармоничного вписывания в фон (важно для реализма) */
+  /* Эффект гармоничного вписывания в фон */
   mix-blend-mode: multiply; 
   opacity: 0.8;
 }
@@ -548,7 +548,7 @@ footer {
 }
 
 .showcase-headline {
-  /* Используем тот же премиальный стиль заголовков, но чуть компактнее */
+  /* Тот же премиальный стиль заголовков, но чуть компактнее */
   font-family: 'Bebas Neue', sans-serif;
   font-size: 4rem; 
   line-height: 1.1;
