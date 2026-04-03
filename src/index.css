@@ -58,25 +58,26 @@ body {
 }
 
 .logo-main {
-  font-size: 38px;
+  font-size: 46px; /* Увеличенный размер */
   font-weight: 700;
   font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  letter-spacing: 2px;
+  letter-spacing: 8px; /* Расширенный интервал */
+  margin-right: -8px; /* Компенсация отступа последней буквы для центровки */
 }
 
 .logo-line {
-  width: 120%;
+  width: 130%; /* Линия чуть шире под большой логотип */
   height: 2px;
   background: linear-gradient(90deg, transparent, #818cf8, transparent);
-  margin-top: 4px;
+  margin-top: 6px;
   border-radius: 2px;
 }
 
-/* BUTTONS - ОДИНАКОВЫЕ И КЛИКАБЕЛЬНЫЕ */
+/* BUTTONS */
 .buttons-group { 
   display: flex; 
   gap: 16px; 
@@ -89,7 +90,6 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  /* Сочный сине-фиолетовый градиент */
   background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%);
   color: #ffffff;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -100,10 +100,9 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden; /* Важно для блика */
+  overflow: hidden;
 }
 
-/* Блик (Shimmer) на кнопке */
 .button::before {
   content: '';
   position: absolute;
@@ -122,7 +121,7 @@ body {
 }
 
 .button:hover::before {
-  left: 150%; /* Запускает анимацию блика при наведении */
+  left: 150%; 
 }
 
 .button.main-cta {
@@ -131,28 +130,25 @@ body {
   margin-top: 30px;
 }
 
-/* TYPOGRAPHY - ЦВЕТА ЗАГОЛОВКОВ */
+/* TYPOGRAPHY - ПРЕМИАЛЬНЫЕ ЗАГОЛОВКИ */
 h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 5.5rem;
   margin-bottom: 24px;
   line-height: 1.1;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-.text-gradient {
-  background: linear-gradient(90deg, #818cf8, #c084fc, #38bdf8);
+  letter-spacing: 2px;
+  /* Единый платиново-индиго градиент для главного текста */
+  background: linear-gradient(135deg, #ffffff 10%, #d8b4fe 60%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Единый градиент для всех h3 (заголовков секций) */
 h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5rem;
   margin-bottom: 50px;
-  background: linear-gradient(90deg, #ffffff 0%, #a5b4fc 50%, #38bdf8 100%);
+  /* Градиент в том же стиле, что и h2 */
+  background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 50%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
@@ -269,7 +265,6 @@ h3 {
 
 .card-top { margin-bottom: 16px; }
 
-/* Обновленный h4 внутри карточек для контраста */
 .card h4 {
   font-size: 1.4rem;
   margin: 0;
@@ -440,6 +435,13 @@ footer {
   opacity: 0.6;
 }
 
+/* Сброс интервала для логотипа в футере */
+.footer-logo {
+  font-size: 32px;
+  letter-spacing: 4px;
+  margin-right: -4px;
+}
+
 .footer-content p {
   font-size: 14px;
   margin: 0;
@@ -450,7 +452,7 @@ footer {
   h2 { font-size: 3.2rem; }
   h3 { font-size: 2.5rem; }
   .header-inner { padding: 12px 20px; justify-content: center; }
-  .logo-main { font-size: 28px; }
+  .logo-main { font-size: 38px; letter-spacing: 6px; }
   .buttons-group { width: 100%; justify-content: center; }
   .stats-section { gap: 30px; padding: 40px 0; }
   .stat-block { min-width: 140px; }
