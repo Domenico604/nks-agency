@@ -23,7 +23,7 @@ html {
 
 /* СКРЫВАЕМ СТАНДАРТНЫЙ КУРСОР НА ДЕСКТОПЕ */
 @media (pointer: fine) {
-  body, a, button {
+  * {
     cursor: none !important;
   }
 }
@@ -51,7 +51,7 @@ body {
   background: #fff;
   border-radius: 50%;
   pointer-events: none; /* Чтобы курсор не блокировал клики */
-  z-index: 9999;
+  z-index: 99999;
   mix-blend-mode: difference; /* Делает курсор инвертированным на светлом фоне */
   will-change: transform;
 }
@@ -509,9 +509,8 @@ footer {
   position: relative;
   transform-style: preserve-3d; /* Для 3D трансформаций */
   
-  /* Эффект гармоничного вписывания в фон (важно для реализма) */
-  mix-blend-mode: multiply; 
-  opacity: 0.8;
+  /* Картинка теперь яркая и четкая */
+  opacity: 1; 
 }
 
 .image-overlay {
@@ -520,8 +519,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Темный градиент поверх изображения для контраста текста */
-  background: linear-gradient(180deg, rgba(5, 5, 8, 0.4) 0%, rgba(5, 5, 8, 0.9) 100%);
+  /* Мягкий темный градиент для контраста с текстом, не перекрывающий саму картинку полностью */
+  background: linear-gradient(180deg, rgba(5, 5, 8, 0.3) 0%, rgba(5, 5, 8, 0.9) 100%);
   z-index: 1;
 }
 
@@ -548,7 +547,6 @@ footer {
 }
 
 .showcase-headline {
-  /* Используем тот же премиальный стиль заголовков, но чуть компактнее */
   font-family: 'Bebas Neue', sans-serif;
   font-size: 4rem; 
   line-height: 1.1;
