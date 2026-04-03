@@ -17,7 +17,15 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8 }
+    transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] }
+  }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
   }
 };
 
@@ -30,28 +38,97 @@ const data = [
 ];
 
 const services = [
-  { title: "Вирусная аналитика", text: "Анализируем тренды и создаём форматы, которые залетают в рекомендации." },
-  { title: "Сценарии удержания", text: "Каждое видео строится вокруг удержания внимания." },
-  { title: "Монтаж", text: "Динамичный монтаж с высоким retention." },
-  { title: "Стратегия", text: "Система контента, которая даёт рост." },
-  { title: "Бренд", text: "Формируем узнаваемость через контент." },
-  { title: "Аналитика", text: "Оптимизация через метрики." }
+  { 
+    title: "Вирусная аналитика", 
+    text: "Анализируем скрытые паттерны алгоритмов и создаём форматы, обреченные на виральность.",
+    tags: ["#Тренды", "#Ресерч", "#Алгоритмы"]
+  },
+  { 
+    title: "Сценарии удержания", 
+    text: "Проектируем каждую секунду видео так, чтобы зритель не мог свайпнуть. Глубокая работа с триггерами.",
+    tags: ["#Retention", "#Копирайтинг", "#Хуки"]
+  },
+  { 
+    title: "Премиальный монтаж", 
+    text: "Динамичный, но чистый эдит. Визуальные эффекты, которые удерживают внимание, а не раздражают.",
+    tags: ["#VFX", "#Саунд-дизайн", "#Динамика"]
+  },
+  { 
+    title: "Комплексная стратегия", 
+    text: "Разрабатываем долгосрочную систему контента, которая регулярно генерирует целевой трафик.",
+    tags: ["#Позиционирование", "#Воронки"]
+  },
+  { 
+    title: "Упаковка бренда", 
+    text: "Формируем сильную визуальную и смысловую узнаваемость вашего проекта в медиа-пространстве.",
+    tags: ["#Айдентика", "#Смыслы", "#Дизайн"]
+  },
+  { 
+    title: "Deep Аналитика", 
+    text: "Еженедельный разбор метрик. Докручиваем форматы и стратегии на основе реальных данных удержания.",
+    tags: ["#A/B Тесты", "#Метрики", "#Оптимизация"]
+  }
+];
+
+const audience = [
+  { 
+    title: "Бренды и Компании", 
+    text: "Конвертируем просмотры в лояльность и клиентов. Построение HR-бренда и медийного веса.", 
+    stats: "Рост узнаваемости x3" 
+  },
+  { 
+    title: "E-commerce", 
+    text: "Создаем продуктовый контент, который продает нативно через обзоры, тренды и распаковки.", 
+    stats: "Снижение CPA" 
+  },
+  { 
+    title: "Креаторы", 
+    text: "Берем на себя всю рутину от идей до монтажа. Вы только снимаетесь — мы делаем рост охватов.", 
+    stats: "Экономия 40ч/мес" 
+  },
+  { 
+    title: "Инфлюенсеры", 
+    text: "Масштабирование личного бренда, выход на новые площадки и монетизация аудитории.", 
+    stats: "Новые рынки" 
+  },
+  { 
+    title: "Агентства", 
+    text: "Закрываем потребность в production под ключ для ваших клиентов. White-label формат.", 
+    stats: "B2B партнерство" 
+  },
+  { 
+    title: "Стартапы", 
+    text: "Быстрый рост аудитории с нуля для валидации гипотез и привлечения первых пользователей.", 
+    stats: "Быстрый старт" 
+  }
+];
+
+const methodology = [
+  { title: "Research", subtitle: "Этап 01", text: "Глубокий анализ ниши, конкурентов и актуальных трендов платформы." },
+  { title: "Script", subtitle: "Этап 02", text: "Написание сценария с проработанной кривой удержания и сильными хуками." },
+  { title: "Production", subtitle: "Этап 03", text: "Помощь со съемкой или полная генерация визуального материала." },
+  { title: "Edit", subtitle: "Этап 04", text: "Сборка ролика: цветокоррекция, графика, саунд-дизайн и ритмика." },
+  { title: "Publishing", subtitle: "Этап 05", text: "SEO-оптимизация, правильные теги, обложки и время публикации." },
+  { title: "Analytics", subtitle: "Этап 06", text: "Сбор данных после публикации и корректировка следующего спринта." }
 ];
 
 const testimonials = [
   {
     name: "Алексей",
-    text: "После работы с командой NKS контент стал системой. Рост х10 и стабильные рекомендации.",
+    role: "CEO TechStartup",
+    text: "После работы с командой NKS контент стал предсказуемой системой. Рост х10 и стабильные рекомендации на каждом ролике.",
     img: "https://i.pravatar.cc/100?img=12"
   },
   {
     name: "Мария",
-    text: "Теперь каждый ролик работает как часть стратегии — рост стал управляемым.",
+    role: "Fashion Бренд",
+    text: "Теперь каждый ролик работает как часть большой воронки — мы наконец-то видим прямую конверсию из Shorts в продажи.",
     img: "https://i.pravatar.cc/100?img=5"
   },
   {
     name: "Илья",
-    text: "Просмотры стабильно растут без рекламы — контент начал работать сам.",
+    role: "Крипто-инфлюенсер",
+    text: "Просмотры стабильно растут без вливаний в рекламу. Ребята делают магию с удержанием аудитории.",
     img: "https://i.pravatar.cc/100?img=8"
   }
 ];
@@ -59,7 +136,6 @@ const testimonials = [
 export default function App() {
   return (
     <div className="container">
-
       {/* HEADER */}
       <header className="header">
         <div className="header-inner">
@@ -81,67 +157,59 @@ export default function App() {
 
       {/* HERO SECTION */}
       <motion.section className="hero" initial="hidden" animate="show" variants={fadeUp}>
+        <div className="hero-badge">Агентство YouTube & Shorts</div>
         <h2>
           Контент, который превращается<br />
-          в системный рост
+          в <span className="text-gradient">системный рост</span>
         </h2>
 
         <p className="hero-text">
-          Мы создаём стратегию контента, которая масштабирует охваты и превращает просмотры в рост.
+          Мы создаём data-driven стратегию контента, которая пробивает алгоритмы, масштабирует охваты и превращает зрителей в фанатов.
         </p>
 
         <button className="button main-cta" onClick={() => window.open("https://t.me/NKSmanager")}>
           Начать масштабирование
         </button>
 
-        <div className="chart-box">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.12)" />
-              <XAxis dataKey="name" stroke="rgba(255,255,255,0.7)" />
-              <YAxis stroke="rgba(255,255,255,0.7)" />
-              <Tooltip contentStyle={{ backgroundColor: "#0a0f1f", border: "none", borderRadius: "10px" }} />
-              <Line type="monotone" dataKey="До" stroke="#a78bfa" strokeWidth={2} dot={{ r: 4 }} />
-              <Line type="monotone" dataKey="После" stroke="#38bdf8" strokeWidth={4} dot={{ r: 6 }} />
+        <motion.div className="chart-box" variants={fadeUp}>
+          <div className="chart-header">
+            <div>
+              <span className="chart-title">Динамика просмотров</span>
+              <span className="chart-subtitle">Органический рост за 5 недель</span>
+            </div>
+            <div className="chart-legend">
+              <span className="legend-item"><span className="dot dot-before"></span>До нас</span>
+              <span className="legend-item"><span className="dot dot-after"></span>С NKS</span>
+            </div>
+          </div>
+          <ResponsiveContainer width="100%" height="80%">
+            <LineChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
+              <XAxis dataKey="name" stroke="rgba(255,255,255,0.4)" fontSize={12} tickLine={false} axisLine={false} dy={10} />
+              <YAxis stroke="rgba(255,255,255,0.4)" fontSize={12} tickLine={false} axisLine={false} dx={-10} />
+              <Tooltip 
+                contentStyle={{ backgroundColor: "rgba(10, 15, 30, 0.9)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px", backdropFilter: "blur(10px)", color: "#fff" }} 
+                itemStyle={{ color: "#fff" }}
+              />
+              <Line type="monotone" dataKey="До" stroke="#64748b" strokeWidth={2} dot={{ r: 4, fill: "#0f172a", strokeWidth: 2 }} activeDot={{ r: 6 }} />
+              <Line type="monotone" dataKey="После" stroke="#818cf8" strokeWidth={4} dot={{ r: 5, fill: "#0f172a", strokeWidth: 2 }} activeDot={{ r: 8, stroke: "#38bdf8", strokeWidth: 2 }} />
             </LineChart>
           </ResponsiveContainer>
-        </div>
+        </motion.div>
       </motion.section>
 
       {/* OTHER SECTIONS */}
       <Section title="Наши возможности" data={services} />
-
-      <Section
-        title="Кому мы помогаем"
-        data={[
-          { title: "Бренды", text: "Рост через вирусный контент." },
-          { title: "Интернет-магазины", text: "Контент для увеличения продаж." },
-          { title: "Креаторы", text: "Системный рост охватов." },
-          { title: "Инфлюенсеры", text: "Личный бренд." },
-          { title: "Агентства", text: "Контент под клиентов." },
-          { title: "Стартапы", text: "Быстрый рост аудитории." }
-        ]}
-      />
-
-      <Section
-        title="Методология"
-        data={[
-          { title: "Research", text: "Анализ ниши и трендов." },
-          { title: "Script", text: "Сценарий с удержанием." },
-          { title: "Edit", text: "Динамичный монтаж." },
-          { title: "Hook", text: "Сильный первый кадр." },
-          { title: "Analytics", text: "Оптимизация через метрики." },
-          { title: "Testing", text: "A/B тесты форматов." }
-        ]}
-      />
+      <Section title="Кому мы помогаем" data={audience} />
+      <Section title="Методология" data={methodology} isNumbered />
 
       {/* TESTIMONIALS SECTION */}
       <motion.section 
         className="testimonials-section"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
-        variants={fadeUp}
+        viewport={{ once: true, margin: "-100px" }}
+        variants={staggerContainer}
       >
         <h3>Результаты и отзывы</h3>
         <div className="grid">
@@ -149,11 +217,14 @@ export default function App() {
             <motion.div
               key={i}
               className="card testimonial-card"
-              whileHover={{ y: -10 }}
+              variants={fadeUp}
             >
               <div className="testimonial-header">
                 <img src={t.img} className="avatar" alt={t.name} />
-                <h4>{t.name}</h4>
+                <div>
+                  <h4>{t.name}</h4>
+                  <span className="testimonial-role">{t.role}</span>
+                </div>
               </div>
               <p>"{t.text}"</p>
               <div className="stars">★★★★★</div>
@@ -162,26 +233,49 @@ export default function App() {
         </div>
       </motion.section>
 
-      <footer>© {new Date().getFullYear()} NKS • Системный рост контента</footer>
+      <footer>
+        <div className="footer-content">
+          <div className="logo-main">NKS</div>
+          <p>© {new Date().getFullYear()} NKS Agency. Системный рост контента.</p>
+        </div>
+      </footer>
     </div>
   );
 }
 
-function Section({ title, data }) {
+function Section({ title, data, isNumbered }) {
   return (
     <motion.section
       className="content-section"
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true }}
-      variants={fadeUp}
+      viewport={{ once: true, margin: "-100px" }}
+      variants={staggerContainer}
     >
       <h3>{title}</h3>
       <div className="grid">
         {data.map((item, i) => (
-          <motion.div key={i} className="card" whileHover={{ scale: 1.03 }}>
-            <h4>{item.title}</h4>
+          <motion.div key={i} className="card" variants={fadeUp}>
+            <div className="card-top">
+              {item.subtitle && <span className="card-subtitle">{item.subtitle}</span>}
+              {isNumbered && !item.subtitle && <span className="card-number">0{i + 1}</span>}
+              <h4>{item.title}</h4>
+            </div>
             <p>{item.text}</p>
+            
+            {/* Дополнительная информация снизу карточки */}
+            {item.tags && (
+              <div className="tags-container">
+                {item.tags.map((tag, idx) => (
+                  <span key={idx} className="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+            {item.stats && (
+              <div className="stats-badge">
+                <span className="stats-icon">↗</span> {item.stats}
+              </div>
+            )}
           </motion.div>
         ))}
       </div>
