@@ -167,7 +167,7 @@ export default function App() {
         <div className="hero-badge">Агентство YouTube & Shorts</div>
         <h2>
           Контент, который превращается<br />
-          в <span className="text-gradient">системный рост</span>
+          в системный рост
         </h2>
 
         <p className="hero-text">
@@ -258,7 +258,7 @@ export default function App() {
 
       <footer>
         <div className="footer-content">
-          <div className="logo-main">NKS</div>
+          <div className="logo-main footer-logo">NKS</div>
           <p>© {new Date().getFullYear()} NKS Vector. Системный рост контента.</p>
         </div>
       </footer>
