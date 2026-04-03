@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   LineChart,
   Line,
@@ -8,7 +8,7 @@ import {
   CartesianGrid,
   ResponsiveContainer
 } from "recharts";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import "./index.css";
 
@@ -41,7 +41,7 @@ const companyStats = [
   { number: "4+", label: "Года на рынке" },
   { number: "120+", label: "Успешных проектов" },
   { number: "500M+", label: "Сгенерировано просмотров" },
-  { number: "15", label: "Экспертов в команде" }
+  { number: "Toshkent City", label: "Главный офис" } // Обновлено
 ];
 
 const services = [
@@ -101,6 +101,10 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
+// URLs стилизованных изображений
+const imgOfficeTashkent = "https://images.unsplash.com/photo-1620803454796-000494485770?q=80&w=1600&auto=format&fit=crop"; // Пример: современный офис с видом на город
+const imgButtonControl = "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop"; // Пример: Крупный план технологичных кнопок
+
 export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -143,7 +147,7 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* УСКОРЕННЫЙ КАСТОМНЫЙ КУРСОР */}
+      {/* КАСТОМНЫЙ КУРСОР */}
       <motion.div
         className="custom-cursor"
         animate={{
@@ -152,7 +156,6 @@ export default function App() {
           scale: isHovering ? 1.5 : 1,
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
-        // Измененные параметры физики: огромная жесткость, малая масса
         transition={{ type: "spring", stiffness: 1200, damping: 35, mass: 0.1 }}
       />
 
@@ -234,10 +237,27 @@ export default function App() {
         ))}
       </motion.section>
 
-      {/* OTHER SECTIONS */}
+      {/* OUR CAPABILITIES */}
       <Section title="Наши возможности" data={services} />
+
+      {/* IMAGE SHOWCASE 1: TASHKENT OFFICE (НОВЫЙ БЛОК) */}
+      <ImageShowcase 
+        imgUrl={imgOfficeTashkent}
+        headline="NKS Vector в Tashkent City. Базируемся в центре, растим охваты по всему миру."
+      />
+
+      {/* WHO WE HELP */}
       <Section title="Кому мы помогаем" data={audience} />
+
+      {/* METHODOLOGY */}
       <Section title="Методология" data={methodology} isNumbered />
+
+      {/* IMAGE SHOWCASE 2: CONTROL (НОВЫЙ БЛОК) */}
+      <ImageShowcase 
+        imgUrl={imgButtonControl}
+        headline="Управляем вниманием. Data-driven стратегия пробивает алгоритмы."
+        isReversed // Опциональный флаг для изменения эффекта
+      />
 
       {/* TESTIMONIALS SECTION */}
       <motion.section 
@@ -316,5 +336,48 @@ function Section({ title, data, isNumbered }) {
         ))}
       </div>
     </motion.section>
+  );
+}
+
+// НОВЫЙ КОМПОНЕНТ: БЛОК С ИЗОБРАЖЕНИЕМ И ЭФФЕКТОМ
+function ImageShowcase({ imgUrl, headline, isReversed }) {
+  const ref = useRef(null);
+  
+  // Отслеживание прогресса скролла относительно этого компонента
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  // Физика пружины для плавности искажения
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
+
+  // Трансформация прогресса скролла в 3D искажение (perspective skew)
+  const yRange = isReversed ? [20, -20] : [-20, 20]; // Направление искажения
+  const skewX = useTransform(smoothProgress, [0, 1], yRange);
+  const opacityText = useTransform(smoothProgress, [0.1, 0.5, 0.9], [0, 1, 0]); // Текст появляется и исчезает
+
+  return (
+    <div ref={ref} className="image-showcase-container">
+      <motion.div 
+        className="image-showcase-inner"
+        style={{
+          backgroundImage: `url(${imgUrl})`,
+          rotateX: skewX, // 3D наклон по вертикали
+          willChange: "transform"
+        }}
+      >
+        <div className="image-overlay" /> {/* Темное наложение для контраста */}
+        
+        {/* Текстовое наложение с эффектом параллакса */}
+        <motion.div 
+          className="showcase-text-content"
+          style={{ opacity: opacityText, y: isReversed ? 50 : -50 }} // Текст плавно движется
+        >
+          <span className="showcase-badge">NKS Vector Context</span>
+          <h2 className="showcase-headline">{headline}</h2>
+        </motion.div>
+      </motion.div>
+    </div>
   );
 }
