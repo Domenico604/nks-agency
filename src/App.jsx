@@ -37,7 +37,6 @@ const data = [
   { name: "Неделя 5", До: 700, После: 18500 }
 ];
 
-// Реалистичные цифры для блока статистики
 const companyStats = [
   { number: "4+", label: "Года на рынке" },
   { number: "120+", label: "Успешных проектов" },
@@ -156,7 +155,7 @@ export default function App() {
             <button className="button" onClick={() => window.open("https://t.me/NKSmanager")}>
               Консалтинг
             </button>
-            <button className="button secondary" onClick={() => window.open("https://t.me/NKSmanager")}>
+            <button className="button" onClick={() => window.open("https://t.me/NKSmanager")}>
               Прайс-лист
             </button>
           </div>
@@ -206,7 +205,7 @@ export default function App() {
         </motion.div>
       </motion.section>
 
-      {/* STATS SECTION (НОВЫЙ БЛОК) */}
+      {/* STATS SECTION */}
       <motion.section 
         className="stats-section"
         initial="hidden"
@@ -260,7 +259,7 @@ export default function App() {
       <footer>
         <div className="footer-content">
           <div className="logo-main">NKS</div>
-          <p>© {new Date().getFullYear()} NKS Agency. Системный рост контента.</p>
+          <p>© {new Date().getFullYear()} NKS Vector. Системный рост контента.</p>
         </div>
       </footer>
     </div>
@@ -287,7 +286,6 @@ function Section({ title, data, isNumbered }) {
             </div>
             <p>{item.text}</p>
             
-            {/* Дополнительная информация снизу карточки */}
             {item.tags && (
               <div className="tags-container">
                 {item.tags.map((tag, idx) => (
