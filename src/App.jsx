@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   LineChart,
   Line,
@@ -8,8 +8,8 @@ import {
   CartesianGrid,
   ResponsiveContainer
 } from "recharts";
-
 import { motion } from "framer-motion";
+import Lenis from "@studio-freight/lenis"; // Импорт плавного скролла
 import "./index.css";
 
 const fadeUp = {
@@ -78,36 +78,12 @@ const services = [
 ];
 
 const audience = [
-  { 
-    title: "Бренды и Компании", 
-    text: "Конвертируем просмотры в лояльность и клиентов. Построение HR-бренда и медийного веса.", 
-    stats: "Рост узнаваемости x3" 
-  },
-  { 
-    title: "E-commerce", 
-    text: "Создаем продуктовый контент, который продает нативно через обзоры, тренды и распаковки.", 
-    stats: "Снижение CPA" 
-  },
-  { 
-    title: "Креаторы", 
-    text: "Берем на себя всю рутину от идей до монтажа. Вы только снимаетесь — мы делаем рост охватов.", 
-    stats: "Экономия 40ч/мес" 
-  },
-  { 
-    title: "Инфлюенсеры", 
-    text: "Масштабирование личного бренда, выход на новые площадки и монетизация аудитории.", 
-    stats: "Новые рынки" 
-  },
-  { 
-    title: "Агентства", 
-    text: "Закрываем потребность в production под ключ для ваших клиентов. White-label формат.", 
-    stats: "B2B партнерство" 
-  },
-  { 
-    title: "Стартапы", 
-    text: "Быстрый рост аудитории с нуля для валидации гипотез и привлечения первых пользователей.", 
-    stats: "Быстрый старт" 
-  }
+  { title: "Бренды и Компании", text: "Конвертируем просмотры в лояльность и клиентов. Построение HR-бренда.", stats: "Рост узнаваемости x3" },
+  { title: "E-commerce", text: "Создаем продуктовый контент, который продает нативно через обзоры и тренды.", stats: "Снижение CPA" },
+  { title: "Креаторы", text: "Берем на себя всю рутину от идей до монтажа. Вы только снимаетесь.", stats: "Экономия 40ч/мес" },
+  { title: "Инфлюенсеры", text: "Масштабирование личного бренда, выход на новые площадки и монетизация.", stats: "Новые рынки" },
+  { title: "Агентства", text: "Закрываем потребность в production под ключ для ваших клиентов. White-label.", stats: "B2B партнерство" },
+  { title: "Стартапы", text: "Быстрый рост аудитории с нуля для валидации гипотез и привлечения юзеров.", stats: "Быстрый старт" }
 ];
 
 const methodology = [
@@ -120,29 +96,69 @@ const methodology = [
 ];
 
 const testimonials = [
-  {
-    name: "Алексей",
-    role: "CEO TechStartup",
-    text: "После работы с командой NKS контент стал предсказуемой системой. Рост х10 и стабильные рекомендации на каждом ролике.",
-    img: "https://i.pravatar.cc/100?img=12"
-  },
-  {
-    name: "Мария",
-    role: "Fashion Бренд",
-    text: "Теперь каждый ролик работает как часть большой воронки — мы наконец-то видим прямую конверсию из Shorts в продажи.",
-    img: "https://i.pravatar.cc/100?img=5"
-  },
-  {
-    name: "Илья",
-    role: "Крипто-инфлюенсер",
-    text: "Просмотры стабильно растут без вливаний в рекламу. Ребята делают магию с удержанием аудитории.",
-    img: "https://i.pravatar.cc/100?img=8"
-  }
+  { name: "Алексей", role: "CEO TechStartup", text: "Контент стал предсказуемой системой. Рост х10 и стабильные рекомендации.", img: "https://i.pravatar.cc/100?img=12" },
+  { name: "Мария", role: "Fashion Бренд", text: "Каждый ролик работает как часть большой воронки — видим конверсию в продажи.", img: "https://i.pravatar.cc/100?img=5" },
+  { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
 export default function App() {
+  // Состояния для кастомного курсора
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    // Инициализация плавного скролла Lenis
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 1,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Логика курсора
+    const updateMousePosition = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    const handleMouseOver = (e) => {
+      // Проверяем, наведен ли курсор на кликабельный элемент
+      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card')) {
+        setIsHovering(true);
+      } else {
+        setIsHovering(false);
+      }
+    };
+
+    window.addEventListener("mousemove", updateMousePosition);
+    window.addEventListener("mouseover", handleMouseOver);
+
+    return () => {
+      lenis.destroy();
+      window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("mouseover", handleMouseOver);
+    };
+  }, []);
+
   return (
     <div className="container">
+      {/* КАСТОМНЫЙ КУРСОР */}
+      <motion.div
+        className="custom-cursor"
+        animate={{
+          x: mousePosition.x - (isHovering ? 24 : 10), // Центровка в зависимости от размера
+          y: mousePosition.y - (isHovering ? 24 : 10),
+          scale: isHovering ? 1.5 : 1,
+          opacity: mousePosition.x === 0 ? 0 : 1
+        }}
+        transition={{ type: "spring", stiffness: 400, damping: 28, mass: 0.5 }}
+      />
+
       {/* HEADER */}
       <header className="header">
         <div className="header-inner">
