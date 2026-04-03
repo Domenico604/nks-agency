@@ -37,11 +37,12 @@ const data = [
   { name: "Неделя 5", До: 700, После: 18500 }
 ];
 
+// Откатили статистику к исходному виду
 const companyStats = [
   { number: "4+", label: "Года на рынке" },
   { number: "120+", label: "Успешных проектов" },
   { number: "500M+", label: "Сгенерировано просмотров" },
-  { number: "Toshkent City", label: "Главный офис" } // Обновлено
+  { number: "15", label: "Экспертов в команде" }
 ];
 
 const services = [
@@ -101,9 +102,9 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-// URLs стилизованных изображений
-const imgOfficeTashkent = "https://images.unsplash.com/photo-1620803454796-000494485770?q=80&w=1600&auto=format&fit=crop"; // Пример: современный офис с видом на город
-const imgButtonControl = "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop"; // Пример: Крупный план технологичных кнопок
+//URLs стилизованных изображений (Абстрактный премиальный продакшн)
+const imgFocusCreation = "https://images.unsplash.com/photo-1619914757643-42ebf53678b8?q=80&w=1600&auto=format&fit=crop"; // Крупный план объектива
+const imgRhythmDynamics = "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1600&auto=format&fit=crop"; // Абстрактный звуковой таймлайн
 
 export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -240,10 +241,10 @@ export default function App() {
       {/* OUR CAPABILITIES */}
       <Section title="Наши возможности" data={services} />
 
-      {/* IMAGE SHOWCASE 1: TASHKENT OFFICE (НОВЫЙ БЛОК) */}
+      {/* IMAGE SHOWCASE 1: FOCUS & CREATION (НОВЫЙ БЛОК) */}
       <ImageShowcase 
-        imgUrl={imgOfficeTashkent}
-        headline="NKS Vector в Tashkent City. Базируемся в центре, растим охваты по всему миру."
+        imgUrl={imgFocusCreation}
+        headline="Создаем стратегию контента. Проектируем каждую секунду видео."
       />
 
       {/* WHO WE HELP */}
@@ -252,11 +253,11 @@ export default function App() {
       {/* METHODOLOGY */}
       <Section title="Методология" data={methodology} isNumbered />
 
-      {/* IMAGE SHOWCASE 2: CONTROL (НОВЫЙ БЛОК) */}
+      {/* IMAGE SHOWCASE 2: RHYTHM & DYNAMICS (НОВЫЙ БЛОК) */}
       <ImageShowcase 
-        imgUrl={imgButtonControl}
-        headline="Управляем вниманием. Data-driven стратегия пробивает алгоритмы."
-        isReversed // Опциональный флаг для изменения эффекта
+        imgUrl={imgRhythmDynamics}
+        headline="Премиальный монтаж. Data-driven решения для вирусных охватов."
+        isReversed // Направление эффекта изменено для разнообразия
       />
 
       {/* TESTIMONIALS SECTION */}
@@ -339,7 +340,7 @@ function Section({ title, data, isNumbered }) {
   );
 }
 
-// НОВЫЙ КОМПОНЕНТ: БЛОК С ИЗОБРАЖЕНИЕМ И ЭФФЕКТОМ
+// КОМПОНЕНТ: БЛОК С ИЗОБРАЖЕНИЕМ И ЭФФЕКТОМ
 function ImageShowcase({ imgUrl, headline, isReversed }) {
   const ref = useRef(null);
   
@@ -353,7 +354,7 @@ function ImageShowcase({ imgUrl, headline, isReversed }) {
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   // Трансформация прогресса скролла в 3D искажение (perspective skew)
-  const yRange = isReversed ? [20, -20] : [-20, 20]; // Направление искажения
+  const yRange = isReversed ? [25, -25] : [-25, 25]; // Направление искажения
   const skewX = useTransform(smoothProgress, [0, 1], yRange);
   const opacityText = useTransform(smoothProgress, [0.1, 0.5, 0.9], [0, 1, 0]); // Текст появляется и исчезает
 
@@ -372,9 +373,9 @@ function ImageShowcase({ imgUrl, headline, isReversed }) {
         {/* Текстовое наложение с эффектом параллакса */}
         <motion.div 
           className="showcase-text-content"
-          style={{ opacity: opacityText, y: isReversed ? 50 : -50 }} // Текст плавно движется
+          style={{ opacity: opacityText, y: isReversed ? 60 : -60 }} // Текст плавно движется
         >
-          <span className="showcase-badge">NKS Vector Context</span>
+          <span className="showcase-badge">NKS Vector Production</span>
           <h2 className="showcase-headline">{headline}</h2>
         </motion.div>
       </motion.div>
