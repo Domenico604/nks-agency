@@ -37,6 +37,14 @@ const data = [
   { name: "Неделя 5", До: 700, После: 18500 }
 ];
 
+// Реалистичные цифры для блока статистики
+const companyStats = [
+  { number: "4+", label: "Года на рынке" },
+  { number: "120+", label: "Успешных проектов" },
+  { number: "500M+", label: "Сгенерировано просмотров" },
+  { number: "15", label: "Экспертов в команде" }
+];
+
 const services = [
   { 
     title: "Вирусная аналитика", 
@@ -198,6 +206,22 @@ export default function App() {
         </motion.div>
       </motion.section>
 
+      {/* STATS SECTION (НОВЫЙ БЛОК) */}
+      <motion.section 
+        className="stats-section"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={staggerContainer}
+      >
+        {companyStats.map((stat, idx) => (
+          <motion.div key={idx} className="stat-block" variants={fadeUp}>
+            <div className="stat-number">{stat.number}</div>
+            <div className="stat-label">{stat.label}</div>
+          </motion.div>
+        ))}
+      </motion.section>
+
       {/* OTHER SECTIONS */}
       <Section title="Наши возможности" data={services} />
       <Section title="Кому мы помогаем" data={audience} />
@@ -273,7 +297,8 @@ function Section({ title, data, isNumbered }) {
             )}
             {item.stats && (
               <div className="stats-badge">
-                <span className="stats-icon">↗</span> {item.stats}
+                <span className="stats-icon">↗</span> 
+                <span>{item.stats}</span>
               </div>
             )}
           </motion.div>
