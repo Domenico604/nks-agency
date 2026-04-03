@@ -111,9 +111,9 @@ const testimonials = [
   { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
 ];
 
-// ТЕПЕРЬ ИСПОЛЬЗУЕМ ЛОКАЛЬНЫЕ ПУТИ К КАРТИНКАМ ИЗ ПАПКИ PUBLIC
-const imgViralGrowth = "/analytics.jpg"; 
-const imgRhythmDynamics = "/timeline.jpg"; 
+// Надежные ссылки на Pexels (графики и монтаж)
+const imgViralGrowth = "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1600"; 
+const imgRhythmDynamics = "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1600"; 
 
 export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
