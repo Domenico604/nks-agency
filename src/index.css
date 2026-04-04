@@ -1,97 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ЦВЕТОВЫЕ ПЕРЕМЕННЫЕ */
 :root {
-  --bg-color: #050508;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  --bg-main: #050508;
+  --bg-gradient: radial-gradient(circle at 15% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
+                 radial-gradient(circle at 85% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 40%);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #0ea5e9;
+  --accent-hover: #38bdf8;
   --card-bg: linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.2) 100%);
   --card-border: rgba(255, 255, 255, 0.04);
   --header-bg: rgba(5, 5, 8, 0.6);
-  --accent: #0ea5e9;
+  --cursor-color: #fff;
   --chart-grid: rgba(255, 255, 255, 0.05);
 }
 
 body.light-mode {
-  --bg-color: #f8fafc;
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --card-bg: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
-  --card-border: rgba(0, 0, 0, 0.06);
-  --header-bg: rgba(248, 250, 252, 0.8);
+  --bg-main: #f8fafc;
+  --bg-gradient: radial-gradient(circle at 15% 30%, rgba(14, 165, 233, 0.1) 0%, transparent 40%),
+                 radial-gradient(circle at 85% 70%, rgba(2, 132, 199, 0.05) 0%, transparent 40%);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
   --accent: #0284c7;
+  --accent-hover: #0369a1;
+  --card-bg: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --header-bg: rgba(248, 250, 252, 0.8);
+  --cursor-color: #000;
   --chart-grid: rgba(0, 0, 0, 0.05);
 }
 
 /* BASE */
 html { scroll-behavior: auto; }
-
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-main);
-  overflow-x: hidden;
-  padding-top: 100px;
-  background-color: var(--bg-color);
-  transition: background-color 0.4s ease;
+  margin: 0; font-family: 'Poppins', sans-serif;
+  color: var(--text-primary); background-color: var(--bg-main);
+  background-image: var(--bg-gradient); background-attachment: fixed;
+  overflow-x: hidden; padding-top: 100px; transition: background 0.3s ease;
 }
 
-/* Твои радиальные градиенты на фоне */
-body::before {
-  content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-  background-image: 
-    radial-gradient(circle at 15% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 85% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 40%);
-}
+@media (pointer: fine) { * { cursor: none !important; } }
 
-/* Остальные стили из твоего кода без изменений, но с использованием переменных */
 .custom-cursor {
   position: fixed; top: 0; left: 0; width: 20px; height: 20px;
-  background: var(--text-main); border-radius: 50%; pointer-events: none;
+  background: var(--cursor-color); border-radius: 50%; pointer-events: none;
   z-index: 99999; mix-blend-mode: difference; will-change: transform;
 }
 
+.container { max-width: 1200px; margin: auto; padding: 0 24px; text-align: center; }
+
+/* HEADER */
 .header {
   position: fixed; top: 0; left: 0; width: 100%; z-index: 999;
   background: var(--header-bg); backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--card-border);
 }
+.header-inner {
+  max-width: 1200px; margin: 0 auto; padding: 16px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
 
-/* Твой логотип */
 .logo-main {
-  font-size: 46px; font-weight: 700; font-family: 'Bebas Neue', sans-serif;
+  font-size: 46px; font-weight: 700; font-family: 'Bebas Neue';
   background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  line-height: 1; letter-spacing: 8px; margin-right: -8px;
+  letter-spacing: 8px; line-height: 1;
 }
 
-/* Темы для кнопок */
+/* BUTTONS */
+.button {
+  padding: 12px 28px; border-radius: 100px; border: none; cursor: pointer;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: #fff; font-weight: 600; transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
+}
+.button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4); }
+
 .theme-toggle {
   background: var(--card-bg); border: 1px solid var(--card-border);
-  color: var(--text-main); width: 42px; height: 42px; border-radius: 50%;
-  cursor: pointer; font-size: 18px; transition: 0.3s; margin-right: 10px;
+  color: var(--text-primary); width: 45px; height: 45px; border-radius: 50%;
+  cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center;
 }
 
-/* Карточки */
-.card {
-  padding: 36px 32px; border-radius: 24px;
-  background: var(--card-bg); border: 1px solid var(--card-border);
-  backdrop-filter: blur(12px); text-align: left; transition: all 0.4s ease;
-  color: var(--text-main);
-}
-.card h4 { color: var(--text-main); }
-.card p { color: var(--text-muted); }
-
-/* Остальной твой CSS (marquee, stats, chart) остается идентичным... */
-/* Просто замени старые цвета (типа #fff или #94a3b8) на переменные там, где это нужно */
-/* Для краткости я не дублирую весь твой CSS, но логика понятна: все секции сохраняются */
-
-.chart-box {
-  background: var(--card-bg); border: 1px solid var(--card-border);
-}
+/* HERO & TYPOGRAPHY */
 h2 {
-  font-family: 'Bebas Neue'; font-size: 5.5rem; line-height: 1.1;
-  background: linear-gradient(135deg, var(--text-main) 10%, #7dd3fc 60%, #0284c7 100%);
+  font-family: 'Bebas Neue'; font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.1; margin-bottom: 24px;
+  background: linear-gradient(135deg, var(--text-primary) 10%, #7dd3fc 60%, var(--accent) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
+h3 {
+  font-family: 'Bebas Neue'; font-size: 3.5rem; margin-bottom: 50px;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-hover) 50%, var(--accent) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* CARDS */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+.card {
+  padding: 36px 32px; border-radius: 24px; background: var(--card-bg);
+  border: 1px solid var(--card-border); backdrop-filter: blur(12px);
+  text-align: left; transition: 0.4s; position: relative;
+}
+.card:hover { transform: translateY(-6px); border-color: var(--accent); }
+.card h4 { font-size: 1.4rem; color: var(--text-primary); margin-bottom: 15px; }
+.card p { color: var(--text-secondary); line-height: 1.6; }
+
+/* MARQUEE */
+.partners-section { overflow: hidden; padding: 40px 0; margin: 40px 0; }
+.marquee-content { display: flex; animation: scroll 30s linear infinite; }
+.partner-logo { font-family: 'Bebas Neue'; font-size: 2.5rem; color: var(--text-secondary); opacity: 0.3; margin: 0 40px; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+
+/* CHARTS & STATS */
+.chart-box { height: 400px; padding: 30px; background: var(--card-bg); border-radius: 32px; border: 1px solid var(--card-border); margin-top: 50px; }
+.stat-number { font-family: 'Bebas Neue'; font-size: 4rem; color: var(--accent); line-height: 1; }
+
+/* IMAGE SHOWCASE */
+.image-showcase-container { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; height: 80vh; overflow: hidden; perspective: 1500px; }
+.image-showcase-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; }
+.showcase-bg-image { width: 100%; height: 100%; object-fit: cover; }
+.image-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent, var(--bg-main)); }
+
+.tag { background: rgba(14, 165, 233, 0.1); border: 1px solid var(--card-border); padding: 5px 12px; border-radius: 8px; font-size: 12px; color: var(--accent); margin-right: 8px; }
