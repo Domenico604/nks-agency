@@ -37,7 +37,7 @@ body {
     radial-gradient(circle at 15% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 85% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 40%);
   background-attachment: fixed;
-  transition: background-color 0.4s ease, color 0.4s ease; /* Плавная смена темы */
+  transition: background-color 0.4s ease, color 0.4s ease; 
 }
 
 .custom-cursor {
@@ -113,11 +113,47 @@ body {
 
 .buttons-group { 
   display: flex; 
-  gap: 16px; 
+  gap: 12px; 
   align-items: center;
 }
 
-/* Стили для переключателя темы */
+/* =============================
+   LANG SWITCHER
+   ============================= */
+.lang-switcher {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 4px;
+  backdrop-filter: blur(5px);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: #fff;
+}
+
+.lang-btn.active {
+  background: rgba(2, 132, 199, 0.3);
+  color: #38bdf8;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.2);
+}
+
+/* =============================
+   THEME TOGGLE
+   ============================= */
 .theme-toggle {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -131,6 +167,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
+  margin-right: 4px;
 }
 
 .theme-toggle:hover {
@@ -139,7 +176,7 @@ body {
 }
 
 .button {
-  padding: 12px 28px;
+  padding: 12px 24px;
   border-radius: 100px;
   font-weight: 600;
   border: none;
@@ -634,7 +671,7 @@ footer {
   h3 { font-size: 2.5rem; }
   .header-inner { padding: 12px 20px; justify-content: center; }
   .logo-main { font-size: 38px; letter-spacing: 6px; }
-  .buttons-group { width: 100%; justify-content: center; }
+  .buttons-group { width: 100%; justify-content: center; flex-wrap: wrap; }
   .stats-section { gap: 30px; padding: 40px 0; }
   .stat-block { min-width: 140px; }
   .stat-number { font-size: 3rem; }
@@ -753,4 +790,23 @@ body.light-theme .theme-toggle {
 
 body.light-theme .theme-toggle:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .lang-switcher {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .lang-btn {
+  color: #64748b;
+}
+
+body.light-theme .lang-btn:hover {
+  color: #0f172a;
+}
+
+body.light-theme .lang-btn.active {
+  background: #fff;
+  color: #0284c7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
