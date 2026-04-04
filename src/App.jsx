@@ -182,7 +182,6 @@ const partners = [
   "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"
 ];
 
-// Картинки
 const imgViralGrowth = "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1600"; 
 const imgRhythmDynamics = "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1600"; 
 
@@ -203,12 +202,10 @@ export default function App() {
   const [lang, setLang] = useState("ru");
 
   useEffect(() => {
-    // Инициализация темы
     const savedTheme = localStorage.getItem("nks-theme") || "dark";
     setTheme(savedTheme);
     if (savedTheme === "light") document.body.classList.add("light-theme");
 
-    // Инициализация языка
     const savedLang = localStorage.getItem("nks-lang") || "ru";
     setLang(savedLang);
 
@@ -228,7 +225,8 @@ export default function App() {
     const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
 
     const handleMouseOver = (e) => {
-      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.theme-toggle')) {
+      // Расширил проверку, чтобы курсор адекватно реагировал на любые кнопки
+      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card')) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -264,7 +262,6 @@ export default function App() {
 
   const t = translations[lang];
 
-  // Динамические данные для графика в зависимости от языка
   const chartData = [
     { name: t.chart.w1, before: 1200, after: 1200 },
     { name: t.chart.w2, before: 1100, after: 1800 },
@@ -273,7 +270,6 @@ export default function App() {
     { name: t.chart.w5, before: 700, after: 18500 }
   ];
 
-  // Динамические цвета для графиков в зависимости от темы
   const axisColor = theme === 'dark' ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
   const gridColor = theme === 'dark' ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)";
   const tooltipBg = theme === 'dark' ? "rgba(10, 15, 30, 0.9)" : "rgba(255, 255, 255, 0.9)";
@@ -282,11 +278,12 @@ export default function App() {
 
   return (
     <div className="container">
+      {/* ИСПРАВЛЕНО: Координаты курсора теперь всегда точно по центру, никаких прыжков в сторону */}
       <motion.div
         className="custom-cursor"
         animate={{
-          x: mousePosition.x - (isHovering ? 24 : 10),
-          y: mousePosition.y - (isHovering ? 24 : 10),
+          x: mousePosition.x - 10,
+          y: mousePosition.y - 10,
           scale: isHovering ? 1.5 : 1,
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
@@ -301,14 +298,12 @@ export default function App() {
           </div>
 
           <div className="buttons-group">
-            {/* Переключатель языков */}
             <div className="lang-switcher">
               <button className={`lang-btn ${lang === 'ru' ? 'active' : ''}`} onClick={() => changeLanguage('ru')}>RU</button>
               <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => changeLanguage('en')}>EN</button>
               <button className={`lang-btn ${lang === 'uz' ? 'active' : ''}`} onClick={() => changeLanguage('uz')}>UZ</button>
             </div>
 
-            {/* Кнопка переключения темы */}
             <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
               {theme === 'dark' ? (
                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
@@ -423,7 +418,6 @@ export default function App() {
           {t.testimonials.map((tItem, i) => (
             <motion.div key={i} className="card testimonial-card" variants={fadeUp}>
               <div className="testimonial-header">
-                {/* Теперь аватарки тянутся правильно из объекта tItem! */}
                 <img src={tItem.img} className="avatar" alt={tItem.name} />
                 <div>
                   <h4>{tItem.name}</h4>
