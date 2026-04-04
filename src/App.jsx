@@ -63,9 +63,9 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Контент стал предсказуемой системой. Рост х10 и стабильные рекомендации." },
-      { name: "Мария", role: "Fashion Бренд", text: "Каждый ролик работает как часть большой воронки — видим конверсию в продажи." },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории." }
+      { name: "Алексей", role: "CEO TechStartup", text: "Контент стал предсказуемой системой. Рост х10 и стабильные рекомендации.", img: "https://i.pravatar.cc/100?img=12" },
+      { name: "Мария", role: "Fashion Бренд", text: "Каждый ролик работает как часть большой воронки — видим конверсию в продажи.", img: "https://i.pravatar.cc/100?img=5" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
     ],
     footer: "Системный рост контента."
   },
@@ -116,9 +116,9 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Alexey", role: "CEO TechStartup", text: "Content became a predictable system. 10x growth and stable recommendations." },
-      { name: "Maria", role: "Fashion Brand", text: "Every video works as part of a large funnel — we see conversion into sales." },
-      { name: "Ilya", role: "Crypto Influencer", text: "Views are growing without ad injections. Pure magic with audience retention." }
+      { name: "Alexey", role: "CEO TechStartup", text: "Content became a predictable system. 10x growth and stable recommendations.", img: "https://i.pravatar.cc/100?img=12" },
+      { name: "Maria", role: "Fashion Brand", text: "Every video works as part of a large funnel — we see conversion into sales.", img: "https://i.pravatar.cc/100?img=5" },
+      { name: "Ilya", role: "Crypto Influencer", text: "Views are growing without ad injections. Pure magic with audience retention.", img: "https://i.pravatar.cc/100?img=8" }
     ],
     footer: "Systemic content growth."
   },
@@ -169,9 +169,9 @@ const translations = {
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Alexey", role: "CEO TechStartup", text: "Kontent bashorat qilinadigan tizimga aylandi. 10x o'sish va barqaror tavsiyalar." },
-      { name: "Mariya", role: "Fashion Brend", text: "Har bir video katta voronkaning bir qismi sifatida ishlaydi - biz sotuvga o'tishni ko'rmoqdamiz." },
-      { name: "Ilya", role: "Kripto-infliuyenser", text: "Ko'rishlar reklamaga pul tikmasdan o'sib bormoqda. Auditoriyani ushlab qolish bilan haqiqiy sehr." }
+      { name: "Alexey", role: "CEO TechStartup", text: "Kontent bashorat qilinadigan tizimga aylandi. 10x o'sish va barqaror tavsiyalar.", img: "https://i.pravatar.cc/100?img=12" },
+      { name: "Mariya", role: "Fashion Brend", text: "Har bir video katta voronkaning bir qismi sifatida ishlaydi - biz sotuvga o'tishni ko'rmoqdamiz.", img: "https://i.pravatar.cc/100?img=5" },
+      { name: "Ilya", role: "Kripto-infliuyenser", text: "Ko'rishlar reklamaga pul tikmasdan o'sib bormoqda. Auditoriyani ushlab qolish bilan haqiqiy sehr.", img: "https://i.pravatar.cc/100?img=8" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -423,8 +423,8 @@ export default function App() {
           {t.testimonials.map((tItem, i) => (
             <motion.div key={i} className="card testimonial-card" variants={fadeUp}>
               <div className="testimonial-header">
-                {/* Аватарки из тестового массива оставляем как есть */}
-                <img src={testimonials[i].img} className="avatar" alt={tItem.name} />
+                {/* Теперь аватарки тянутся правильно из объекта tItem! */}
+                <img src={tItem.img} className="avatar" alt={tItem.name} />
                 <div>
                   <h4>{tItem.name}</h4>
                   <span className="testimonial-role">{tItem.role}</span>
