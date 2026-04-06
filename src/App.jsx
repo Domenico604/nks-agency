@@ -63,9 +63,11 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Контент стал предсказуемой системой. Рост х10 и стабильные рекомендации.", img: "https://i.pravatar.cc/100?img=12" },
-      { name: "Мария", role: "Fashion Бренд", text: "Каждый ролик работает как часть большой воронки — видим конверсию в продажи.", img: "https://i.pravatar.cc/100?img=5" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Просмотры растут без вливаний в рекламу. Магия с удержанием аудитории.", img: "https://i.pravatar.cc/100?img=8" }
+      { name: "Мария", role: "Основатель Fashion Бренда", text: "Работа с NKS перевернула наше представление о контенте. Мы не просто получаем миллионы просмотров, но и видим реальную конверсию. Мой телефон просто разрывается от уведомлений о новых заказах и подписчиках! Рост продаж составил 300% за первый квартал.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" },
+      { name: "Алексей", role: "CEO TechStartup", text: "Ребята выстроили предсказуемую систему. Мы выросли в 10 раз за полгода, и недавно я распаковал серебряную кнопку YouTube. Это полностью заслуга их data-driven подхода к превью и удержанию аудитории. Лучшая инвестиция в маркетинг.", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Раньше я тратил тысячи долларов на посевы и рекламу. Сейчас просмотры растут органически. Парни знают какие-то магические паттерны алгоритмов Shorts. За месяц пришло 150,000 живой аудитории абсолютно без вливаний в трафик.", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" },
+      { name: "Елена", role: "EdTech Платформа", text: "Нам нужна была сильная узнаваемость в СНГ. NKS взяли на себя всё: от ресерча тем до финального саунд-дизайна. У нас теперь стабильно по 3-4 вирусных ролика в месяц, а стоимость привлечения лида (CPA) упала в три раза.", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Долго сомневался, нужен ли недвижке YouTube. Оказалось, еще как нужен. Сделали упор на экспертные обзоры с премиальным монтажом. Как итог — закрыли две сделки на премиум-объекты чисто с органики канала.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" }
     ],
     footer: "Системный рост контента."
   },
@@ -116,9 +118,11 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Alexey", role: "CEO TechStartup", text: "Content became a predictable system. 10x growth and stable recommendations.", img: "https://i.pravatar.cc/100?img=12" },
-      { name: "Maria", role: "Fashion Brand", text: "Every video works as part of a large funnel — we see conversion into sales.", img: "https://i.pravatar.cc/100?img=5" },
-      { name: "Ilya", role: "Crypto Influencer", text: "Views are growing without ad injections. Pure magic with audience retention.", img: "https://i.pravatar.cc/100?img=8" }
+      { name: "Jessica", role: "Fashion Brand Owner", text: "Working with NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. My phone screen is constantly lit up with new follower and order notifications! Sales are up 300%.", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" },
+      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. It's entirely thanks to their data-driven approach to thumbnails and audience retention.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" },
+      { name: "David", role: "Crypto Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys understand hidden algorithm patterns. We gained 150,000 active subscribers in just a month without any paid traffic.", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" },
+      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS took over everything: from topic research to final sound design. We consistently hit 3-4 viral videos a month, and our Cost Per Acquisition (CPA) dropped to a third of what it was.", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" },
+      { name: "Robert", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews with premium editing. As a result, we closed two high-ticket deals strictly from organic channel traffic.", img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=150&q=80" }
     ],
     footer: "Systemic content growth."
   },
@@ -169,9 +173,11 @@ const translations = {
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Alexey", role: "CEO TechStartup", text: "Kontent bashorat qilinadigan tizimga aylandi. 10x o'sish va barqaror tavsiyalar.", img: "https://i.pravatar.cc/100?img=12" },
-      { name: "Mariya", role: "Fashion Brend", text: "Har bir video katta voronkaning bir qismi sifatida ishlaydi - biz sotuvga o'tishni ko'rmoqdamiz.", img: "https://i.pravatar.cc/100?img=5" },
-      { name: "Ilya", role: "Kripto-infliuyenser", text: "Ko'rishlar reklamaga pul tikmasdan o'sib bormoqda. Auditoriyani ushlab qolish bilan haqiqiy sehr.", img: "https://i.pravatar.cc/100?img=8" }
+      { name: "Madina", role: "Kiyim brendi asochisi", text: "NKS bilan ishlash kontentga bo'lgan qarashimizni butunlay o'zgartirdi. Biz nafaqat millionlab ko'rishlarga ega bo'lyapmiz, balki real sotuvlarni ham ko'ryapmiz. Telefonim ekranida har daqiqa yangi obunachilar va buyurtmalar xabarlari chiqib turadi!", img: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?auto=format&fit=crop&w=150&q=80" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar biznesimiz uchun bashorat qilinadigan tizim qurdilar. Biz yarim yil ichida 10 barobar o'sdik va yaqinda YouTube kumush tugmasini oldik. Bu to'lig'icha jamoaning ma'lumotlarga va tahlilga asoslangan yondashuvi natijasidir.", img: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?auto=format&fit=crop&w=150&q=80" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar o'z-o'zidan organik o'smoqda. NKS algoritmlarning yashirin sirlarini biladi. Bir oy ichida hech qanday reklamasiz 150,000 ta faol obunachi yig'dik.", img: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=150&q=80" },
+      { name: "Laylo", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS mavzularni izlashdan tortib toza montajgacha hammasini o'z zimmasiga oldi. Mijoz jalb qilish narxi (CPA) 3 barobarga arzonlashdi. Ajoyib natija!", img: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=150&q=80" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Boshida ko'chmas mulk uchun YouTube qanchalik kerakligiga shubha qilgan edim. Ammo ekspertlik sharhlari va premium montaj orqali kanalning o'zidan ikkita katta premium obyektni sotishga erishdik.", img: "https://images.unsplash.com/photo-1508341591423-4347099e1f19?auto=format&fit=crop&w=150&q=80" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -225,7 +231,6 @@ export default function App() {
     const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
 
     const handleMouseOver = (e) => {
-      // Расширил проверку, чтобы курсор адекватно реагировал на любые кнопки
       if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card')) {
         setIsHovering(true);
       } else {
@@ -278,7 +283,6 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* ИСПРАВЛЕНО: Координаты курсора теперь всегда точно по центру, никаких прыжков в сторону */}
       <motion.div
         className="custom-cursor"
         animate={{
@@ -406,30 +410,42 @@ export default function App() {
         isReversed 
       />
 
-      <motion.section 
-        className="testimonials-section"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-      >
+      <section className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
-        <div className="grid">
-          {t.testimonials.map((tItem, i) => (
-            <motion.div key={i} className="card testimonial-card" variants={fadeUp}>
-              <div className="testimonial-header">
-                <img src={tItem.img} className="avatar" alt={tItem.name} />
-                <div>
-                  <h4>{tItem.name}</h4>
-                  <span className="testimonial-role">{tItem.role}</span>
+        {/* НОВЫЙ БЛОК: Бегущая строка для отзывов */}
+        <div className="testimonials-marquee-container">
+          <div className="testimonials-track">
+            {t.testimonials.map((tItem, i) => (
+              <div key={i} className="card testimonial-card">
+                <div className="testimonial-header">
+                  <img src={tItem.img} className="avatar" alt={tItem.name} />
+                  <div>
+                    <h4>{tItem.name}</h4>
+                    <span className="testimonial-role">{tItem.role}</span>
+                  </div>
                 </div>
+                <p>"{tItem.text}"</p>
+                <div className="stars">★★★★★</div>
               </div>
-              <p>"{tItem.text}"</p>
-              <div className="stars">★★★★★</div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
+          <div className="testimonials-track" aria-hidden="true">
+            {t.testimonials.map((tItem, i) => (
+              <div key={i + 100} className="card testimonial-card">
+                <div className="testimonial-header">
+                  <img src={tItem.img} className="avatar" alt={tItem.name} />
+                  <div>
+                    <h4>{tItem.name}</h4>
+                    <span className="testimonial-role">{tItem.role}</span>
+                  </div>
+                </div>
+                <p>"{tItem.text}"</p>
+                <div className="stars">★★★★★</div>
+              </div>
+            ))}
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       <footer>
         <div className="footer-content">
