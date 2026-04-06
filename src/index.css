@@ -81,7 +81,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap; /* Исправлено: не разрешаем перенос строк в шапке */
+  flex-wrap: nowrap;
   gap: 15px;
 }
 
@@ -118,7 +118,7 @@ body {
 }
 
 /* =============================
-   LANG SWITCHER (ИСПРАВЛЕННЫЙ)
+   LANG SWITCHER
    ============================= */
 .lang-switcher {
   display: inline-flex;
@@ -127,7 +127,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 100px;
   padding: 4px;
-  height: 44px; /* Жесткая высота, как у переключателя темы */
+  height: 44px;
   box-sizing: border-box;
 }
 
@@ -137,7 +137,7 @@ body {
   color: #94a3b8;
   font-size: 13px;
   font-weight: 600;
-  width: 40px; /* Жесткая ширина, чтобы не скакала ячейка */
+  width: 40px;
   height: 100%;
   border-radius: 100px;
   cursor: pointer;
@@ -199,7 +199,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  white-space: nowrap; /* Чтобы текст кнопок не ломался */
+  white-space: nowrap;
 }
 
 .button::before {
@@ -362,8 +362,13 @@ h3 {
   100% { transform: translateX(-100%); }
 }
 
-.content-section, .testimonials-section {
+.content-section {
   padding: 80px 0;
+}
+
+.testimonials-section {
+  padding: 80px 0;
+  overflow: hidden;
 }
 
 .grid {
@@ -528,9 +533,23 @@ h3 {
 .dot-before { background: #64748b; }
 .dot-after { background: #0ea5e9; box-shadow: 0 0 10px rgba(14, 165, 233, 0.5); }
 
+/* =========================================
+   ОТЗЫВЫ: КАРУСЕЛЬ И КАРТОЧКИ
+   ========================================= */
 .testimonial-card {
   background: linear-gradient(180deg, rgba(14, 165, 233, 0.05) 0%, rgba(15, 23, 42, 0.2) 100%);
   border: 1px solid rgba(14, 165, 233, 0.15);
+  width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card p {
+  font-size: 1.05rem; 
+  line-height: 1.7;
+  color: #e2e8f0; 
+  margin-bottom: 30px;
 }
 
 .testimonial-header {
@@ -560,6 +579,39 @@ h3 {
   font-size: 16px;
   letter-spacing: 2px;
   margin-top: auto;
+}
+
+.testimonials-marquee-container {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.testimonials-track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+  min-width: 100%;
+  padding-left: 24px;
+  gap: 24px;
+  animation: scrollTestimonials 50s linear infinite;
+}
+
+.testimonials-marquee-container:hover .testimonials-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 footer {
@@ -688,8 +740,15 @@ footer {
   .image-showcase-container { height: 70vh; }
   .showcase-headline { font-size: 2.5rem; padding: 15px; }
   .partner-logo { font-size: 1.8rem; margin: 0 20px; }
+  
+  .testimonial-card {
+    width: 320px;
+    padding: 24px;
+  }
+  .testimonial-card p {
+    font-size: 0.95rem;
+  }
 }
-
 
 /* =========================================
    LIGHT THEME OVERRIDES
