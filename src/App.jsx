@@ -1,20 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  CartesianGrid,
-  ResponsiveContainer
+  LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer
 } from "recharts";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import "./index.css";
 
-// ==========================================
-// СЛОВАРЬ ПЕРЕВОДОВ С УНИКАЛЬНЫМИ ТЕКСТАМИ ОТЗЫВОВ
-// ==========================================
 const translations = {
   ru: {
     nav: { consulting: "Консалтинг", pricing: "Прайс-лист" },
@@ -35,7 +26,7 @@ const translations = {
     servicesTitle: "Наши возможности",
     services: [
       { title: "Вирусная аналитика", text: "Анализируем скрытые паттерны алгоритмов и создаём форматы, обреченные на виральность.", tags: ["#Тренды", "#Ресерч", "#Алгоритмы"] },
-      { title: "Сценарии удержания", text: "Проектируем каждую секунду видео так, чтобы зритель не мог свайпнуть. Глубокая работа с триггерами.", tags: ["#Retention", "#Копирайтинг", "#Хуки"] },
+      { title: "Сценарии удержания", text: "Проектируем каждую секунду видео так, чтобы зритель не мог свайпнуть. Глубокая работа с триггерами.", tags: ["#Retention", "#Копирайтинг", "#Hooks"] },
       { title: "Премиальный монтаж", text: "Динамичный, но чистый эдит. Визуальные эффекты, которые удерживают внимание.", tags: ["#VFX", "#Саунд-дизайн", "#Dynamics"] },
       { title: "Комплексная стратегия", text: "Разрабатываем долгосрочную систему контента, которая регулярно генерирует целевой трафик.", tags: ["#Positioning", "#Воронки"] },
       { title: "Упаковка бренда", text: "Формируем сильную визуальную узнаваемость вашего проекта в медиа-пространстве.", tags: ["#Identity", "#Смыслы", "#Design"] },
@@ -46,10 +37,10 @@ const translations = {
     audience: [
       { title: "Бренды и Компании", text: "Конвертируем просмотры в лояльность. Построение HR-бренда.", stats: "Узнаваемость x3" },
       { title: "E-commerce", text: "Продуктовый контент, который продает нативно через тренды.", stats: "Lower CPA" },
-      { title: "Креаторы", text: "Берем на себя всю рутину от идей до монтажа.", stats: "Экономия 40ч/мес" },
-      { title: "Инфлюенсеры", text: "Масштабирование личного бренда, выход на новые площадки.", stats: "Новые рынки" },
+      { title: "Креаторы", text: "Берем на себя всю рутину от идей до монтажа.", stats: "Save 40h/month" },
+      { title: "Инфлюенсеры", text: "Масштабирование личного бренда, выход на новые площадки.", stats: "New Markets" },
       { title: "Агентства", text: "Закрываем потребность в production под ключ для ваших клиентов.", stats: "White-label" },
-      { title: "Стартапы", text: "Быстрый рост аудитории с нуля для валидации гипотез.", stats: "Быстрый старт" }
+      { title: "Стартапы", text: "Быстрый рост аудитории с нуля для валидации гипотез.", stats: "Quick Start" }
     ],
     methodologyTitle: "Методология",
     methodology: [
@@ -63,12 +54,12 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок. data-driven подход в действии!", img: "/Gemini_Generated_Image_lry8utlry8utlry8.png", bg_img: "/testimonial_bg_1.jpg" },
-      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга. Мой телефон просто разрывается от уведомлений!", img: "/Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg", bg_img: "/testimonial_bg_2.jpg" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на посевы, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg", bg_img: "/testimonial_bg_3.jpg" },
-      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц. Это уровень!", img: "/Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg", bg_img: "/testimonial_bg_4.jpg" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает даже в такой сложной нише.", img: "/Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg", bg_img: "/testimonial_bg_5.jpg" },
-      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее и узнаваемее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg", bg_img: "/testimonial_bg_6.jpg" }
+      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок. data-driven подход в действии!", img: "/Gemini_Generated_Image_lry8utlry8utlry8.png" },
+      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга. Мой телефон разрывается от уведомлений!", img: "/Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg" },
+      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц. Это уровень!", img: "/Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает даже в такой сложной нише.", img: "/Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg" },
+      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее и узнаваемее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg" }
     ],
     footer: "Системный рост контента."
   },
@@ -119,12 +110,12 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%. My phone just won't stop ringing!", img: "/Gemini_Generated_Image_kdczcfkdczcfkdcz (2).jpg", bg_img: "/testimonial_bg_1.jpg" },
-      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. data-driven magic!", img: "/Gemini_Generated_Image_u5wofeu5wofeu5wo.jpg", bg_img: "/testimonial_bg_2.jpg" },
-      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Gemini_Generated_Image_gd8f93gd8f93gd8f.jpg", bg_img: "/testimonial_bg_3.jpg" },
-      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third. Impeccable level!", img: "/Gemini_Generated_Image_7gbvpi7gbvpi7gbv.jpg", bg_img: "/testimonial_bg_4.jpg" },
-      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals strictly from our organic audience.", img: "/Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg", bg_img: "/testimonial_bg_5.jpg" },
-      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns. The editing and dynamics are just pure magic.", img: "/Gemini_Generated_Image_1042gz1042gz1042.jpg", bg_img: "/testimonial_bg_6.jpg" }
+      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%. My phone just won't stop ringing!", img: "/Gemini_Generated_Image_kdczcfkdczcfkdcz (2).jpg" },
+      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. data-driven magic!", img: "/Gemini_Generated_Image_u5wofeu5wofeu5wo.jpg" },
+      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Gemini_Generated_Image_gd8f93gd8f93gd8f.jpg" },
+      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third. Impeccable level!", img: "/Gemini_Generated_Image_7gbvpi7gbvpi7gbv.jpg" },
+      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals strictly from our organic audience.", img: "/Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg" },
+      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns. The editing and dynamics are just pure magic.", img: "/Gemini_Generated_Image_1042gz1042gz1042.jpg" }
     ],
     footer: "Systemic content growth."
   },
@@ -157,7 +148,7 @@ const translations = {
     audienceTitle: "Kimga yordam beramiz",
     audience: [
       { title: "Brendlar va Kompaniyalar", text: "Ko'rishlarni sodiqlik va mijozlarga aylantiramiz.", stats: "Taniqlik x3" },
-      { title: "E-commerce", text: "Product content that sells natively through trends.", stats: "Lower CPA" },
+      { title: "E-commerce", text: "sharhlar va trendlar orqali tabiiy ravishda sotadigan kontent.", stats: "Lower CPA" },
       { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni zimmamizga olamiz.", stats: "Oyiga 40s tejash" },
       { title: "Infliuyenserlar", text: "Shaxsiy brendni kengaytirish, yangi platformalarga chiqish.", stats: "Yangi bozorlar" },
       { title: "Agentliklar", text: "Mijozlaringiz uchun tayyor prodyuserlik ehtiyojini yopamiz.", stats: "White-label" },
@@ -165,32 +156,28 @@ const translations = {
     ],
     methodologyTitle: "Metodologiya",
     methodology: [
-      { title: "Izlanish", subtitle: "Stage 01", text: "Nisha, raqobatchilar va trendlarni tahlil qilish." },
-      { title: "Ssenariy", subtitle: "Stage 02", text: "Writing script with retention curve and strong hooks." },
-      { title: "Ishlab chiqarish", subtitle: "Stage 03", text: "Assistance with shooting or full visual material generation." },
-      { title: "Montaj", subtitle: "Stage 04", text: "Video assembly: color correction, graphics, sound design." },
-      { title: "Publishing", subtitle: "Stage 05", text: "SEO optimization, correct tags, thumbnail and publishing time." },
+      { title: "Research", subtitle: "Stage 01", text: "Nisha, raqobatchilar va trendlarni tahlil qilish." },
+      { title: "Script", subtitle: "Stage 02", text: "Writing script with retention curve and strong hooks." },
+      { title: "Production", subtitle: "Stage 03", text: "Assistance with shooting or full visual material generation." },
+      { title: "Edit", subtitle: "Stage 04", text: "Video assembly: color correction, graphics, sound design." },
+      { title: "Publishing", subtitle: "Stage 05", text: "SEO optimallashtirish, to'g'ri teglar, muqovalar ва nashr vaqti." },
       { title: "Analytics", subtitle: "Stage 06", text: "Data collection after publication and adjustment of sprint." }
     ],
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg", bg_img: "/testimonial_bg_1.jpg" },
-      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik. Data-driven sehr!", img: "/Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg", bg_img: "/testimonial_bg_2.jpg" },
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Gemini_Generated_Image_4648gm4648gm4648.jpg", bg_img: "/testimonial_bg_3.jpg" },
-      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi. Telefonim tinmayapti.", img: "/Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg", bg_img: "/testimonial_bg_4.jpg" },
-      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Gemini_Generated_Image_2o04kw2o04kw2o04.jpg", bg_img: "/testimonial_bg_5.jpg" },
-      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg", bg_img: "/testimonial_bg_6.jpg" }
+      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik. Data-driven sehr!", img: "/Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Gemini_Generated_Image_4648gm4648gm4648.jpg" },
+      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi. Telefonim tinmayapti.", img: "/Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Gemini_Generated_Image_2o04kw2o04kw2o04.jpg" },
+      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
 };
 
-const partners = [
-  "NEXUS GLOBAL", "AURA FINANCE", "VERTEX MEDIA", 
-  "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"
-];
-
+const partners = ["NEXUS GLOBAL", "AURA FINANCE", "VERTEX MEDIA", "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"];
 const imgViralGrowth = "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1600"; 
 const imgRhythmDynamics = "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1600"; 
 
@@ -294,13 +281,13 @@ export default function App() {
     if (active && payload && payload.length) {
       return (
         <div style={{ backgroundColor: tooltipBg, border: `1px solid rgba(14, 165, 233, 0.3)`, padding: "16px", borderRadius: "12px", backdropFilter: "blur(10px)", color: tooltipText, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}>
-          <p style={{ margin: "0 0 10px 0", fontWeight: "600", fontSize: "14px", borderBottom: "1px solid rgba(14,165,233,0.2)", paddingBottom: "6px", color: theme === 'dark' ? '#cbd5e1' : '#64748b' }}>
+          <p style={{ margin: "0 0 10px 0", fontWeight: "600", fontSize: "14px", borderBottom: "1px solid rgba(14,165,233,0.2)", paddingBottom: "6px" }}>
             {label}
           </p>
           {payload.map((entry, index) => (
             <div key={index} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: index === 0 ? "8px" : "0" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <span style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: entry.color, boxShadow: `0 0 8px ${entry.color}` }}></span>
+                <span style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: entry.color }}></span>
                 <span style={{ fontSize: "14px", opacity: 0.8 }}>{entry.name}:</span>
               </div>
               <span style={{ fontWeight: "700", fontSize: "16px", marginLeft: "auto" }}>
@@ -316,15 +303,12 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* ==========================================
-         ИЗМЕНЕННЫЙ КУРСОР: ТЕПЕРЬ ЭТО СТРЕЛКА "PLAY"
-         ========================================== */}
       <motion.div
         className="custom-cursor"
         animate={{
-          x: mousePosition.x - 12, // Смещаем центрирование для иконки 24x24
+          x: mousePosition.x - 12,
           y: mousePosition.y - 12,
-          scale: isHovering ? 1.5 : 1, // Немного увеличиваем при наведении
+          scale: isHovering ? 1.5 : 1,
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
         transition={{ type: "spring", stiffness: 2000, damping: 20, mass: 0.05 }}
@@ -448,18 +432,12 @@ export default function App() {
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
             {t.testimonials.map((tItem, i) => (
-              /* ДОБАВЛЕН CSS-ПЕРЕМЕННАЯ ДЛЯ ФОНА */
-              <div key={i} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.bg_img})` }}>
-                {/* ОВЕРЛЕЙ ДЛЯ ТЕКСТА */}
+              <div key={i} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.img})` }}>
                 <div className="testimonial-overlay"></div>
                 
-                {/* ТЕКСТ ОТЗЫВА - ТЕПЕРЬ ПЕРВЫМ */}
                 <p className="testimonial-text">"{tItem.text}"</p>
-                
-                {/* ЗВЕЗДЫ */}
                 <div className="stars">★★★★★</div>
 
-                {/* ХЕДЕР С АВАТАРОМ И ИМЕНЕМ - ТЕПЕРЬ ВНИЗУ */}
                 <div className="testimonial-footer">
                   <img src={tItem.img} className="avatar" alt={tItem.name} />
                   <div>
@@ -470,10 +448,9 @@ export default function App() {
               </div>
             ))}
           </div>
-          {/* КЛОН КАРУСЕЛИ */}
           <div className="testimonials-track" aria-hidden="true">
             {t.testimonials.map((tItem, i) => (
-              <div key={i + 100} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.bg_img})` }}>
+              <div key={i + 100} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.img})` }}>
                 <div className="testimonial-overlay"></div>
                 <p className="testimonial-text">"{tItem.text}"</p>
                 <div className="stars">★★★★★</div>
