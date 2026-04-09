@@ -13,7 +13,7 @@ import Lenis from "@studio-freight/lenis";
 import "./index.css";
 
 // ==========================================
-// СЛОВАРЬ ПЕРЕВОДОВ С 18 УНИКАЛЬНЫМИ ФОТО
+// СЛОВАРЬ ПЕРЕВОДОВ С УНИКАЛЬНЫМИ ТЕКСТАМИ ОТЗЫВОВ
 // ==========================================
 const translations = {
   ru: {
@@ -37,7 +37,7 @@ const translations = {
       { title: "Вирусная аналитика", text: "Анализируем скрытые паттерны алгоритмов и создаём форматы, обреченные на виральность.", tags: ["#Тренды", "#Ресерч", "#Алгоритмы"] },
       { title: "Сценарии удержания", text: "Проектируем каждую секунду видео так, чтобы зритель не мог свайпнуть. Глубокая работа с триггерами.", tags: ["#Retention", "#Копирайтинг", "#Хуки"] },
       { title: "Премиальный монтаж", text: "Динамичный, но чистый эдит. Визуальные эффекты, которые удерживают внимание.", tags: ["#VFX", "#Саунд-дизайн", "#Dynamics"] },
-      { title: "Комплексная стратегия", text: "Разрабатываем долгосрочную систему контента, которая регулярно генерирует целевой трафик.", tags: ["#Позиционирование", "#Воронки"] },
+      { title: "Комплексная стратегия", text: "Разрабатываем долгосрочную систему контента, которая регулярно генерирует целевой трафик.", tags: ["#Positioning", "#Воронки"] },
       { title: "Упаковка бренда", text: "Формируем сильную визуальную узнаваемость вашего проекта в медиа-пространстве.", tags: ["#Identity", "#Смыслы", "#Design"] },
       { title: "Deep Аналитика", text: "Докручиваем форматы и стратегии на основе реальных данных удержания.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
     ],
@@ -45,7 +45,7 @@ const translations = {
     audienceTitle: "Кому мы помогаем",
     audience: [
       { title: "Бренды и Компании", text: "Конвертируем просмотры в лояльность. Построение HR-бренда.", stats: "Узнаваемость x3" },
-      { title: "E-commerce", text: "Продуктовый контент, который продает нативно через тренды.", stats: "Снижение CPA" },
+      { title: "E-commerce", text: "Продуктовый контент, который продает нативно через тренды.", stats: "Lower CPA" },
       { title: "Креаторы", text: "Берем на себя всю рутину от идей до монтажа.", stats: "Экономия 40ч/мес" },
       { title: "Инфлюенсеры", text: "Масштабирование личного бренда, выход на новые площадки.", stats: "Новые рынки" },
       { title: "Агентства", text: "Закрываем потребность в production под ключ для ваших клиентов.", stats: "White-label" },
@@ -53,22 +53,22 @@ const translations = {
     ],
     methodologyTitle: "Методология",
     methodology: [
-      { title: "Research", subtitle: "Этап 01", text: "Глубокий анализ ниши, конкурентов и трендов." },
-      { title: "Script", subtitle: "Этап 02", text: "Сценарий с кривой удержания и сильными хуками." },
-      { title: "Production", subtitle: "Этап 03", text: "Помощь со съемкой или полная генерация визуала." },
-      { title: "Edit", subtitle: "Этап 04", text: "Сборка ролика: цветокоррекция, графика, саунд-дизайн." },
-      { title: "Publishing", subtitle: "Этап 05", text: "SEO-оптимизация, теги, обложки и время публикации." },
-      { title: "Analytics", subtitle: "Этап 06", text: "Сбор данных после публикации и корректировка спринта." }
+      { title: "Research", subtitle: "Stage 01", text: "Глубокий анализ ниши, конкурентов и трендов." },
+      { title: "Script", subtitle: "Stage 02", text: "Сценарий с кривой удержания и сильными хуками." },
+      { title: "Production", subtitle: "Stage 03", text: "Помощь со съемкой или полная генерация визуала." },
+      { title: "Edit", subtitle: "Stage 04", text: "Сборка ролика: цветокоррекция, графика, саунд-дизайн." },
+      { title: "Publishing", subtitle: "Stage 05", text: "SEO-оптимизация, теги, обложки и время публикации." },
+      { title: "Analytics", subtitle: "Stage 06", text: "Сбор данных после публикации и корректировка спринта." }
     ],
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Ребята выстроили предсказуемую систему. Мы выросли в 10 раз за полгода, и недавно я распаковал серебряную кнопку YouTube.", img: "Gemini_Generated_Image_lry8utlry8utlry8.png" },
-      { name: "Мария", role: "Основатель Fashion Бренда", text: "NKS перевернули наше представление о контенте. Видим реальную конверсию. За месяц пришло 150,000 живой аудитории.", img: "Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Раньше тратил тысячи долларов на рекламу. Сейчас просмотры растут органически. Парни знают магические паттерны.", img: "Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg" },
-      { name: "Елена", role: "EdTech Платформа", text: "Нам нужна была сильная узнаваемость в СНГ. Стабильно по 3-4 вирусных ролика в месяц. CPA упал в три раза.", img: "Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала.", img: "Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg" },
-      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал узнаваемым, а столики теперь бронируют на неделю вперед благодаря вкусным Shorts.", img: "Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg" }
+      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок. data-driven подход в действии!", img: "/Gemini_Generated_Image_lry8utlry8utlry8.png", bg_img: "/testimonial_bg_1.jpg" },
+      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга. Мой телефон просто разрывается от уведомлений!", img: "/Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg", bg_img: "/testimonial_bg_2.jpg" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на посевы, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg", bg_img: "/testimonial_bg_3.jpg" },
+      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц. Это уровень!", img: "/Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg", bg_img: "/testimonial_bg_4.jpg" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает даже в такой сложной нише.", img: "/Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg", bg_img: "/testimonial_bg_5.jpg" },
+      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее и узнаваемее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg", bg_img: "/testimonial_bg_6.jpg" }
     ],
     footer: "Системный рост контента."
   },
@@ -119,12 +119,12 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Jessica", role: "Fashion Brand Owner", text: "Working with NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "Gemini_Generated_Image_kdczcfkdczcfkdcz (2).jpg" },
-      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button.", img: "Gemini_Generated_Image_u5wofeu5wofeu5wo.jpg" },
-      { name: "Chloe", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys understand hidden algorithm patterns.", img: "Gemini_Generated_Image_gd8f93gd8f93gd8f.jpg" },
-      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS took over everything: from topic research to final sound design.", img: "Gemini_Generated_Image_7gbvpi7gbvpi7gbv.jpg" },
-      { name: "Robert", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg" },
-      { name: "Emily", role: "Fitness Coach", text: "They completely transformed my personal brand. The retention strategies they use for Shorts are mind-blowing.", img: "Gemini_Generated_Image_1042gz1042gz1042.jpg" }
+      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%. My phone just won't stop ringing!", img: "/Gemini_Generated_Image_kdczcfkdczcfkdcz (2).jpg", bg_img: "/testimonial_bg_1.jpg" },
+      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. data-driven magic!", img: "/Gemini_Generated_Image_u5wofeu5wofeu5wo.jpg", bg_img: "/testimonial_bg_2.jpg" },
+      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Gemini_Generated_Image_gd8f93gd8f93gd8f.jpg", bg_img: "/testimonial_bg_3.jpg" },
+      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third. Impeccable level!", img: "/Gemini_Generated_Image_7gbvpi7gbvpi7gbv.jpg", bg_img: "/testimonial_bg_4.jpg" },
+      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals strictly from our organic audience.", img: "/Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg", bg_img: "/testimonial_bg_5.jpg" },
+      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns. The editing and dynamics are just pure magic.", img: "/Gemini_Generated_Image_1042gz1042gz1042.jpg", bg_img: "/testimonial_bg_6.jpg" }
     ],
     footer: "Systemic content growth."
   },
@@ -148,16 +148,16 @@ const translations = {
     services: [
       { title: "Virusli tahlil", text: "Algoritmlarning yashirin naqshlarini tahlil qilamiz va virusli formatlarni yaratamiz.", tags: ["#Trendlar", "#Izlanish", "#Algoritmlar"] },
       { title: "Ushlab qolish ssenariylari", text: "Tomoshabin videoni o'tkazib yubormasligi uchun har bir soniyani loyihalashtiramiz.", tags: ["#Retention", "#Kopirayting", "#Huklar"] },
-      { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan, bezovta qilmaydigan effektlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dinamika"] },
-      { title: "Kompleks strategiya", text: "Trafikni yaratadigan uzoq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Pozitsiyalash", "#Voronkalar"] },
-      { title: "Brend qadoqlash", text: "Media makonida loyihangizning kuchli vizual tan olinishini shakllantiramiz.", tags: ["#Aydentika", "#Ma'nolar", "#Dizayn"] },
-      { title: "Chuqur tahlil", text: "Haqiqiy ma'lumotlar asosida formatlar va strategiyalarni moslashtiramiz.", tags: ["#A/B Testlar", "#Metrikalar", "#Optimizatsiya"] }
+      { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan, bezovta qilmayдigan effektlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dynamics"] },
+      { title: "Kompleks strategiya", text: "Trafikni yaratadigan uzoq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Positioning", "#Voronkalar"] },
+      { title: "Brend qadoqlash", text: "Media makonida loyihangizning kuchli vizual tan olinishini shakllantiramiz.", tags: ["#Identity", "#Meanings", "#Design"] },
+      { title: "Chuqur tahlil", text: "Haqiqiy ma'lumotlar asosida formatlar va strategiyalarni moslashtiramiz.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
     ],
     showcase1: "Kontent strategiyasini yaratamiz. Videoning har bir soniyasini loyihalashtiramiz.",
     audienceTitle: "Kimga yordam beramiz",
     audience: [
       { title: "Brendlar va Kompaniyalar", text: "Ko'rishlarni sodiqlik va mijozlarga aylantiramiz.", stats: "Taniqlik x3" },
-      { title: "Elektron tijorat", text: "Sharhlar va trendlar orqali tabiiy ravishda sotadigan kontent.", stats: "CPA pasayishi" },
+      { title: "E-commerce", text: "Product content that sells natively through trends.", stats: "Lower CPA" },
       { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni zimmamizga olamiz.", stats: "Oyiga 40s tejash" },
       { title: "Infliuyenserlar", text: "Shaxsiy brendni kengaytirish, yangi platformalarga chiqish.", stats: "Yangi bozorlar" },
       { title: "Agentliklar", text: "Mijozlaringiz uchun tayyor prodyuserlik ehtiyojini yopamiz.", stats: "White-label" },
@@ -165,22 +165,22 @@ const translations = {
     ],
     methodologyTitle: "Metodologiya",
     methodology: [
-      { title: "Izlanish", subtitle: "01-bosqich", text: "Nisha, raqobatchilar va trendlarni tahlil qilish." },
-      { title: "Ssenariy", subtitle: "02-bosqich", text: "Ushlab qolish egri chizig'i va kuchli huklar bilan ssenariy yozish." },
-      { title: "Ishlab chiqarish", subtitle: "03-bosqich", text: "Suratga olishda yordam berish yoki vizual material yaratish." },
-      { title: "Montaj", subtitle: "04-bosqich", text: "Videoni yig'ish: ranglarni to'g'rilash, grafika, ovoz dizayni." },
-      { title: "Nashr qilish", subtitle: "05-bosqich", text: "SEO optimallashtirish, to'g'ri teglar, muqovalar va nashr vaqti." },
-      { title: "Tahlil", subtitle: "06-bosqich", text: "Nashrdan keyin ma'lumotlarni to'plash va sprintni moslashtirish." }
+      { title: "Izlanish", subtitle: "Stage 01", text: "Nisha, raqobatchilar va trendlarni tahlil qilish." },
+      { title: "Ssenariy", subtitle: "Stage 02", text: "Writing script with retention curve and strong hooks." },
+      { title: "Ishlab chiqarish", subtitle: "Stage 03", text: "Assistance with shooting or full visual material generation." },
+      { title: "Montaj", subtitle: "Stage 04", text: "Video assembly: color correction, graphics, sound design." },
+      { title: "Publishing", subtitle: "Stage 05", text: "SEO optimization, correct tags, thumbnail and publishing time." },
+      { title: "Analytics", subtitle: "Stage 06", text: "Data collection after publication and adjustment of sprint." }
     ],
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS bilan ishlash kontentga bo'lgan qarashimizni butunlay o'zgartirdi. Biz real sotuvlarni ko'ryapmiz. Telefon tinmayapti!", img: "Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg" },
-      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik.", img: "Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg" },
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar o'z-o'zidan organik o'smoqda. Ajoyib natija!", img: "Gemini_Generated_Image_4648gm4648gm4648.jpg" },
-      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi.", img: "Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg" },
-      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "Gemini_Generated_Image_2o04kw2o04kw2o04.jpg" },
-      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. CPA 3 barobarga arzonlashdi.", img: "Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg" }
+      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg", bg_img: "/testimonial_bg_1.jpg" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik. Data-driven sehr!", img: "/Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg", bg_img: "/testimonial_bg_2.jpg" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Gemini_Generated_Image_4648gm4648gm4648.jpg", bg_img: "/testimonial_bg_3.jpg" },
+      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi. Telefonim tinmayapti.", img: "/Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg", bg_img: "/testimonial_bg_4.jpg" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Gemini_Generated_Image_2o04kw2o04kw2o04.jpg", bg_img: "/testimonial_bg_5.jpg" },
+      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg", bg_img: "/testimonial_bg_6.jpg" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -316,12 +316,15 @@ export default function App() {
 
   return (
     <div className="container">
+      {/* ==========================================
+         ИЗМЕНЕННЫЙ КУРСОР: ТЕПЕРЬ ЭТО СТРЕЛКА "PLAY"
+         ========================================== */}
       <motion.div
         className="custom-cursor"
         animate={{
-          x: mousePosition.x - 8,
-          y: mousePosition.y - 8,
-          scale: isHovering ? 1.8 : 1,
+          x: mousePosition.x - 12, // Смещаем центрирование для иконки 24x24
+          y: mousePosition.y - 12,
+          scale: isHovering ? 1.5 : 1, // Немного увеличиваем при наведении
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
         transition={{ type: "spring", stiffness: 2000, damping: 20, mass: 0.05 }}
@@ -445,31 +448,42 @@ export default function App() {
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
             {t.testimonials.map((tItem, i) => (
-              <div key={i} className="card testimonial-card">
-                <div className="testimonial-header">
+              /* ДОБАВЛЕН CSS-ПЕРЕМЕННАЯ ДЛЯ ФОНА */
+              <div key={i} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.bg_img})` }}>
+                {/* ОВЕРЛЕЙ ДЛЯ ТЕКСТА */}
+                <div className="testimonial-overlay"></div>
+                
+                {/* ТЕКСТ ОТЗЫВА - ТЕПЕРЬ ПЕРВЫМ */}
+                <p className="testimonial-text">"{tItem.text}"</p>
+                
+                {/* ЗВЕЗДЫ */}
+                <div className="stars">★★★★★</div>
+
+                {/* ХЕДЕР С АВАТАРОМ И ИМЕНЕМ - ТЕПЕРЬ ВНИЗУ */}
+                <div className="testimonial-footer">
                   <img src={tItem.img} className="avatar" alt={tItem.name} />
                   <div>
                     <h4>{tItem.name}</h4>
                     <span className="testimonial-role">{tItem.role}</span>
                   </div>
                 </div>
-                <p>"{tItem.text}"</p>
-                <div className="stars">★★★★★</div>
               </div>
             ))}
           </div>
+          {/* КЛОН КАРУСЕЛИ */}
           <div className="testimonials-track" aria-hidden="true">
             {t.testimonials.map((tItem, i) => (
-              <div key={i + 100} className="card testimonial-card">
-                <div className="testimonial-header">
+              <div key={i + 100} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.bg_img})` }}>
+                <div className="testimonial-overlay"></div>
+                <p className="testimonial-text">"{tItem.text}"</p>
+                <div className="stars">★★★★★</div>
+                <div className="testimonial-footer">
                   <img src={tItem.img} className="avatar" alt={tItem.name} />
                   <div>
                     <h4>{tItem.name}</h4>
                     <span className="testimonial-role">{tItem.role}</span>
                   </div>
                 </div>
-                <p>"{tItem.text}"</p>
-                <div className="stars">★★★★★</div>
               </div>
             ))}
           </div>
