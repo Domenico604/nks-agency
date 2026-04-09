@@ -13,7 +13,7 @@ import Lenis from "@studio-freight/lenis";
 import "./index.css";
 
 // ==========================================
-// СЛОВАРЬ ПЕРЕВОДОВ (RU, EN, UZ)
+// СЛОВАРЬ ПЕРЕВОДОВ С 18 УНИКАЛЬНЫМИ ФОТО
 // ==========================================
 const translations = {
   ru: {
@@ -63,11 +63,12 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Мария", role: "Основатель Fashion Бренда", text: "Работа с NKS перевернула наше представление о контенте. Мы не просто получаем миллионы просмотров, но и видим реальную конверсию. Мой телефон просто разрывается от уведомлений о новых заказах и подписчиках! Рост продаж составил 300% за первый квартал.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" },
-      { name: "Алексей", role: "CEO TechStartup", text: "Ребята выстроили предсказуемую систему. Мы выросли в 10 раз за полгода, и недавно я распаковал серебряную кнопку YouTube. Это полностью заслуга их data-driven подхода к превью и удержанию аудитории. Лучшая инвестиция в маркетинг.", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Раньше я тратил тысячи долларов на посевы и рекламу. Сейчас просмотры растут органически. Парни знают какие-то магические паттерны алгоритмов Shorts. За месяц пришло 150,000 живой аудитории абсолютно без вливаний в трафик.", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" },
-      { name: "Елена", role: "EdTech Платформа", text: "Нам нужна была сильная узнаваемость в СНГ. NKS взяли на себя всё: от ресерча тем до финального саунд-дизайна. У нас теперь стабильно по 3-4 вирусных ролика в месяц, а стоимость привлечения лида (CPA) упала в три раза.", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Долго сомневался, нужен ли недвижке YouTube. Оказалось, еще как нужен. Сделали упор на экспертные обзоры с премиальным монтажом. Как итог — закрыли две сделки на премиум-объекты чисто с органики канала.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" }
+      { name: "Алексей", role: "CEO TechStartup", text: "Ребята выстроили предсказуемую систему. Мы выросли в 10 раз за полгода, и недавно я распаковал серебряную кнопку YouTube. Это полностью заслуга их data-driven подхода.", img: "Gemini_Generated_Image_lry8utlry8utlry8.jpg" },
+      { name: "Алина", role: "Основатель Fashion Бренда", text: "Работа с NKS перевернула наше представление о контенте. Мы не просто получаем миллионы просмотров, но и видим реальную конверсию. Рост продаж составил 300% за первый квартал.", img: "Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Раньше я тратил тысячи долларов на посевы и рекламу. Сейчас просмотры растут органически. Парни знают магические паттерны алгоритмов Shorts. За месяц 150,000 аудитории.", img: "Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg" },
+      { name: "Елена", role: "EdTech Платформа", text: "Нам нужна была сильная узнаваемость в СНГ. NKS взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц.", img: "Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Долго сомневался, нужен ли недвижке YouTube. Сделали упор на экспертные обзоры с премиальным монтажом. Как итог — закрыли две сделки чисто с органики.", img: "Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg" },
+      { name: "Виктор", role: "Владелец сети ресторанов", text: "Отличная работа с визуалом и смыслами. Наш бренд стал узнаваемым, а столики теперь бронируют на неделю вперед благодаря вкусным Shorts.", img: "Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg" }
     ],
     footer: "Системный рост контента."
   },
@@ -118,11 +119,12 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Jessica", role: "Fashion Brand Owner", text: "Working with NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. My phone screen is constantly lit up with new follower and order notifications! Sales are up 300%.", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" },
-      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. It's entirely thanks to their data-driven approach to thumbnails and audience retention.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" },
-      { name: "David", role: "Crypto Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys understand hidden algorithm patterns. We gained 150,000 active subscribers in just a month without any paid traffic.", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" },
-      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS took over everything: from topic research to final sound design. We consistently hit 3-4 viral videos a month, and our Cost Per Acquisition (CPA) dropped to a third of what it was.", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" },
-      { name: "Robert", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews with premium editing. As a result, we closed two high-ticket deals strictly from organic channel traffic.", img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=150&q=80" }
+      { name: "Jessica", role: "Fashion Brand Owner", text: "Working with NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "Gemini_Generated_Image_kdczcfkdczcfkdcz (2).jpg" },
+      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button.", img: "Gemini_Generated_Image_u5wofeu5wofeu5wo.jpg" },
+      { name: "Chloe", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys understand hidden algorithm patterns.", img: "Gemini_Generated_Image_gd8f93gd8f93gd8f.jpg" },
+      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS took over everything: from topic research to final sound design.", img: "Gemini_Generated_Image_7gbvpi7gbvpi7gbv.jpg" },
+      { name: "David", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg" },
+      { name: "Emily", role: "Fitness Coach", text: "They completely transformed my personal brand. The retention strategies they use for Shorts are mind-blowing.", img: "Gemini_Generated_Image_1042gz1042gz1042.jpg" }
     ],
     footer: "Systemic content growth."
   },
@@ -173,11 +175,12 @@ const translations = {
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Madina", role: "Kiyim brendi asochisi", text: "NKS bilan ishlash kontentga bo'lgan qarashimizni butunlay o'zgartirdi. Biz nafaqat millionlab ko'rishlarga ega bo'lyapmiz, balki real sotuvlarni ham ko'ryapmiz. Telefonim ekranida har daqiqa yangi obunachilar va buyurtmalar xabarlari chiqib turadi!", img: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?auto=format&fit=crop&w=150&q=80" },
-      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar biznesimiz uchun bashorat qilinadigan tizim qurdilar. Biz yarim yil ichida 10 barobar o'sdik va yaqinda YouTube kumush tugmasini oldik. Bu to'lig'icha jamoaning ma'lumotlarga va tahlilga asoslangan yondashuvi natijasidir.", img: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?auto=format&fit=crop&w=150&q=80" },
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar o'z-o'zidan organik o'smoqda. NKS algoritmlarning yashirin sirlarini biladi. Bir oy ichida hech qanday reklamasiz 150,000 ta faol obunachi yig'dik.", img: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=150&q=80" },
-      { name: "Laylo", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS mavzularni izlashdan tortib toza montajgacha hammasini o'z zimmasiga oldi. Mijoz jalb qilish narxi (CPA) 3 barobarga arzonlashdi. Ajoyib natija!", img: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=150&q=80" },
-      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Boshida ko'chmas mulk uchun YouTube qanchalik kerakligiga shubha qilgan edim. Ammo ekspertlik sharhlari va premium montaj orqali kanalning o'zidan ikkita katta premium obyektni sotishga erishdik.", img: "https://images.unsplash.com/photo-1508341591423-4347099e1f19?auto=format&fit=crop&w=150&q=80" }
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar o'z-o'zidan organik o'smoqda. NKS algoritmlarning yashirin sirlarini biladi.", img: "Gemini_Generated_Image_4648gm4648gm4648.jpg" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar biznesimiz uchun bashorat qilinadigan tizim qurdilar. Biz yarim yil ichida 10 barobar o'sdik va yaqinda YouTube kumush tugmasini oldik.", img: "Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Boshida ko'chmas mulk uchun YouTube qanchalik kerakligiga shubha qilgan edim. Ammo ekspertlik sharhlari orqali ikkita katta premium obyektni sotdik.", img: "Gemini_Generated_Image_2o04kw2o04kw2o04.jpg" },
+      { name: "Madina", role: "Kiyim brendi asochisi", text: "NKS bilan ishlash kontentga bo'lgan qarashimizni butunlay o'zgartirdi. Telefonim ekranida har daqiqa yangi obunachilar xabarlari chiqib turadi!", img: "Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg" },
+      { name: "Timur", role: "Restorator", text: "Ajoyib yondashuv. Bizning taomlarimizni shunday chiroyli ko'rsatishdiki, odamlar videoni ko'riboq stol band qilishni boshlashdi. Juda mamnunman.", img: "Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg" },
+      { name: "Farhod", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini o'z zimmasiga oldi. Mijoz jalb qilish narxi 3 barobarga arzonlashdi.", img: "Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -277,21 +280,53 @@ export default function App() {
 
   const axisColor = theme === 'dark' ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
   const gridColor = theme === 'dark' ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)";
-  const tooltipBg = theme === 'dark' ? "rgba(10, 15, 30, 0.9)" : "rgba(255, 255, 255, 0.9)";
-  const tooltipBorder = theme === 'dark' ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)";
+  const tooltipBg = theme === 'dark' ? "rgba(15, 23, 42, 0.9)" : "rgba(255, 255, 255, 0.9)";
   const tooltipText = theme === 'dark' ? "#fff" : "#0f172a";
+
+  // Форматирование цифр на Y оси (1000 -> 1k)
+  const formatYAxis = (tickItem) => {
+    if (tickItem >= 1000) {
+      return (tickItem / 1000) + 'k';
+    }
+    return tickItem;
+  };
+
+  // Кастомный красивый тултип при наведении
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div style={{ backgroundColor: tooltipBg, border: "1px solid rgba(14, 165, 233, 0.3)", padding: "16px", borderRadius: "12px", backdropFilter: "blur(10px)", color: tooltipText, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}>
+          <p style={{ margin: "0 0 10px 0", fontWeight: "600", fontSize: "14px", borderBottom: "1px solid rgba(14,165,233,0.2)", paddingBottom: "6px", color: theme === 'dark' ? '#cbd5e1' : '#64748b' }}>
+            {label}
+          </p>
+          {payload.map((entry, index) => (
+            <div key={index} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: index === 0 ? "8px" : "0" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                <span style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: entry.color, boxShadow: `0 0 8px ${entry.color}` }}></span>
+                <span style={{ fontSize: "14px", opacity: 0.8 }}>{entry.name}:</span>
+              </div>
+              <span style={{ fontWeight: "700", fontSize: "16px", marginLeft: "auto" }}>
+                {entry.value.toLocaleString('ru-RU')}
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <div className="container">
       <motion.div
         className="custom-cursor"
         animate={{
-          x: mousePosition.x - 10,
-          y: mousePosition.y - 10,
-          scale: isHovering ? 1.5 : 1,
+          x: mousePosition.x - 8,
+          y: mousePosition.y - 8,
+          scale: isHovering ? 1.8 : 1,
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
-        transition={{ type: "spring", stiffness: 1200, damping: 35, mass: 0.1 }}
+        transition={{ type: "spring", stiffness: 2000, damping: 20, mass: 0.05 }}
       />
 
       <header className="header">
@@ -348,16 +383,13 @@ export default function App() {
             </div>
           </div>
           <ResponsiveContainer width="100%" height="80%">
-            <LineChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+            <LineChart data={chartData} margin={{ top: 10, right: 30, left: 10, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke={gridColor} vertical={false} />
-              <XAxis dataKey="name" stroke={axisColor} fontSize={12} tickLine={false} axisLine={false} dy={10} />
-              <YAxis stroke={axisColor} fontSize={12} tickLine={false} axisLine={false} dx={-10} />
-              <Tooltip 
-                contentStyle={{ backgroundColor: tooltipBg, border: `1px solid ${tooltipBorder}`, borderRadius: "12px", backdropFilter: "blur(10px)", color: tooltipText }} 
-                itemStyle={{ color: tooltipText }}
-              />
-              <Line name={t.chart.before} type="monotone" dataKey="before" stroke="#64748b" strokeWidth={2} dot={{ r: 4, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 6 }} />
-              <Line name={t.chart.after} type="monotone" dataKey="after" stroke="#0ea5e9" strokeWidth={4} dot={{ r: 5, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 8, stroke: "#38bdf8", strokeWidth: 2 }} />
+              <XAxis dataKey="name" stroke={axisColor} fontSize={12} tickLine={false} axisLine={false} dy={15} />
+              <YAxis tickFormatter={formatYAxis} stroke={axisColor} fontSize={12} tickLine={false} axisLine={false} dx={-10} width={40} />
+              <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(14, 165, 233, 0.2)', strokeWidth: 2, strokeDasharray: '5 5' }} />
+              <Line name={t.chart.before} type="monotone" dataKey="before" stroke="#64748b" strokeWidth={3} dot={{ r: 4, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 6 }} />
+              <Line name={t.chart.after} type="monotone" dataKey="after" stroke="#0ea5e9" strokeWidth={4} dot={{ r: 5, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 8, stroke: "#38bdf8", strokeWidth: 2, boxShadow: "0 0 10px #38bdf8" }} />
             </LineChart>
           </ResponsiveContainer>
         </motion.div>
@@ -412,7 +444,6 @@ export default function App() {
 
       <section className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
-        {/* НОВЫЙ БЛОК: Бегущая строка для отзывов */}
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
             {t.testimonials.map((tItem, i) => (
