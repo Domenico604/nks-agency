@@ -36,39 +36,39 @@ const translations = {
     services: [
       { title: "Вирусная аналитика", text: "Анализируем скрытые паттерны алгоритмов и создаём форматы, обреченные на виральность.", tags: ["#Тренды", "#Ресерч", "#Алгоритмы"] },
       { title: "Сценарии удержания", text: "Проектируем каждую секунду видео так, чтобы зритель не мог свайпнуть. Глубокая работа с триггерами.", tags: ["#Retention", "#Копирайтинг", "#Хуки"] },
-      { title: "Премиальный монтаж", text: "Динамичный, но чистый эдит. Визуальные эффекты, которые удерживают внимание, а не раздражают.", tags: ["#VFX", "#Саунд-дизайн", "#Динамика"] },
+      { title: "Премиальный монтаж", text: "Динамичный, но чистый эдит. Визуальные эффекты, которые удерживают внимание.", tags: ["#VFX", "#Саунд-дизайн", "#Dynamics"] },
       { title: "Комплексная стратегия", text: "Разрабатываем долгосрочную систему контента, которая регулярно генерирует целевой трафик.", tags: ["#Позиционирование", "#Воронки"] },
-      { title: "Упаковка бренда", text: "Формируем сильную визуальную и смысловую узнаваемость вашего проекта в медиа-пространстве.", tags: ["#Айдентика", "#Смыслы", "#Дизайн"] },
-      { title: "Deep Аналитика", text: "Еженедельный разбор метрик. Докручиваем форматы и стратегии на основе реальных данных удержания.", tags: ["#A/B Тесты", "#Метрики", "#Оптимизация"] }
+      { title: "Упаковка бренда", text: "Формируем сильную визуальную узнаваемость вашего проекта в медиа-пространстве.", tags: ["#Identity", "#Смыслы", "#Design"] },
+      { title: "Deep Аналитика", text: "Докручиваем форматы и стратегии на основе реальных данных удержания.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
     ],
     showcase1: "Создаем стратегию контента. Проектируем каждую секунду видео.",
     audienceTitle: "Кому мы помогаем",
     audience: [
-      { title: "Бренды и Компании", text: "Конвертируем просмотры в лояльность и клиентов. Построение HR-бренда.", stats: "Рост узнаваемости x3" },
-      { title: "E-commerce", text: "Создаем продуктовый контент, который продает нативно через обзоры и тренды.", stats: "Снижение CPA" },
-      { title: "Креаторы", text: "Берем на себя всю рутину от идей до монтажа. Вы только снимаетесь.", stats: "Экономия 40ч/мес" },
-      { title: "Инфлюенсеры", text: "Масштабирование личного бренда, выход на новые площадки и монетизация.", stats: "Новые рынки" },
-      { title: "Агентства", text: "Закрываем потребность в production под ключ для ваших клиентов. White-label.", stats: "B2B партнерство" },
-      { title: "Стартапы", text: "Быстрый рост аудитории с нуля для валидации гипотез и привлечения юзеров.", stats: "Быстрый старт" }
+      { title: "Бренды и Компании", text: "Конвертируем просмотры в лояльность. Построение HR-бренда.", stats: "Узнаваемость x3" },
+      { title: "E-commerce", text: "Продуктовый контент, который продает нативно через тренды.", stats: "Снижение CPA" },
+      { title: "Креаторы", text: "Берем на себя всю рутину от идей до монтажа.", stats: "Экономия 40ч/мес" },
+      { title: "Инфлюенсеры", text: "Масштабирование личного бренда, выход на новые площадки.", stats: "Новые рынки" },
+      { title: "Агентства", text: "Закрываем потребность в production под ключ для ваших клиентов.", stats: "White-label" },
+      { title: "Стартапы", text: "Быстрый рост аудитории с нуля для валидации гипотез.", stats: "Быстрый старт" }
     ],
     methodologyTitle: "Методология",
     methodology: [
-      { title: "Research", subtitle: "Этап 01", text: "Глубокий анализ ниши, конкурентов и актуальных трендов платформы." },
-      { title: "Script", subtitle: "Этап 02", text: "Написание сценария с проработанной кривой удержания и сильными хуками." },
-      { title: "Production", subtitle: "Этап 03", text: "Помощь со съемкой или полная генерация визуального материала." },
-      { title: "Edit", subtitle: "Этап 04", text: "Сборка ролика: цветокоррекция, графика, саунд-дизайн и ритмика." },
-      { title: "Publishing", subtitle: "Этап 05", text: "SEO-оптимизация, правильные теги, обложки и время публикации." },
-      { title: "Analytics", subtitle: "Этап 06", text: "Сбор данных после публикации и корректировка следующего спринта." }
+      { title: "Research", subtitle: "Этап 01", text: "Глубокий анализ ниши, конкурентов и трендов." },
+      { title: "Script", subtitle: "Этап 02", text: "Сценарий с кривой удержания и сильными хуками." },
+      { title: "Production", subtitle: "Этап 03", text: "Помощь со съемкой или полная генерация визуала." },
+      { title: "Edit", subtitle: "Этап 04", text: "Сборка ролика: цветокоррекция, графика, саунд-дизайн." },
+      { title: "Publishing", subtitle: "Этап 05", text: "SEO-оптимизация, теги, обложки и время публикации." },
+      { title: "Analytics", subtitle: "Этап 06", text: "Сбор данных после публикации и корректировка спринта." }
     ],
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Ребята выстроили предсказуемую систему. Мы выросли в 10 раз за полгода, и недавно я распаковал серебряную кнопку YouTube. Это полностью заслуга их data-driven подхода.", img: "Gemini_Generated_Image_lry8utlry8utlry8.jpg" },
-      { name: "Алина", role: "Основатель Fashion Бренда", text: "Работа с NKS перевернула наше представление о контенте. Мы не просто получаем миллионы просмотров, но и видим реальную конверсию. Рост продаж составил 300% за первый квартал.", img: "Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Раньше я тратил тысячи долларов на посевы и рекламу. Сейчас просмотры растут органически. Парни знают магические паттерны алгоритмов Shorts. За месяц 150,000 аудитории.", img: "Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg" },
-      { name: "Елена", role: "EdTech Платформа", text: "Нам нужна была сильная узнаваемость в СНГ. NKS взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц.", img: "Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Долго сомневался, нужен ли недвижке YouTube. Сделали упор на экспертные обзоры с премиальным монтажом. Как итог — закрыли две сделки чисто с органики.", img: "Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg" },
-      { name: "Виктор", role: "Владелец сети ресторанов", text: "Отличная работа с визуалом и смыслами. Наш бренд стал узнаваемым, а столики теперь бронируют на неделю вперед благодаря вкусным Shorts.", img: "Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg" }
+      { name: "Алексей", role: "CEO TechStartup", text: "Ребята выстроили предсказуемую систему. Мы выросли в 10 раз за полгода, и недавно я распаковал серебряную кнопку YouTube.", img: "Gemini_Generated_Image_lry8utlry8utlry8.png" },
+      { name: "Мария", role: "Основатель Fashion Бренда", text: "NKS перевернули наше представление о контенте. Видим реальную конверсию. За месяц пришло 150,000 живой аудитории.", img: "Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Раньше тратил тысячи долларов на рекламу. Сейчас просмотры растут органически. Парни знают магические паттерны.", img: "Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg" },
+      { name: "Елена", role: "EdTech Платформа", text: "Нам нужна была сильная узнаваемость в СНГ. Стабильно по 3-4 вирусных ролика в месяц. CPA упал в три раза.", img: "Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала.", img: "Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg" },
+      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал узнаваемым, а столики теперь бронируют на неделю вперед благодаря вкусным Shorts.", img: "Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg" }
     ],
     footer: "Системный рост контента."
   },
@@ -92,29 +92,29 @@ const translations = {
     services: [
       { title: "Viral Analytics", text: "We analyze hidden algorithm patterns and create formats destined for virality.", tags: ["#Trends", "#Research", "#Algorithms"] },
       { title: "Retention Scripts", text: "We design every second of the video so the viewer can't swipe away. Deep trigger work.", tags: ["#Retention", "#Copywriting", "#Hooks"] },
-      { title: "Premium Editing", text: "Dynamic yet clean edit. Visual effects that hold attention, not irritate.", tags: ["#VFX", "#Sound Design", "#Dynamics"] },
+      { title: "Premium Editing", text: "Dynamic yet clean edit. Visual effects that hold attention.", tags: ["#VFX", "#Sound Design", "#Dynamics"] },
       { title: "Complex Strategy", text: "We develop a long-term content system that regularly generates targeted traffic.", tags: ["#Positioning", "#Funnels"] },
-      { title: "Brand Packaging", text: "We form strong visual and semantic recognition of your project in the media space.", tags: ["#Identity", "#Meanings", "#Design"] },
-      { title: "Deep Analytics", text: "Weekly metrics review. We tweak formats and strategies based on real retention data.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
+      { title: "Brand Packaging", text: "We form strong visual recognition of your project in the media space.", tags: ["#Identity", "#Meanings", "#Design"] },
+      { title: "Deep Analytics", text: "We tweak formats and strategies based on real retention data.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
     ],
     showcase1: "We create content strategy. We design every second of the video.",
     audienceTitle: "Who We Help",
     audience: [
-      { title: "Brands & Companies", text: "Convert views into loyalty and clients. Building HR brand.", stats: "Brand awareness x3" },
-      { title: "E-commerce", text: "Create product content that sells natively through reviews and trends.", stats: "Lower CPA" },
-      { title: "Creators", text: "We take over all routine from ideas to editing. You just shoot.", stats: "Save 40h/month" },
-      { title: "Influencers", text: "Scaling personal brand, entering new platforms and monetization.", stats: "New markets" },
-      { title: "Agencies", text: "Close the need for turnkey production for your clients. White-label.", stats: "B2B partnership" },
-      { title: "Startups", text: "Fast audience growth from scratch to validate hypotheses and attract users.", stats: "Quick start" }
+      { title: "Brands & Companies", text: "Convert views into loyalty. Building HR brand.", stats: "Brand awareness x3" },
+      { title: "E-commerce", text: "Product content that sells natively through trends.", stats: "Lower CPA" },
+      { title: "Creators", text: "We take over all routine from ideas to editing.", stats: "Save 40h/month" },
+      { title: "Influencers", text: "Scaling personal brand, entering new platforms.", stats: "New Markets" },
+      { title: "Agencies", text: "Close the need for turnkey production for your clients.", stats: "White-label" },
+      { title: "Startups", text: "Fast audience growth from scratch to validate hypotheses.", stats: "Quick Start" }
     ],
     methodologyTitle: "Methodology",
     methodology: [
-      { title: "Research", subtitle: "Stage 01", text: "Deep analysis of the niche, competitors, and current platform trends." },
-      { title: "Script", subtitle: "Stage 02", text: "Writing a script with a well-developed retention curve and strong hooks." },
-      { title: "Production", subtitle: "Stage 03", text: "Assistance with shooting or full generation of visual material." },
-      { title: "Edit", subtitle: "Stage 04", text: "Video assembly: color correction, graphics, sound design, and rhythm." },
-      { title: "Publishing", subtitle: "Stage 05", text: "SEO optimization, correct tags, thumbnails, and publishing time." },
-      { title: "Analytics", subtitle: "Stage 06", text: "Data collection after publication and adjustment of the next sprint." }
+      { title: "Research", subtitle: "Stage 01", text: "Deep analysis of the niche, competitors, and trends." },
+      { title: "Script", subtitle: "Stage 02", text: "Writing script with retention curve and strong hooks." },
+      { title: "Production", subtitle: "Stage 03", text: "Assistance with shooting or full visual material generation." },
+      { title: "Edit", subtitle: "Stage 04", text: "Video assembly: color correction, graphics, sound design." },
+      { title: "Publishing", subtitle: "Stage 05", text: "SEO optimization, correct tags, thumbnail and publishing time." },
+      { title: "Analytics", subtitle: "Stage 06", text: "Data collection after publication and adjustment of sprint." }
     ],
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
@@ -123,7 +123,7 @@ const translations = {
       { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button.", img: "Gemini_Generated_Image_u5wofeu5wofeu5wo.jpg" },
       { name: "Chloe", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys understand hidden algorithm patterns.", img: "Gemini_Generated_Image_gd8f93gd8f93gd8f.jpg" },
       { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS took over everything: from topic research to final sound design.", img: "Gemini_Generated_Image_7gbvpi7gbvpi7gbv.jpg" },
-      { name: "David", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg" },
+      { name: "Robert", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg" },
       { name: "Emily", role: "Fitness Coach", text: "They completely transformed my personal brand. The retention strategies they use for Shorts are mind-blowing.", img: "Gemini_Generated_Image_1042gz1042gz1042.jpg" }
     ],
     footer: "Systemic content growth."
@@ -146,41 +146,41 @@ const translations = {
     ],
     servicesTitle: "Bizning imkoniyatlarimiz",
     services: [
-      { title: "Virusli tahlil", text: "Algoritmlarning yashirin naqshlarini tahlil qilamiz va virusli bo'lishga mo'ljallangan formatlarni yaratamiz.", tags: ["#Trendlar", "#Izlanish", "#Algoritmlar"] },
-      { title: "Ushlab qolish ssenariylari", text: "Tomoshabin videoni o'tkazib yubormasligi uchun har bir soniyani loyihalashtiramiz. Triggerlar bilan chuqur ishlash.", tags: ["#Retention", "#Kopirayting", "#Huklar"] },
-      { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan, bezovta qilmaydigan vizual effektlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dinamika"] },
-      { title: "Kompleks strategiya", text: "Muntazam ravishda maqsadli trafikni yaratadigan uzoq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Pozitsiyalash", "#Voronkalar"] },
-      { title: "Brend qadoqlash", text: "Media makonida loyihangizning kuchli vizual va semantik tan olinishini shakllantiramiz.", tags: ["#Aydentika", "#Ma'nolar", "#Dizayn"] },
-      { title: "Chuqur tahlil", text: "Haftalik ko'rsatkichlarni ko'rib chiqish. Haqiqiy ma'lumotlar asosida formatlar va strategiyalarni moslashtiramiz.", tags: ["#A/B Testlar", "#Metrikalar", "#Optimizatsiya"] }
+      { title: "Virusli tahlil", text: "Algoritmlarning yashirin naqshlarini tahlil qilamiz va virusli formatlarni yaratamiz.", tags: ["#Trendlar", "#Izlanish", "#Algoritmlar"] },
+      { title: "Ushlab qolish ssenariylari", text: "Tomoshabin videoni o'tkazib yubormasligi uchun har bir soniyani loyihalashtiramiz.", tags: ["#Retention", "#Kopirayting", "#Huklar"] },
+      { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan, bezovta qilmaydigan effektlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dinamika"] },
+      { title: "Kompleks strategiya", text: "Trafikni yaratadigan uzoq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Pozitsiyalash", "#Voronkalar"] },
+      { title: "Brend qadoqlash", text: "Media makonida loyihangizning kuchli vizual tan olinishini shakllantiramiz.", tags: ["#Aydentika", "#Ma'nolar", "#Dizayn"] },
+      { title: "Chuqur tahlil", text: "Haqiqiy ma'lumotlar asosida formatlar va strategiyalarni moslashtiramiz.", tags: ["#A/B Testlar", "#Metrikalar", "#Optimizatsiya"] }
     ],
     showcase1: "Kontent strategiyasini yaratamiz. Videoning har bir soniyasini loyihalashtiramiz.",
     audienceTitle: "Kimga yordam beramiz",
     audience: [
-      { title: "Brendlar va Kompaniyalar", text: "Ko'rishlarni sodiqlik va mijozlarga aylantiramiz. HR brendini yaratish.", stats: "Taniqlik x3 o'sishi" },
-      { title: "Elektron tijorat (E-com)", text: "Sharhlar va trendlar orqali tabiiy ravishda sotadigan mahsulot kontentini yaratamiz.", stats: "CPA pasayishi" },
-      { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni o'z zimmamizga olamiz. Siz faqat suratga tushasiz.", stats: "Oyiga 40s tejash" },
-      { title: "Infliuyenserlar", text: "Shaxsiy brendni kengaytirish, yangi platformalarga chiqish va monetizatsiya.", stats: "Yangi bozorlar" },
-      { title: "Agentliklar", text: "Mijozlaringiz uchun tayyor prodyuserlik ehtiyojini yopamiz. White-label.", stats: "B2B hamkorlik" },
-      { title: "Startaplar", text: "Gipotezalarni tasdiqlash va foydalanuvchilarni jalb qilish uchun noldan tezkor auditoriya o'sishi.", stats: "Tezkor start" }
+      { title: "Brendlar va Kompaniyalar", text: "Ko'rishlarni sodiqlik va mijozlarga aylantiramiz.", stats: "Taniqlik x3" },
+      { title: "Elektron tijorat", text: "Sharhlar va trendlar orqali tabiiy ravishda sotadigan kontent.", stats: "CPA pasayishi" },
+      { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni zimmamizga olamiz.", stats: "Oyiga 40s tejash" },
+      { title: "Infliuyenserlar", text: "Shaxsiy brendni kengaytirish, yangi platformalarga chiqish.", stats: "Yangi bozorlar" },
+      { title: "Agentliklar", text: "Mijozlaringiz uchun tayyor prodyuserlik ehtiyojini yopamiz.", stats: "White-label" },
+      { title: "Startaplar", text: "Gipotezalarni tasdiqlash uchun tezkor auditoriya o'sishi.", stats: "Tezkor start" }
     ],
     methodologyTitle: "Metodologiya",
     methodology: [
-      { title: "Izlanish", subtitle: "01-bosqich", text: "Nisha, raqobatchilar va platformaning joriy trendlarini chuqur tahlil qilish." },
-      { title: "Ssenariy", subtitle: "02-bosqich", text: "Yaxshi ishlab chiqilgan ushlab qolish egri chizig'i va kuchli huklar bilan ssenariy yozish." },
-      { title: "Ishlab chiqarish", subtitle: "03-bosqich", text: "Suratga olishda yordam berish yoki vizual materialni to'liq yaratish." },
-      { title: "Montaj", subtitle: "04-bosqich", text: "Videoni yig'ish: ranglarni to'g'rilash, grafika, ovoz dizayni va ritm." },
+      { title: "Izlanish", subtitle: "01-bosqich", text: "Nisha, raqobatchilar va trendlarni tahlil qilish." },
+      { title: "Ssenariy", subtitle: "02-bosqich", text: "Ushlab qolish egri chizig'i va kuchli huklar bilan ssenariy yozish." },
+      { title: "Ishlab chiqarish", subtitle: "03-bosqich", text: "Suratga olishda yordam berish yoki vizual material yaratish." },
+      { title: "Montaj", subtitle: "04-bosqich", text: "Videoni yig'ish: ranglarni to'g'rilash, grafika, ovoz dizayni." },
       { title: "Nashr qilish", subtitle: "05-bosqich", text: "SEO optimallashtirish, to'g'ri teglar, muqovalar va nashr vaqti." },
-      { title: "Tahlil", subtitle: "06-bosqich", text: "Nashrdan keyin ma'lumotlarni to'plash va keyingi sprintni moslashtirish." }
+      { title: "Tahlil", subtitle: "06-bosqich", text: "Nashrdan keyin ma'lumotlarni to'plash va sprintni moslashtirish." }
     ],
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar o'z-o'zidan organik o'smoqda. NKS algoritmlarning yashirin sirlarini biladi.", img: "Gemini_Generated_Image_4648gm4648gm4648.jpg" },
-      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar biznesimiz uchun bashorat qilinadigan tizim qurdilar. Biz yarim yil ichida 10 barobar o'sdik va yaqinda YouTube kumush tugmasini oldik.", img: "Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg" },
-      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Boshida ko'chmas mulk uchun YouTube qanchalik kerakligiga shubha qilgan edim. Ammo ekspertlik sharhlari orqali ikkita katta premium obyektni sotdik.", img: "Gemini_Generated_Image_2o04kw2o04kw2o04.jpg" },
-      { name: "Madina", role: "Kiyim brendi asochisi", text: "NKS bilan ishlash kontentga bo'lgan qarashimizni butunlay o'zgartirdi. Telefonim ekranida har daqiqa yangi obunachilar xabarlari chiqib turadi!", img: "Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg" },
-      { name: "Timur", role: "Restorator", text: "Ajoyib yondashuv. Bizning taomlarimizni shunday chiroyli ko'rsatishdiki, odamlar videoni ko'riboq stol band qilishni boshlashdi. Juda mamnunman.", img: "Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg" },
-      { name: "Farhod", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini o'z zimmasiga oldi. Mijoz jalb qilish narxi 3 barobarga arzonlashdi.", img: "Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg" }
+      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS bilan ishlash kontentga bo'lgan qarashimizni butunlay o'zgartirdi. Biz real sotuvlarni ko'ryapmiz. Telefon tinmayapti!", img: "Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik.", img: "Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar o'z-o'zidan organik o'smoqda. Ajoyib natija!", img: "Gemini_Generated_Image_4648gm4648gm4648.jpg" },
+      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi.", img: "Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "Gemini_Generated_Image_2o04kw2o04kw2o04.jpg" },
+      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. CPA 3 barobarga arzonlashdi.", img: "Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -280,10 +280,9 @@ export default function App() {
 
   const axisColor = theme === 'dark' ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
   const gridColor = theme === 'dark' ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)";
-  const tooltipBg = theme === 'dark' ? "rgba(15, 23, 42, 0.9)" : "rgba(255, 255, 255, 0.9)";
+  const tooltipBg = theme === 'dark' ? "rgba(10, 15, 30, 0.9)" : "rgba(255, 255, 255, 0.9)";
   const tooltipText = theme === 'dark' ? "#fff" : "#0f172a";
 
-  // Форматирование цифр на Y оси (1000 -> 1k)
   const formatYAxis = (tickItem) => {
     if (tickItem >= 1000) {
       return (tickItem / 1000) + 'k';
@@ -291,11 +290,10 @@ export default function App() {
     return tickItem;
   };
 
-  // Кастомный красивый тултип при наведении
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
-        <div style={{ backgroundColor: tooltipBg, border: "1px solid rgba(14, 165, 233, 0.3)", padding: "16px", borderRadius: "12px", backdropFilter: "blur(10px)", color: tooltipText, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}>
+        <div style={{ backgroundColor: tooltipBg, border: `1px solid rgba(14, 165, 233, 0.3)`, padding: "16px", borderRadius: "12px", backdropFilter: "blur(10px)", color: tooltipText, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}>
           <p style={{ margin: "0 0 10px 0", fontWeight: "600", fontSize: "14px", borderBottom: "1px solid rgba(14,165,233,0.2)", paddingBottom: "6px", color: theme === 'dark' ? '#cbd5e1' : '#64748b' }}>
             {label}
           </p>
