@@ -44,13 +44,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
-  background: #fff;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
   border-radius: 50%;
   pointer-events: none;
   z-index: 99999;
-  mix-blend-mode: difference;
   will-change: transform;
 }
 
@@ -555,16 +556,17 @@ h3 {
 .testimonial-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
 .avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
   border: 2px solid rgba(14, 165, 233, 0.5);
   object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-role {
@@ -602,11 +604,7 @@ h3 {
   min-width: 100%;
   padding-left: 24px;
   gap: 24px;
-  animation: scrollTestimonials 50s linear infinite;
-}
-
-.testimonials-marquee-container:hover .testimonials-track {
-  animation-play-state: paused;
+  animation: scrollTestimonials 50s linear infinite reverse;
 }
 
 @keyframes scrollTestimonials {
