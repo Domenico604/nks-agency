@@ -597,6 +597,7 @@ h3 {
   -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
+/* Изменено для анимации слева направо */
 .testimonials-track {
   display: flex;
   flex-shrink: 0;
@@ -604,12 +605,13 @@ h3 {
   min-width: 100%;
   padding-left: 24px;
   gap: 24px;
-  animation: scrollTestimonials 50s linear infinite reverse;
+  animation: scrollTestimonialsLTR 40s linear infinite;
 }
 
-@keyframes scrollTestimonials {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+/* Новая анимация, чтобы отзывы ехали в нужную сторону */
+@keyframes scrollTestimonialsLTR {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
 }
 
 footer {
