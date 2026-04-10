@@ -134,7 +134,8 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 
 .testimonials-marquee-container { display: flex; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden; user-select: none; mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
 .testimonials-track { display: flex; flex-shrink: 0; align-items: stretch; min-width: 100%; padding: 10px 24px; gap: 24px; animation: scrollTestimonialsLTR 50s linear infinite; }
-.testimonials-track:hover { animation-play-state: paused; }
+
+/* Убрана остановка анимации при наведении: .testimonials-track:hover { animation-play-state: paused; } */
 
 @keyframes scrollTestimonialsLTR { 0% { transform: translateX(-100%); } 100% { transform: translateX(0); } }
 
