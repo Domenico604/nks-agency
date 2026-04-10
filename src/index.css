@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ==========================================
-   БАЗОВЫЕ НАСТРОЙКИ
-   ========================================== */
-html { 
-  scroll-behavior: auto;
-}
-
+html { scroll-behavior: auto; }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #050508; }
 ::-webkit-scrollbar-thumb { background: rgba(14, 165, 233, 0.3); border-radius: 10px; }
@@ -16,125 +10,63 @@ html {
 @media (pointer: fine) { * { cursor: none !important; } }
 
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #f8fafc;
-  overflow-x: hidden;
-  padding-top: 100px;
-  background-color: #050508;
-  background-image: 
-    radial-gradient(circle at 15% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 85% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 40%);
-  background-attachment: fixed;
-  transition: background-color 0.4s ease, color 0.4s ease; 
+  margin: 0; font-family: 'Poppins', sans-serif; color: #f8fafc; overflow-x: hidden; padding-top: 100px;
+  background-color: #050508; background-image: radial-gradient(circle at 15% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 40%), radial-gradient(circle at 85% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 40%);
+  background-attachment: fixed; transition: background-color 0.4s ease, color 0.4s ease; 
 }
 
-/* ==========================================
-   КУРСОР
-   ========================================== */
 .custom-cursor {
-  position: fixed;
-  top: 0; left: 0;
-  width: 24px; height: 24px;
+  position: fixed; top: 0; left: 0; width: 24px; height: 24px; pointer-events: none; z-index: 99999;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2338bdf8'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
-  background-size: cover;
-  pointer-events: none;
-  z-index: 99999;
-  will-change: transform;
-  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.6));
+  background-size: cover; will-change: transform; filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.6));
 }
 
 .container { max-width: 1200px; margin: auto; padding: 0 24px; text-align: center; }
 
-/* ==========================================
-   ШАПКА (HEADER)
-   ========================================== */
 .header {
-  position: fixed;
-  top: 0; left: 0; width: 100%; z-index: 999;
-  background: rgba(5, 5, 8, 0.6);
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 999; background: rgba(5, 5, 8, 0.6);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;
 }
-
-.header-inner {
-  max-width: 1200px; margin: 0 auto; padding: 16px 24px;
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 15px;
-}
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 15px; }
 
 .logo { display: flex; flex-direction: column; align-items: center; }
 .logo-main {
-  font-size: 46px; font-weight: 700; font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  line-height: 1; letter-spacing: 8px; margin-right: -8px; 
+  font-size: 46px; font-weight: 700; font-family: 'Bebas Neue', sans-serif; line-height: 1; letter-spacing: 8px; margin-right: -8px; 
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-
 .logo-line { width: 130%; height: 2px; background: linear-gradient(90deg, transparent, #0ea5e9, transparent); margin-top: 6px; border-radius: 2px; }
+
 .buttons-group { display: flex; gap: 12px; align-items: center; }
-
-/* =============================
-   ПЕРЕКЛЮЧАТЕЛИ
-   ============================= */
-.lang-switcher {
-  display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 100px; padding: 4px; height: 44px; box-sizing: border-box;
-}
-
-.lang-btn {
-  background: transparent; border: none; color: #94a3b8; font-size: 13px; font-weight: 600;
-  width: 40px; height: 100%; border-radius: 100px; cursor: pointer; transition: all 0.3s ease;
-  display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1;
-}
-
+.lang-switcher { display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 100px; padding: 4px; height: 44px; box-sizing: border-box; }
+.lang-btn { background: transparent; border: none; color: #94a3b8; font-size: 13px; font-weight: 600; width: 40px; height: 100%; border-radius: 100px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; padding: 0; line-height: 1; }
 .lang-btn:hover { color: #fff; }
 .lang-btn.active { background: rgba(2, 132, 199, 0.3); color: #38bdf8; box-shadow: 0 2px 10px rgba(2, 132, 199, 0.2); }
 
 .theme-toggle {
-  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff;
-  width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: all 0.3s ease; margin-right: 4px;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; width: 44px; height: 44px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; margin-right: 4px;
 }
 .theme-toggle:hover { background: rgba(255, 255, 255, 0.1); transform: scale(1.05); }
 
-/* ==========================================
-   КНОПКИ И ТИПОГРАФИКА
-   ========================================== */
 .button {
-  padding: 12px 24px; border-radius: 100px; font-weight: 600; border: none; cursor: pointer;
-  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%); color: #ffffff;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); font-size: 14px; letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  padding: 12px 24px; border-radius: 100px; font-weight: 600; border: none; cursor: pointer; color: #ffffff;
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%); transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  font-size: 14px; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   display: inline-flex; align-items: center; justify-content: center; position: relative; overflow: hidden; white-space: nowrap;
 }
-
-.button::before {
-  content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transform: skewX(-20deg); transition: 0.6s;
-}
-
+.button::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transform: skewX(-20deg); transition: 0.6s; }
 .button:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3); }
 .button:hover::before { left: 150%; }
 .button.main-cta { padding: 18px 48px; font-size: 16px; margin-top: 30px; }
 
-h2 {
-  font-family: 'Bebas Neue', sans-serif; font-size: 5.5rem; margin-bottom: 24px; line-height: 1.1; letter-spacing: 2px;
-  background: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-
-h3 {
-  font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50px;
-  background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  letter-spacing: 1px; line-height: 1.2; display: inline-block;
-}
+h2 { font-family: 'Bebas Neue', sans-serif; font-size: 5.5rem; margin-bottom: 24px; line-height: 1.1; letter-spacing: 2px; background: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50px; background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; display: inline-block; }
 
 .hero { padding: 120px 0 60px; }
 .hero-badge { display: inline-block; padding: 8px 16px; border-radius: 100px; background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.2); font-size: 13px; color: #38bdf8; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px; }
 .hero-text { font-size: 1.15rem; max-width: 650px; margin: 0 auto 30px; color: #94a3b8; line-height: 1.7; font-weight: 300; }
 
-/* ==========================================
-   СТАТИСТИКА И ПАРТНЕРЫ
-   ========================================== */
 .stats-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; padding: 60px 0; margin-bottom: 0px; border-top: 1px solid rgba(255, 255, 255, 0.05); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent); }
 .stat-block { text-align: center; min-width: 180px; }
 .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 1; background: linear-gradient(135deg, #fff 0%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
@@ -145,12 +77,8 @@ h3 {
 .marquee-content { display: flex; flex-shrink: 0; align-items: center; justify-content: space-around; min-width: 100%; animation: scroll 30s linear infinite; }
 .partner-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: rgba(255, 255, 255, 0.15); margin: 0 40px; letter-spacing: 2px; transition: color 0.3s ease; white-space: nowrap; }
 .partner-logo:hover { color: rgba(56, 189, 248, 0.8); }
-
 @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-/* ==========================================
-   СЕТКА И КАРТОЧКИ
-   ========================================== */
 .content-section { padding: 80px 0; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
 .card { padding: 36px 32px; border-radius: 24px; background: linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.2) 100%); border: 1px solid rgba(255, 255, 255, 0.04); backdrop-filter: blur(12px); text-align: left; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); display: flex; flex-direction: column; position: relative; overflow: hidden; }
@@ -166,9 +94,6 @@ h3 {
 .tag { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 6px 12px; border-radius: 8px; font-size: 12px; color: #cbd5e1; white-space: nowrap; }
 .stats-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; font-size: 13px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 8px 16px; border-radius: 100px; border: 1px solid rgba(52, 211, 153, 0.2); width: fit-content; }
 
-/* ==========================================
-   ГРАФИК (CHART)
-   ========================================== */
 .chart-box { height: 400px; margin-top: 60px; padding: 30px; background: rgba(15, 23, 42, 0.4); border-radius: 32px; border: 1px solid rgba(255,255,255,0.04); backdrop-filter: blur(10px); }
 .chart-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; text-align: left; }
 .chart-title { display: block; font-size: 1.2rem; font-weight: 500; color: #fff; margin-bottom: 4px; }
@@ -180,75 +105,39 @@ h3 {
 .dot-after { background: #0ea5e9; box-shadow: 0 0 10px rgba(14, 165, 233, 0.5); }
 
 /* =========================================
-   НОВЫЕ АККУРАТНЫЕ ОТЗЫВЫ (ЯЧЕЙКИ)
+   НОВЫЕ ПРЕМИАЛЬНЫЕ ОТЗЫВЫ (ЯЧЕЙКИ)
    ========================================= */
 .testimonials-section { padding: 80px 0; overflow: hidden; }
 
 .testimonial-card {
-  width: 400px; 
-  flex-shrink: 0;
-  padding: 30px;
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.2) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  text-align: left;
+  width: 420px; flex-shrink: 0; padding: 40px; border-radius: 32px; gap: 24px;
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.3) 100%);
 }
 
-.testimonial-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+.testimonial-header { display: flex; align-items: center; gap: 20px; }
 
-.avatar {
-  width: 64px; 
-  height: 64px;
-  border-radius: 50%; 
-  border: 2px solid rgba(14, 165, 233, 0.6);
-  object-fit: cover;
+/* Оформление большой рамочки фото */
+.avatar-frame {
+  width: 90px; height: 90px; border-radius: 50%; padding: 4px; flex-shrink: 0;
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3); transition: transform 0.3s ease;
 }
+.testimonial-card:hover .avatar-frame { transform: scale(1.05); box-shadow: 0 0 25px rgba(56, 189, 248, 0.5); }
 
-.testimonial-header h4 {
-  font-size: 1.2rem;
-  margin: 0 0 4px 0;
-  color: #fff;
-  font-weight: 600;
-  line-height: 1.2;
-}
+.avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid #050508; }
 
-.testimonial-role {
-  font-size: 13px;
-  color: #94a3b8;
-  display: block;
-}
+.testimonial-info h4 { font-size: 1.3rem; margin: 0 0 4px 0; color: #fff; font-weight: 600; line-height: 1.2; }
+.testimonial-role { font-size: 13px; color: #38bdf8; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
+.stars { color: #fbbf24; font-size: 16px; letter-spacing: 2px; }
 
-.stars {
-  color: #fbbf24;
-  font-size: 16px;
-  letter-spacing: 2px;
-  margin-top: -8px;
-}
-
-.testimonial-text {
-  font-size: 0.95rem; 
-  line-height: 1.6;
-  color: #e2e8f0;
-  font-weight: 300;
-  margin: 0;
-  font-style: italic;
-}
+.testimonial-text { font-size: 1rem; line-height: 1.7; color: #f1f5f9; font-weight: 300; margin: 0; opacity: 0.9; }
 
 .testimonials-marquee-container { display: flex; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden; user-select: none; mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
-.testimonials-track { display: flex; flex-shrink: 0; align-items: stretch; min-width: 100%; padding-left: 24px; gap: 24px; animation: scrollTestimonialsLTR 40s linear infinite; }
+.testimonials-track { display: flex; flex-shrink: 0; align-items: stretch; min-width: 100%; padding: 10px 24px; gap: 24px; animation: scrollTestimonialsLTR 50s linear infinite; }
+.testimonials-track:hover { animation-play-state: paused; }
+
 @keyframes scrollTestimonialsLTR { 0% { transform: translateX(-100%); } 100% { transform: translateX(0); } }
 
-/* ==========================================
-   ПАРАЛЛАКС И ФУТЕР
-   ========================================== */
 footer { padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 50px; }
 .footer-content { display: flex; flex-direction: column; align-items: center; gap: 16px; opacity: 0.6; }
 .footer-logo { font-size: 32px; letter-spacing: 4px; margin-right: -4px; }
@@ -262,9 +151,6 @@ footer { padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
 .showcase-badge { display: inline-block; padding: 6px 14px; border-radius: 100px; background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.2); font-size: 11px; color: #38bdf8; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 2px; }
 .showcase-headline { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 1.1; letter-spacing: 1px; margin: 0; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); background-image: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-/* ==========================================
-   МОБИЛЬНАЯ АДАПТАЦИЯ
-   ========================================== */
 @media (max-width: 768px) {
   .custom-cursor { display: none; }
   h2 { font-size: 3.2rem; } h3 { font-size: 2.5rem; }
@@ -280,9 +166,9 @@ footer { padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
   .showcase-headline { font-size: 2.5rem; padding: 15px; }
   .partner-logo { font-size: 1.8rem; margin: 0 20px; }
   
-  .testimonial-card { width: 300px; padding: 20px; }
-  .testimonial-text { font-size: 0.9rem; }
-  .avatar { width: 50px; height: 50px; }
+  .testimonial-card { width: 320px; padding: 30px; gap: 16px; }
+  .avatar-frame { width: 70px; height: 70px; }
+  .testimonial-text { font-size: 0.95rem; }
 }
 
 /* =========================================
@@ -295,8 +181,8 @@ body.light-theme h3 { background: linear-gradient(135deg, #0f172a 0%, #0284c7 50
 body.light-theme .hero-text, body.light-theme .stat-label, body.light-theme .chart-subtitle, body.light-theme .legend-item, body.light-theme .card p, body.light-theme .testimonial-text { color: #475569; }
 body.light-theme .stats-section { border-top: 1px solid rgba(0, 0, 0, 0.05); background: linear-gradient(90deg, transparent, rgba(0,0,0,0.02), transparent); }
 body.light-theme .card, body.light-theme .chart-box { background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(248, 250, 252, 0.5) 100%); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-body.light-theme .card:hover { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 0.8) 100%); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); }
-body.light-theme .card h4, body.light-theme .chart-title, body.light-theme .testimonial-header h4 { color: #0f172a; }
+body.light-theme .card:hover, body.light-theme .testimonial-card:hover { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 0.8) 100%); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); }
+body.light-theme .card h4, body.light-theme .chart-title, body.light-theme .testimonial-info h4 { color: #0f172a; }
 body.light-theme .card-number { color: rgba(0,0,0,0.05); }
 body.light-theme .card::before { background: linear-gradient(135deg, rgba(0,0,0,0.05), transparent, rgba(14, 165, 233, 0.1)); }
 body.light-theme .tag { background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(0, 0, 0, 0.06); color: #334155; }
