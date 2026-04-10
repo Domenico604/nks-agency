@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* BASE */
+/* ==========================================
+   БАЗОВЫЕ НАСТРОЙКИ
+   ========================================== */
 html { 
   scroll-behavior: auto;
 }
@@ -64,6 +66,9 @@ body {
   text-align: center;
 }
 
+/* ==========================================
+   ШАПКА (HEADER)
+   ========================================== */
 .header {
   position: fixed;
   top: 0;
@@ -121,7 +126,7 @@ body {
 }
 
 /* =============================
-   LANG SWITCHER
+   ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ
    ============================= */
 .lang-switcher {
   display: inline-flex;
@@ -163,7 +168,7 @@ body {
 }
 
 /* =============================
-   THEME TOGGLE
+   ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ
    ============================= */
 .theme-toggle {
   background: rgba(255, 255, 255, 0.05);
@@ -185,6 +190,9 @@ body {
   transform: scale(1.05);
 }
 
+/* ==========================================
+   КНОПКИ И ТИПОГРАФИКА
+   ========================================== */
 .button {
   padding: 12px 24px;
   border-radius: 100px;
@@ -279,6 +287,9 @@ h3 {
   font-weight: 300;
 }
 
+/* ==========================================
+   СТАТИСТИКА И ПАРТНЕРЫ
+   ========================================== */
 .stats-section {
   display: flex;
   flex-wrap: wrap;
@@ -365,6 +376,9 @@ h3 {
   100% { transform: translateX(-100%); }
 }
 
+/* ==========================================
+   СЕТКА И КАРТОЧКИ
+   ========================================== */
 .content-section {
   padding: 80px 0;
 }
@@ -484,6 +498,9 @@ h3 {
   width: fit-content;
 }
 
+/* ==========================================
+   ГРАФИК (CHART)
+   ========================================== */
 .chart-box {
   height: 400px;
   margin-top: 60px;
@@ -540,27 +557,23 @@ h3 {
    ИЗМЕНЕННЫЕ ОГРОМНЫЕ ОТЗЫВЫ: ФОН И ТЕКСТ
    ========================================= */
 .testimonial-card {
-  width: 550px; /* Делаем карточки намного больше */
-  height: 650px; /* Задаем фиксированную высоту */
+  width: 550px; 
+  height: 650px; 
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Контент вверху и внизу */
+  justify-content: space-between; 
   padding: 40px;
   border-radius: 32px;
-  
-  /* ИСПОЛЬЗУЕМ ФОНОВОЕ ИЗОБРАЖЕНИЕ */
   background-image: var(--bg-img);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
   border: 1px solid rgba(14, 165, 233, 0.3);
   position: relative;
   overflow: hidden;
 }
 
-/* Затемняющий оверлей для читаемости текста */
 .testimonial-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -569,7 +582,7 @@ h3 {
 }
 
 .testimonial-text {
-  font-size: 1.6rem; /* Крупный текст */
+  font-size: 1.6rem; 
   line-height: 1.5;
   color: #f8fafc;
   font-weight: 300;
@@ -588,19 +601,18 @@ h3 {
   text-align: left;
 }
 
-/* ФУТЕР КАРТОЧКИ: АВАТАР И ИМЯ */
 .testimonial-footer {
   display: flex;
   align-items: center;
   gap: 20px;
   position: relative;
   z-index: 2;
-  margin-top: auto; /* Прижимаем к низу */
+  margin-top: auto; 
   text-align: left;
 }
 
 .avatar {
-  width: 100px; /* Большой аватар */
+  width: 100px; 
   height: 100px;
   border-radius: 20px;
   border: 3px solid rgba(14, 165, 233, 0.6);
@@ -635,7 +647,6 @@ h3 {
   -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
-/* Анимация слева направо */
 .testimonials-track {
   display: flex;
   flex-shrink: 0;
@@ -651,6 +662,9 @@ h3 {
   100% { transform: translateX(0); }
 }
 
+/* ==========================================
+   ПАРАЛЛАКС И ФУТЕР
+   ========================================== */
 footer {
   padding: 60px 0;
   border-top: 1px solid rgba(255,255,255,0.05);
@@ -762,6 +776,9 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
+/* ==========================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ
+   ========================================== */
 @media (max-width: 768px) {
   .custom-cursor { display: none; }
   h2 { font-size: 3.2rem; }
@@ -793,7 +810,7 @@ footer {
 }
 
 /* =========================================
-   LIGHT THEME OVERRIDES
+   СВЕТЛАЯ ТЕМА (LIGHT THEME)
    ========================================= */
 body.light-theme {
   background-color: #f8fafc;
