@@ -303,6 +303,7 @@ export default function App() {
 
   return (
     <div className="container">
+      {/* КУРСОР: Уменьшили mass, увеличили stiffness для моментальной скорости */}
       <motion.div
         className="custom-cursor"
         animate={{
@@ -311,7 +312,7 @@ export default function App() {
           scale: isHovering ? 1.5 : 1,
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
-        transition={{ type: "spring", stiffness: 2000, damping: 20, mass: 0.05 }}
+        transition={{ type: "spring", stiffness: 4000, damping: 30, mass: 0.01 }}
       />
 
       <header className="header">
@@ -427,40 +428,37 @@ export default function App() {
         isReversed 
       />
 
+      {/* НОВАЯ СЕКЦИЯ ОТЗЫВОВ - Аккуратные ячейки */}
       <section className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
             {t.testimonials.map((tItem, i) => (
-              <div key={i} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.img})` }}>
-                <div className="testimonial-overlay"></div>
-                
-                <p className="testimonial-text">"{tItem.text}"</p>
-                <div className="stars">★★★★★</div>
-
-                <div className="testimonial-footer">
+              <div key={i} className="card testimonial-card">
+                <div className="testimonial-header">
                   <img src={tItem.img} className="avatar" alt={tItem.name} />
                   <div>
                     <h4>{tItem.name}</h4>
                     <span className="testimonial-role">{tItem.role}</span>
                   </div>
                 </div>
+                <div className="stars">★★★★★</div>
+                <p className="testimonial-text">"{tItem.text}"</p>
               </div>
             ))}
           </div>
           <div className="testimonials-track" aria-hidden="true">
             {t.testimonials.map((tItem, i) => (
-              <div key={i + 100} className="card testimonial-card" style={{ '--bg-img': `url(${tItem.img})` }}>
-                <div className="testimonial-overlay"></div>
-                <p className="testimonial-text">"{tItem.text}"</p>
-                <div className="stars">★★★★★</div>
-                <div className="testimonial-footer">
+              <div key={i + 100} className="card testimonial-card">
+                <div className="testimonial-header">
                   <img src={tItem.img} className="avatar" alt={tItem.name} />
                   <div>
                     <h4>{tItem.name}</h4>
                     <span className="testimonial-role">{tItem.role}</span>
                   </div>
                 </div>
+                <div className="stars">★★★★★</div>
+                <p className="testimonial-text">"{tItem.text}"</p>
               </div>
             ))}
           </div>
