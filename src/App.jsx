@@ -54,12 +54,12 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок. data-driven подход в действии!", img: "/Gemini_Generated_Image_lry8utlry8utlry8.png" },
-      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга. Мой телефон разрывается от уведомлений!", img: "/Gemini_Generated_Image_wc2e9ewc2e9ewc2e.jpg" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Gemini_Generated_Image_39zfrv39zfrv39zf (1).jpg" },
-      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц. Это уровень!", img: "/Gemini_Generated_Image_9hyfdg9hyfdg9hyf.jpg" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает даже в такой сложной нише.", img: "/Gemini_Generated_Image_5pi73y5pi73y5pi7.jpg" },
-      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее и узнаваемее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Gemini_Generated_Image_j8qf0bj8qf0bj8qf.jpg" }
+      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок. data-driven подход в действии!", img: "/1.png" },
+      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга. Мой телефон разрывается от уведомлений!", img: "/2.png" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/3.png" },
+      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц. Это уровень!", img: "/4.png" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает даже в такой сложной нише.", img: "/5.png" },
+      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее и узнаваемее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/6.png" }
     ],
     footer: "Системный рост контента."
   },
@@ -110,12 +110,12 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%. My phone just won't stop ringing!", img: "/Gemini_Generated_Image_kdczcfkdczcfkdcz (2).jpg" },
-      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. data-driven magic!", img: "/Gemini_Generated_Image_u5wofeu5wofeu5wo.jpg" },
-      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Gemini_Generated_Image_gd8f93gd8f93gd8f.jpg" },
-      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third. Impeccable level!", img: "/Gemini_Generated_Image_7gbvpi7gbvpi7gbv.jpg" },
-      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals strictly from our organic audience.", img: "/Gemini_Generated_Image_9uwa6k9uwa6k9uwa.jpg" },
-      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns. The editing and dynamics are just pure magic.", img: "/Gemini_Generated_Image_1042gz1042gz1042.jpg" }
+      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%. My phone just won't stop ringing!", img: "/7.png" },
+      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. data-driven magic!", img: "/8.png" },
+      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/9.png" },
+      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third. Impeccable level!", img: "/10.png" },
+      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals strictly from our organic audience.", img: "/11.png" },
+      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns. The editing and dynamics are just pure magic.", img: "/12.png" }
     ],
     footer: "Systemic content growth."
   },
@@ -166,12 +166,12 @@ const translations = {
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Gemini_Generated_Image_xbcbvaxbcbvaxbcb.jpg" },
-      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik. Data-driven sehr!", img: "/Gemini_Generated_Image_ji05rlji05rlji05 (1).jpg" },
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Gemini_Generated_Image_4648gm4648gm4648.jpg" },
-      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi. Telefonim tinmayapti.", img: "/Gemini_Generated_Image_ncpdc4ncpdc4ncpd.jpg" },
-      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Gemini_Generated_Image_2o04kw2o04kw2o04.jpg" },
-      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Gemini_Generated_Image_pu4kpkpu4kpkpu4k.jpg" }
+      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/13.png" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik. Data-driven sehr!", img: "/14.png" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/15.png" },
+      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi. Telefonim tinmayapti.", img: "/16.png" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/17.png" },
+      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/18.png" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -303,7 +303,7 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* КУРСОР: Уменьшили mass, увеличили stiffness для моментальной скорости */}
+      {/* ОЧЕНЬ БЫСТРЫЙ КУРСОР: моментальная реакция (duration 0) */}
       <motion.div
         className="custom-cursor"
         animate={{
@@ -312,7 +312,7 @@ export default function App() {
           scale: isHovering ? 1.5 : 1,
           opacity: mousePosition.x === 0 ? 0 : 1
         }}
-        transition={{ type: "spring", stiffness: 4000, damping: 30, mass: 0.01 }}
+        transition={{ type: "tween", duration: 0 }}
       />
 
       <header className="header">
@@ -428,7 +428,6 @@ export default function App() {
         isReversed 
       />
 
-      {/* НОВАЯ СЕКЦИЯ ОТЗЫВОВ - Аккуратные ячейки */}
       <section className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
         <div className="testimonials-marquee-container">
