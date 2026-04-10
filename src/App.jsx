@@ -54,12 +54,12 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок. data-driven подход в действии!", img: "/Pic 1.png" },
-      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга. Мой телефон разрывается от уведомлений!", img: "/Pic 2.png" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Pic 3.png" },
-      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц. Это уровень!", img: "/Pic 4.png" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает даже в такой сложной нише.", img: "/Pic 5.png" },
-      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее и узнаваемее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Pic 6.png" }
+      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок.", img: "/Pic 2.png" },
+      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга.", img: "/Pic 4.png" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Pic 6.png" },
+      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц.", img: "/Pic 17.png" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает!", img: "/Pic 10.png" },
+      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Pic 11.png" }
     ],
     footer: "Системный рост контента."
   },
@@ -82,7 +82,7 @@ const translations = {
     servicesTitle: "Our Capabilities",
     services: [
       { title: "Viral Analytics", text: "We analyze hidden algorithm patterns and create formats destined for virality.", tags: ["#Trends", "#Research", "#Algorithms"] },
-      { title: "Retention Scripts", text: "We design every second of the video so the viewer can't swipe away. Deep trigger work.", tags: ["#Retention", "#Copywriting", "#Hooks"] },
+      { title: "Retention Scripts", text: "We design every second of the video so the viewer can't swipe away.", tags: ["#Retention", "#Copywriting", "#Hooks"] },
       { title: "Premium Editing", text: "Dynamic yet clean edit. Visual effects that hold attention.", tags: ["#VFX", "#Sound Design", "#Dynamics"] },
       { title: "Complex Strategy", text: "We develop a long-term content system that regularly generates targeted traffic.", tags: ["#Positioning", "#Funnels"] },
       { title: "Brand Packaging", text: "We form strong visual recognition of your project in the media space.", tags: ["#Identity", "#Meanings", "#Design"] },
@@ -110,12 +110,12 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%. My phone just won't stop ringing!", img: "/Pic 7.png" },
-      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months, and I recently unboxed our YouTube Silver Play Button. data-driven magic!", img: "/Pic 8.png" },
-      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Pic 9.png" },
-      { name: "Sarah", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third. Impeccable level!", img: "/Pic 10.png" },
-      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals strictly from our organic audience.", img: "/Pic 11.png" },
-      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns. The editing and dynamics are just pure magic.", img: "/Pic 12.png" }
+      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "/Pic 9.png" },
+      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months. data-driven magic!", img: "/Pic 5.png" },
+      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Pic 12.png" },
+      { name: "David", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third.", img: "/Pic 11.png" },
+      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "/Pic 16.png" },
+      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns.", img: "/Pic 14.png" }
     ],
     footer: "Systemic content growth."
   },
@@ -139,7 +139,7 @@ const translations = {
     services: [
       { title: "Virusli tahlil", text: "Algoritmlarning yashirin naqshlarini tahlil qilamiz va virusli formatlarni yaratamiz.", tags: ["#Trendlar", "#Izlanish", "#Algoritmlar"] },
       { title: "Ushlab qolish ssenariylari", text: "Tomoshabin videoni o'tkazib yubormasligi uchun har bir soniyani loyihalashtiramiz.", tags: ["#Retention", "#Kopirayting", "#Huklar"] },
-      { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan, bezovta qilmayдigan effektlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dynamics"] },
+      { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan effectlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dynamics"] },
       { title: "Kompleks strategiya", text: "Trafikni yaratadigan uzoq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Positioning", "#Voronkalar"] },
       { title: "Brend qadoqlash", text: "Media makonida loyihangizning kuchli vizual tan olinishini shakllantiramiz.", tags: ["#Identity", "#Meanings", "#Design"] },
       { title: "Chuqur tahlil", text: "Haqiqiy ma'lumotlar asosida formatlar va strategiyalarni moslashtiramiz.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
@@ -157,21 +157,21 @@ const translations = {
     methodologyTitle: "Metodologiya",
     methodology: [
       { title: "Research", subtitle: "Stage 01", text: "Nisha, raqobatchilar va trendlarni tahlil qilish." },
-      { title: "Script", subtitle: "Stage 02", text: "Writing script with retention curve and strong hooks." },
-      { title: "Production", subtitle: "Stage 03", text: "Assistance with shooting or full visual material generation." },
-      { title: "Edit", subtitle: "Stage 04", text: "Video assembly: color correction, graphics, sound design." },
-      { title: "Publishing", subtitle: "Stage 05", text: "SEO optimallashtirish, to'g'ri teglar, muqovalar ва nashr vaqti." },
-      { title: "Analytics", subtitle: "Stage 06", text: "Data collection after publication and adjustment of sprint." }
+      { title: "Script", subtitle: "Stage 02", text: "Ssenariy, ushlab qolish egri chizig'i va kuchli huklar." },
+      { title: "Production", subtitle: "Stage 03", text: "Suratga olishda yordam berish yoki to'liq vizual generatsiya." },
+      { title: "Edit", subtitle: "Stage 04", text: "Video montaj: rang berish, grafika, ovoz dizayni." },
+      { title: "Publishing", subtitle: "Stage 05", text: "SEO optimallashtirish, teglar, muqovalar ва nashr vaqti." },
+      { title: "Analytics", subtitle: "Stage 06", text: "Nashrdan keyin ma'lumotlarni yig'ish va sprintni tuzatish." }
     ],
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Alisher", role: "Kiyim brendi CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Pic 13.png" },
-      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik. Data-driven sehr!", img: "/Pic 14.png" },
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Pic 15.png" },
-      { name: "Madina", role: "Kiyim brendi asochisi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi. Telefonim tinmayapti.", img: "/Pic 16.png" },
-      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Pic 17.png" },
-      { name: "Malika", role: "EdTech Platformasi", text: "Bizga O'zbekiston bo'ylab kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Pic 18.png" }
+      { name: "Alisher", role: "CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Pic 15.png" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik.", img: "/Pic 8.png" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Pic 18.png" },
+      { name: "Madina", role: "Asoschi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi.", img: "/Pic 3.png" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Pic 1.png" },
+      { name: "Malika", role: "EdTech Platformasi", text: "Bizga kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Pic 7.png" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -209,7 +209,6 @@ export default function App() {
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      wheelMultiplier: 1,
     });
 
     function raf(time) {
@@ -270,29 +269,17 @@ export default function App() {
   const tooltipBg = theme === 'dark' ? "rgba(10, 15, 30, 0.9)" : "rgba(255, 255, 255, 0.9)";
   const tooltipText = theme === 'dark' ? "#fff" : "#0f172a";
 
-  const formatYAxis = (tickItem) => {
-    if (tickItem >= 1000) {
-      return (tickItem / 1000) + 'k';
-    }
-    return tickItem;
-  };
+  const formatYAxis = (tickItem) => tickItem >= 1000 ? (tickItem / 1000) + 'k' : tickItem;
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
         <div style={{ backgroundColor: tooltipBg, border: `1px solid rgba(14, 165, 233, 0.3)`, padding: "16px", borderRadius: "12px", backdropFilter: "blur(10px)", color: tooltipText, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}>
-          <p style={{ margin: "0 0 10px 0", fontWeight: "600", fontSize: "14px", borderBottom: "1px solid rgba(14,165,233,0.2)", paddingBottom: "6px" }}>
-            {label}
-          </p>
+          <p style={{ margin: "0 0 10px 0", fontWeight: "600", fontSize: "14px", borderBottom: "1px solid rgba(14,165,233,0.2)", paddingBottom: "6px" }}>{label}</p>
           {payload.map((entry, index) => (
             <div key={index} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: index === 0 ? "8px" : "0" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <span style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: entry.color }}></span>
-                <span style={{ fontSize: "14px", opacity: 0.8 }}>{entry.name}:</span>
-              </div>
-              <span style={{ fontWeight: "700", fontSize: "16px", marginLeft: "auto" }}>
-                {entry.value.toLocaleString('ru-RU')}
-              </span>
+              <div style={{ display: "flex", alignItems: "center", gap: "6px" }}><span style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: entry.color }}></span><span style={{ fontSize: "14px", opacity: 0.8 }}>{entry.name}:</span></div>
+              <span style={{ fontWeight: "700", fontSize: "16px", marginLeft: "auto" }}>{entry.value.toLocaleString('ru-RU')}</span>
             </div>
           ))}
         </div>
@@ -303,7 +290,7 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* ОЧЕНЬ БЫСТРЫЙ КУРСОР: моментальная реакция (duration 0) */}
+      {/* КУРСОР: Мгновенная скорость без физики массы */}
       <motion.div
         className="custom-cursor"
         animate={{
@@ -317,18 +304,13 @@ export default function App() {
 
       <header className="header">
         <div className="header-inner">
-          <div className="logo">
-            <div className="logo-main">NKS</div>
-            <div className="logo-line"></div>
-          </div>
-
+          <div className="logo"><div className="logo-main">NKS</div><div className="logo-line"></div></div>
           <div className="buttons-group">
             <div className="lang-switcher">
               <button className={`lang-btn ${lang === 'ru' ? 'active' : ''}`} onClick={() => changeLanguage('ru')}>RU</button>
               <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => changeLanguage('en')}>EN</button>
               <button className={`lang-btn ${lang === 'uz' ? 'active' : ''}`} onClick={() => changeLanguage('uz')}>UZ</button>
             </div>
-
             <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
               {theme === 'dark' ? (
                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
@@ -336,13 +318,8 @@ export default function App() {
                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
               )}
             </button>
-            
-            <button className="button" onClick={() => window.open("https://t.me/NKSmanager")}>
-              {t.nav.consulting}
-            </button>
-            <button className="button" onClick={() => window.open("https://t.me/NKSmanager")}>
-              {t.nav.pricing}
-            </button>
+            <button className="button" onClick={() => window.open("https://t.me/NKSmanager")}>{t.nav.consulting}</button>
+            <button className="button" onClick={() => window.open("https://t.me/NKSmanager")}>{t.nav.pricing}</button>
           </div>
         </div>
       </header>
@@ -350,19 +327,11 @@ export default function App() {
       <motion.section className="hero" initial="hidden" animate="show" variants={fadeUp}>
         <div className="hero-badge">{t.hero.badge}</div>
         <h2 dangerouslySetInnerHTML={{ __html: t.hero.title }}></h2>
-
         <p className="hero-text">{t.hero.text}</p>
-
-        <button className="button main-cta" onClick={() => window.open("https://t.me/NKSmanager")}>
-          {t.hero.btn}
-        </button>
-
+        <button className="button main-cta" onClick={() => window.open("https://t.me/NKSmanager")}>{t.hero.btn}</button>
         <motion.div className="chart-box" variants={fadeUp}>
           <div className="chart-header">
-            <div>
-              <span className="chart-title">{t.chart.title}</span>
-              <span className="chart-subtitle">{t.chart.subtitle}</span>
-            </div>
+            <div><span className="chart-title">{t.chart.title}</span><span className="chart-subtitle">{t.chart.subtitle}</span></div>
             <div className="chart-legend">
               <span className="legend-item"><span className="dot dot-before"></span>{t.chart.before}</span>
               <span className="legend-item"><span className="dot dot-after"></span>{t.chart.after}</span>
@@ -381,53 +350,26 @@ export default function App() {
         </motion.div>
       </motion.section>
 
-      <motion.section 
-        className="stats-section"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-50px" }}
-        variants={staggerContainer}
-      >
+      <motion.section className="stats-section" initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer}>
         {t.stats.map((stat, idx) => (
-          <motion.div key={idx} className="stat-block" variants={fadeUp}>
-            <div className="stat-number">{stat.number}</div>
-            <div className="stat-label">{stat.label}</div>
-          </motion.div>
+          <motion.div key={idx} className="stat-block" variants={fadeUp}><div className="stat-number">{stat.number}</div><div className="stat-label">{stat.label}</div></motion.div>
         ))}
       </motion.section>
 
       <section className="partners-section">
         <div className="marquee-container">
-          <div className="marquee-content">
-            {partners.map((partner, idx) => (
-              <span key={idx} className="partner-logo">{partner}</span>
-            ))}
-          </div>
-          <div className="marquee-content" aria-hidden="true">
-            {partners.map((partner, idx) => (
-              <span key={idx} className="partner-logo">{partner}</span>
-            ))}
-          </div>
+          <div className="marquee-content">{partners.map((p, idx) => <span key={idx} className="partner-logo">{p}</span>)}</div>
+          <div className="marquee-content" aria-hidden="true">{partners.map((p, idx) => <span key={idx} className="partner-logo">{p}</span>)}</div>
         </div>
       </section>
 
       <Section title={t.servicesTitle} data={t.services} />
-
-      <ImageShowcase 
-        imgUrl={imgViralGrowth}
-        headline={t.showcase1}
-      />
-
+      <ImageShowcase imgUrl={imgViralGrowth} headline={t.showcase1} />
       <Section title={t.audienceTitle} data={t.audience} />
-
       <Section title={t.methodologyTitle} data={t.methodology} isNumbered />
+      <ImageShowcase imgUrl={imgRhythmDynamics} headline={t.showcase2} isReversed />
 
-      <ImageShowcase 
-        imgUrl={imgRhythmDynamics}
-        headline={t.showcase2}
-        isReversed 
-      />
-
+      {/* СЕКЦИЯ ОТЗЫВОВ - С КРУПНЫМИ КРАСИВЫМИ ФОТО */}
       <section className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
         <div className="testimonials-marquee-container">
@@ -435,14 +377,16 @@ export default function App() {
             {t.testimonials.map((tItem, i) => (
               <div key={i} className="card testimonial-card">
                 <div className="testimonial-header">
-                  <img src={tItem.img} className="avatar" alt={tItem.name} />
-                  <div>
+                  <div className="avatar-frame">
+                    <img src={tItem.img} className="avatar" alt={tItem.name} />
+                  </div>
+                  <div className="testimonial-info">
                     <h4>{tItem.name}</h4>
                     <span className="testimonial-role">{tItem.role}</span>
+                    <div className="stars">★★★★★</div>
                   </div>
                 </div>
-                <div className="stars">★★★★★</div>
-                <p className="testimonial-text">"{tItem.text}"</p>
+                <p className="testimonial-text">“{tItem.text}”</p>
               </div>
             ))}
           </div>
@@ -450,39 +394,30 @@ export default function App() {
             {t.testimonials.map((tItem, i) => (
               <div key={i + 100} className="card testimonial-card">
                 <div className="testimonial-header">
-                  <img src={tItem.img} className="avatar" alt={tItem.name} />
-                  <div>
+                  <div className="avatar-frame">
+                    <img src={tItem.img} className="avatar" alt={tItem.name} />
+                  </div>
+                  <div className="testimonial-info">
                     <h4>{tItem.name}</h4>
                     <span className="testimonial-role">{tItem.role}</span>
+                    <div className="stars">★★★★★</div>
                   </div>
                 </div>
-                <div className="stars">★★★★★</div>
-                <p className="testimonial-text">"{tItem.text}"</p>
+                <p className="testimonial-text">“{tItem.text}”</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <footer>
-        <div className="footer-content">
-          <div className="logo-main footer-logo">NKS</div>
-          <p>© {new Date().getFullYear()} NKS Vector. {t.footer}</p>
-        </div>
-      </footer>
+      <footer><div className="footer-content"><div className="logo-main footer-logo">NKS</div><p>© {new Date().getFullYear()} NKS Vector. {t.footer}</p></div></footer>
     </div>
   );
 }
 
 function Section({ title, data, isNumbered }) {
   return (
-    <motion.section
-      className="content-section"
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={staggerContainer}
-    >
+    <motion.section className="content-section" initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
       <h3>{title}</h3>
       <div className="grid">
         {data.map((item, i) => (
@@ -493,20 +428,8 @@ function Section({ title, data, isNumbered }) {
               <h4>{item.title}</h4>
             </div>
             <p>{item.text}</p>
-            
-            {item.tags && (
-              <div className="tags-container">
-                {item.tags.map((tag, idx) => (
-                  <span key={idx} className="tag">{tag}</span>
-                ))}
-              </div>
-            )}
-            {item.stats && (
-              <div className="stats-badge">
-                <span className="stats-icon">↗</span> 
-                <span>{item.stats}</span>
-              </div>
-            )}
+            {item.tags && <div className="tags-container">{item.tags.map((tag, idx) => <span key={idx} className="tag">{tag}</span>)}</div>}
+            {item.stats && <div className="stats-badge"><span className="stats-icon">↗</span> <span>{item.stats}</span></div>}
           </motion.div>
         ))}
       </div>
@@ -516,34 +439,17 @@ function Section({ title, data, isNumbered }) {
 
 function ImageShowcase({ imgUrl, headline, isReversed }) {
   const ref = useRef(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
-
-  const yRange = isReversed ? [25, -25] : [-25, 25]; 
-  const skewX = useTransform(smoothProgress, [0, 1], yRange);
+  const skewX = useTransform(smoothProgress, [0, 1], isReversed ? [25, -25] : [-25, 25]);
   const opacityText = useTransform(smoothProgress, [0.1, 0.5, 0.9], [0, 1, 0]);
 
   return (
     <div ref={ref} className="image-showcase-container">
-      <motion.div 
-        className="image-showcase-inner"
-        style={{
-          rotateX: skewX,
-          willChange: "transform"
-        }}
-      >
-        <img src={imgUrl} alt="Showcase Background" className="showcase-bg-image" />
+      <motion.div className="image-showcase-inner" style={{ rotateX: skewX, willChange: "transform" }}>
+        <img src={imgUrl} alt="Showcase" className="showcase-bg-image" />
         <div className="image-overlay" />
-        
-        <motion.div 
-          className="showcase-text-content"
-          style={{ opacity: opacityText, y: isReversed ? 60 : -60 }}
-        >
+        <motion.div className="showcase-text-content" style={{ opacity: opacityText, y: isReversed ? 60 : -60 }}>
           <span className="showcase-badge">NKS Vector Production</span>
           <h2 className="showcase-headline">{headline}</h2>
         </motion.div>
