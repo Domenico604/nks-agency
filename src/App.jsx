@@ -55,12 +55,18 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок.", img: "/Pic 2.png" },
-      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга.", img: "/Pic 4.png" },
-      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Pic 6.png" },
-      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц.", img: "/Pic 17.png" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает!", img: "/Pic 10.png" },
-      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Pic 11.png" }
+      // Славянская внешность (женский пол)
+      { name: "Екатерина Миронова", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок.", img: "/ru_female_1.png" },
+      // Славянская внешность (мужской пол)
+      { name: "Иван Петров", role: "Маркетинг-директор", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга.", img: "/ru_male_1.png" },
+      // Славянская внешность (мужской пол)
+      { name: "Илья Белов", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/ru_male_2.png" },
+      // Славянская внешность (женский пол)
+      { name: "Елена Кович", role: "EdTech Platform Owner", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц.", img: "/ru_female_2.png" },
+      // Славянская внешность (мужской пол)
+      { name: "Алексей Смирнов", role: " CEO Недвижимость", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает!", img: "/ru_male_3.png" },
+      // Славянская внешность (женский пол)
+      { name: "Мария Голубева", role: "Маркетолог", text: "Бренд стал визуально сильнее. Наши Shorts выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/ru_female_3.png" }
     ],
     footer: "Системный рост контента."
   },
@@ -112,12 +118,18 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Jessica", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "/Pic 9.png" },
-      { name: "Michael", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months. data-driven magic!", img: "/Pic 5.png" },
-      { name: "Chloe", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Pic 12.png" },
-      { name: "David", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third.", img: "/Pic 11.png" },
-      { name: "Robert", role: "Real Estate Agency", text: "doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "/Pic 16.png" },
-      { name: "Emily", role: "Beauty Influencer", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns.", img: "/Pic 14.png" }
+      // Европейская внешность (женский пол)
+      { name: "Jessica Bloom", role: "CEO TechStartup", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "/en_female_1.png" },
+      // Европейская внешность (мужской пол)
+      { name: "Michael Vance", role: "Venture Capitalist", text: "The team built a predictable system for us. We grew 10x in six months. data-driven magic!", img: "/en_male_1.png" },
+      // Европейская внешность (женский пол)
+      { name: "Chloe O'Donnell", role: "Fitness Influencer", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/en_female_2.png" },
+      // Европейская внешность (мужской пол)
+      { name: "David Foster", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third.", img: "/en_male_2.png" },
+      // Европейская внешность (женский пол)
+      { name: "Robert Davies", role: "Head of Marketing", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "/en_male_3.png" },
+      // Европейская внешность (женский пол)
+      { name: "Emily Watson", role: "Beauty Brand Owner", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns.", img: "/en_female_3.png" }
     ],
     footer: "Systemic content growth."
   },
@@ -143,7 +155,7 @@ const translations = {
       { title: "Virusli tahlil", text: "Algoritmlarning yashirin naqshlarini tahlil qilamiz va virusli formatlarni yaratamiz.", tags: ["#Trendlar", "#Izlanish", "#Algoritmlar"] },
       { title: "Ushlab qolish ssenariylari", text: "Tomoshabin videoni o'tkazib yubormasligi uchun har bir soniyani loyihalashtiramiz.", tags: ["#Retention", "#Kopirayting", "#Huklar"] },
       { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan effectlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dynamics"] },
-      { title: "Kompleks strategiya", text: "Trafikni yaratadigan uzoq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Positioning", "#Voronkalar"] },
+      { title: "Kompleks strategiya", text: "Trafikni yaratadigan uзоq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Positioning", "#Voronkalar"] },
       { title: "Brend qadoqlash", text: "Media makonida loyihangizning kuchli vizual tan olinishini shakllantiramiz.", tags: ["#Identity", "#Meanings", "#Design"] },
       { title: "Chuqur tahlil", text: "Haqiqiy ma'lumotlar asosida formatlar va strategiyalarni moslashtiramiz.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
     ],
@@ -152,7 +164,7 @@ const translations = {
     audience: [
       { title: "Brendlar va Kompaniyalar", text: "Ko'rishlarni sodiqlik va mijozlarga aylantiramiz.", stats: "Taniqlik x3" },
       { title: "E-commerce", text: "sharhlar va trendlar orqali tabiiy ravishda sotadigan kontent.", stats: "Lower CPA" },
-      { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni zimmamizga olamiz.", stats: "Oyiga 40s tejash" },
+      { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni zimmamizга olamiz.", stats: "Oyiga 40s tejash" },
       { title: "Infliuyenserlar", text: "Shaxsiy brendni kengaytirish, yangi platformalarga chiqish.", stats: "Yangi bozorlar" },
       { title: "Agentliklar", text: "Mijozlaringiz uchun tayyor prodyuserlik ehtiyojini yopamiz.", stats: "White-label" },
       { title: "Startaplar", text: "Gipotezalarni tasdiqlash uchun tezkor auditoriya o'sishi.", stats: "Tezkor start" }
@@ -169,18 +181,25 @@ const translations = {
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Alisher", role: "CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Pic 15.png" },
-      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik.", img: "/Pic 8.png" },
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Pic 18.png" },
-      { name: "Madina", role: "Asoschi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi.", img: "/Pic 3.png" },
-      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Pic 1.png" },
-      { name: "Malika", role: "EdTech Platformasi", text: "Bizga kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Pic 7.png" }
+      // Азиатская/Узбекская внешность (мужской пол)
+      { name: "Alisher Umarov", role: "Fintech Startap CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/uz_male_1.png" },
+      // Азиатская/Узбекская внешность (мужской пол)
+      { name: "Jasur Atayev", role: "CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik.", img: "/uz_male_2.png" },
+      // Азиатская/Узбекская внешность (мужской пол)
+      { name: "Rustam Soliyev", role: "Маркетолог", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/uz_male_3.png" },
+      // Азиатская/Узбекская внешность (женский пол)
+      { name: "Madina Hakimova", role: "Бизнес Owner", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi.", img: "/uz_female_1.png" },
+      // Азиатская/Узбекская внешность (мужской пол)
+      { name: "Aziz Rakhimov", role: "Finansist", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/uz_male_4.png" },
+      // Азиатская/Узбекская внешность (женский пол)
+      { name: "Malika Sharipova", role: "EdTech Platform", text: "Bizga kuchli taniqlilik kerak edi. NKS Vector toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/uz_female_2.png" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
 };
 
 const partners = ["NEXUS GLOBAL", "AURA FINANCE", "VERTEX MEDIA", "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"];
+// Изменили на png и новые пути
 const imgViralGrowth = "/showcase1.png"; 
 const imgRhythmDynamics = "/showcase2.png"; 
 
@@ -265,6 +284,7 @@ export default function App() {
   };
 
   const t = translations[lang];
+
   const tgBtnText = lang === 'ru' ? 'Написать в Telegram' : lang === 'en' ? 'Contact on Telegram' : 'Telegram orqali yozish';
 
   const chartData = [
@@ -303,7 +323,12 @@ export default function App() {
     <div className="container">
       <motion.div
         className="custom-cursor"
-        animate={{ x: mousePosition.x - 12, y: mousePosition.y - 12, scale: isHovering ? 1.5 : 1, opacity: mousePosition.x === 0 ? 0 : 1 }}
+        animate={{
+          x: mousePosition.x - 12,
+          y: mousePosition.y - 12,
+          scale: isHovering ? 1.5 : 1,
+          opacity: mousePosition.x === 0 ? 0 : 1
+        }}
         transition={{ type: "tween", duration: 0 }}
       />
 
@@ -415,7 +440,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ОБНОВЛЕННЫЙ FOOTER */}
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-brand">
@@ -455,6 +480,7 @@ export default function App() {
   );
 }
 
+// Добавили пропс `id` для функции скролла
 function Section({ id, title, data, isNumbered }) {
   return (
     <motion.section id={id} className="content-section" initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
