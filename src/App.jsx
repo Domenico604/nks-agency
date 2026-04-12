@@ -171,10 +171,10 @@ const translations = {
     testimonials: [
       { name: "Alisher", role: "CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Pic 15.png" },
       { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik.", img: "/Pic 8.png" },
-      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib नतीजा!", img: "/Pic 18.png" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Pic 18.png" },
       { name: "Madina", role: "Asoschi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi.", img: "/Pic 3.png" },
       { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Pic 1.png" },
-      { name: "Malika", role: "EdTech Platformasi", text: "Bizга kuchli taniqlilik kerak edi. NKS Vector toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Pic 7.png" }
+      { name: "Malika", role: "EdTech Platformasi", text: "Bizga kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Pic 7.png" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -182,9 +182,8 @@ const translations = {
 
 const partners = ["NEXUS GLOBAL", "AURA FINANCE", "VERTEX MEDIA", "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"];
 
-// ВВЕЛИ СГЕНЕРИРОВАННОЕ ИЗОБРАЖЕНИЕ - ТЕМНОЕ, СТРАТЕГИЧЕСКОЕ
-const imgViralGrowth = "/image_2.png"; 
-
+// Новое, очень темное абстрактное фото для блока Стратегии (синие data-линии)
+const imgViralGrowth = "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2074&auto=format&fit=crop"; 
 const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=2094&auto=format&fit=crop"; 
 
 const fadeUp = {
@@ -226,7 +225,7 @@ export default function App() {
     const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
 
     const handleMouseOver = (e) => {
-      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-nav-grid span')) {
+      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-nav-row span')) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -383,13 +382,12 @@ export default function App() {
       <Section id="methodology" title={t.methodologyTitle} data={t.methodology} isNumbered />
       <ImageShowcase imgUrl={imgRhythmDynamics} headline={t.showcase2} isReversed />
 
-      {/* СЕКЦИЯ ОТЗЫВОВ - ИСПРАВЛЕНА ПРОБЛЕМА С КЕШИРОВАНИЕМ КАРТИНОК */}
+      {/* СЕКЦИЯ ОТЗЫВОВ */}
       <section id="testimonials" className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
             {t.testimonials.map((tItem, i) => (
-              /* ДОБАВЛЕН ${lang} В КЛЮЧ, ЧТОБЫ REACT ПОЛНОСТЬЮ ПЕРЕРИСОВЫВАЛ БЛОК ПРИ СМЕНЕ ЯЗЫКА */
               <div key={`${lang}-${i}`} className="card testimonial-card">
                 <div className="testimonial-header">
                   <div className="avatar-frame">
@@ -425,7 +423,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ОБНОВЛЕННЫЙ FOOTER - без лишних ссылок внизу */}
+      {/* ПОЛНОСТЬЮ ОБНОВЛЕННЫЙ FOOTER */}
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-brand">
@@ -433,7 +431,8 @@ export default function App() {
             <p className="footer-slogan">{t.footer}</p>
           </div>
           
-          <div className="footer-nav-grid">
+          {/* Навигация в виде стильной горизонтальной "таблетки" */}
+          <div className="footer-nav-row">
             <span onClick={() => scrollToSection('services')}>{t.footerNav.services}</span>
             <span onClick={() => scrollToSection('audience')}>{t.footerNav.audience}</span>
             <span onClick={() => scrollToSection('methodology')}>{t.footerNav.methodology}</span>
@@ -453,8 +452,9 @@ export default function App() {
           </div>
         </div>
         
+        {/* Копирайт ровно по центру */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} NKS Vector. All rights reserved.</p>
+          <p>© 2026 NKS Vector. All rights reserved.</p>
         </div>
       </footer>
     </div>
