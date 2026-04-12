@@ -9,6 +9,7 @@ import "./index.css";
 const translations = {
   ru: {
     nav: { consulting: "Консалтинг", pricing: "Прайс-лист" },
+    footerNav: { services: "Наши возможности", audience: "Кому мы помогаем", methodology: "Методология", testimonials: "Отзывы" },
     hero: {
       badge: "Агентство YouTube & Shorts",
       title: "Контент, который превращается<br />в системный рост",
@@ -65,6 +66,7 @@ const translations = {
   },
   en: {
     nav: { consulting: "Consulting", pricing: "Pricing" },
+    footerNav: { services: "Our Capabilities", audience: "Who We Help", methodology: "Methodology", testimonials: "Reviews" },
     hero: {
       badge: "YouTube & Shorts Agency",
       title: "Content that turns into<br />systemic growth",
@@ -121,6 +123,7 @@ const translations = {
   },
   uz: {
     nav: { consulting: "Konsalting", pricing: "Narxlar" },
+    footerNav: { services: "Bizning imkoniyatlarimiz", audience: "Kimga yordam beramiz", methodology: "Metodologiya", testimonials: "Sharhlar" },
     hero: {
       badge: "YouTube va Shorts Agentligi",
       title: "Tizimli o'sishga olib keladigan<br />kontent",
@@ -220,7 +223,7 @@ export default function App() {
     const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
 
     const handleMouseOver = (e) => {
-      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-links span')) {
+      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-links span') || e.target.closest('.footer-nav-grid span')) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -252,6 +255,13 @@ export default function App() {
   const changeLanguage = (newLang) => {
     setLang(newLang);
     localStorage.setItem("nks-lang", newLang);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const t = translations[lang];
@@ -364,14 +374,14 @@ export default function App() {
         </div>
       </section>
 
-      <Section title={t.servicesTitle} data={t.services} />
+      <Section id="services" title={t.servicesTitle} data={t.services} />
       <ImageShowcase imgUrl={imgViralGrowth} headline={t.showcase1} />
-      <Section title={t.audienceTitle} data={t.audience} />
-      <Section title={t.methodologyTitle} data={t.methodology} isNumbered />
+      <Section id="audience" title={t.audienceTitle} data={t.audience} />
+      <Section id="methodology" title={t.methodologyTitle} data={t.methodology} isNumbered />
       <ImageShowcase imgUrl={imgRhythmDynamics} headline={t.showcase2} isReversed />
 
       {/* СЕКЦИЯ ОТЗЫВОВ */}
-      <section className="testimonials-section">
+      <section id="testimonials" className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
@@ -411,7 +421,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ОБНОВЛЕННЫЙ FOOTER */}
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-brand">
@@ -419,6 +429,13 @@ export default function App() {
             <p className="footer-slogan">{t.footer}</p>
           </div>
           
+          <div className="footer-nav-grid">
+            <span onClick={() => scrollToSection('services')}>{t.footerNav.services}</span>
+            <span onClick={() => scrollToSection('audience')}>{t.footerNav.audience}</span>
+            <span onClick={() => scrollToSection('methodology')}>{t.footerNav.methodology}</span>
+            <span onClick={() => scrollToSection('testimonials')}>{t.footerNav.testimonials}</span>
+          </div>
+
           <div className="footer-social">
             <button className="tg-button" onClick={() => window.open("https://t.me/NKSmanager")}>
               <span className="tg-icon">
@@ -444,9 +461,10 @@ export default function App() {
   );
 }
 
-function Section({ title, data, isNumbered }) {
+// Добавили пропс `id` для функции скролла
+function Section({ id, title, data, isNumbered }) {
   return (
-    <motion.section className="content-section" initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
+    <motion.section id={id} className="content-section" initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
       <h3>{title}</h3>
       <div className="grid">
         {data.map((item, i) => (
