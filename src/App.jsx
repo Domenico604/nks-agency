@@ -55,12 +55,12 @@ const translations = {
     showcase2: "Премиальный монтаж. Data-driven решения для вирусных охватов.",
     testimonialsTitle: "Результаты и отзывы",
     testimonials: [
-      { name: "Jessica Bloom", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "/Pic 9.jpg" },
-      { name: "Michael Vance", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months. data-driven magic!", img: "/Pic 5.jpg" },
-      { name: "Chloe O'Donnell", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Pic 12.jpg" },
-      { name: "David Foster", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third.", img: "/Pic 13.jpg" },
-      { name: "Robert Davies", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "/Pic 16.jpg" },
-      { name: "Emily Watson", role: "Beauty Brand Owner", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns.", img: "/Pic 14.jpg" }
+      { name: "Алексей", role: "CEO TechStartup", text: "Команда NKS выстроила для нас предсказуемую систему роста. Наши последние Shorts пробили 1.5M просмотров, и мы видим реальный приток целевых заявок.", img: "/Pic 2.png" },
+      { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга.", img: "/Pic 4.png" },
+      { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Pic 6.png" },
+      { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц.", img: "/Pic 17.png" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает!", img: "/Pic 10.png" },
+      { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Pic 11.png" }
     ],
     footer: "Системный рост контента."
   },
@@ -112,12 +112,12 @@ const translations = {
     showcase2: "Premium editing. Data-driven solutions for viral reach.",
     testimonialsTitle: "Results & Reviews",
     testimonials: [
-      { name: "Jessica Bloom", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "/Pic 9.jpg" },
-      { name: "Michael Vance", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months. data-driven magic!", img: "/Pic 5.jpg" },
-      { name: "Chloe O'Donnell", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Pic 12.jpg" },
-      { name: "David Foster", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third.", img: "/Pic 13.jpg" },
-      { name: "Robert Davies", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "/Pic 16.jpg" },
-      { name: "Emily Watson", role: "Beauty Brand Owner", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns.", img: "/Pic 14.jpg" }
+      { name: "Jessica Bloom", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "/Pic 9.png" },
+      { name: "Michael Vance", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months. data-driven magic!", img: "/Pic 5.png" },
+      { name: "Chloe O'Donnell", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Pic 12.png" },
+      { name: "David Foster", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third.", img: "/Pic 13.png" },
+      { name: "Robert Davies", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "/Pic 16.png" },
+      { name: "Emily Watson", role: "Beauty Brand Owner", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns.", img: "/Pic 14.png" }
     ],
     footer: "Systemic content growth."
   },
@@ -143,7 +143,7 @@ const translations = {
       { title: "Virusli tahlil", text: "Algoritmlarning yashirin naqshlarini tahlil qilamiz va virusli formatlarni yaratamiz.", tags: ["#Trendlar", "#Izlanish", "#Algoritmlar"] },
       { title: "Ushlab qolish ssenariylari", text: "Tomoshabin videoni o'tkazib yubormasligi uchun har bir soniyani loyihalashtiramiz.", tags: ["#Retention", "#Kopirayting", "#Huklar"] },
       { title: "Premium montaj", text: "Dinamik, ammo toza tahrir. E'tiborni tortadigan effectlar.", tags: ["#VFX", "#Ovoz dizayni", "#Dynamics"] },
-      { title: "Kompleks strategiya", text: "Trafikni yaratadigan uзоq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Positioning", "#Voronkalar"] },
+      { title: "Kompleks strategiya", text: "Trafikni yaratadigan uzoq muddatli kontent tizimini ishlab chiqamiz.", tags: ["#Positioning", "#Voronkalar"] },
       { title: "Brend qadoqlash", text: "Media makonida loyihangizning kuchli vizual tan olinishini shakllantiramiz.", tags: ["#Identity", "#Meanings", "#Design"] },
       { title: "Chuqur tahlil", text: "Haqiqiy ma'lumotlar asosida formatlar va strategiyalarni moslashtiramiz.", tags: ["#A/B Tests", "#Metrics", "#Optimization"] }
     ],
@@ -152,10 +152,10 @@ const translations = {
     audience: [
       { title: "Brendlar va Kompaniyalar", text: "Ko'rishlarni sodiqlik va mijozlarga aylantiramiz.", stats: "Taniqlik x3" },
       { title: "E-commerce", text: "sharhlar va trendlar orqali tabiiy ravishda sotadigan kontent.", stats: "Lower CPA" },
-      { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni zimmamizга olamiz.", stats: "Oyiga 40s tejash" },
+      { title: "Kreatorlar", text: "G'oyalardan tortib montajgacha bo'lgan barcha ishlarni zimmamizga olamiz.", stats: "Oyiga 40s tejash" },
       { title: "Infliuyenserlar", text: "Shaxsiy brendni kengaytirish, yangi platformalarga chiqish.", stats: "Yangi bozorlar" },
       { title: "Agentliklar", text: "Mijozlaringiz uchun tayyor prodyuserlik ehtiyojini yopamiz.", stats: "White-label" },
-      { title: "Startaplar", text: "Gipotezalarni tasdiqlash uchun tezкор auditoriya o'sishi.", stats: "Tezkor start" }
+      { title: "Startaplar", text: "Gipotezalarni tasdiqlash uchun tezkor auditoriya o'sishi.", stats: "Tezkor start" }
     ],
     methodologyTitle: "Metodologiya",
     methodology: [
@@ -169,12 +169,12 @@ const translations = {
     showcase2: "Premium montaj. Virusli qamrov uchun data-driven yechimlar.",
     testimonialsTitle: "Natijalar va sharhlar",
     testimonials: [
-      { name: "Jessica Bloom", role: "Fashion Brand Owner", text: "NKS completely flipped our content game. We don't just get millions of views; we see actual conversions. Sales are up 300%.", img: "/Pic 9.jpg" },
-      { name: "Michael Vance", role: "CEO TechStartup", text: "The team built a predictable system for us. We grew 10x in six months. data-driven magic!", img: "/Pic 5.jpg" },
-      { name: "Chloe O'Donnell", role: "Fitness Coach", text: "They completely transformed my personal brand. The 'Retention Scripts' they use for Shorts are mind-blowing. My community is thriving!", img: "/Pic 12.jpg" },
-      { name: "David Foster", role: "EdTech Platform", text: "We needed strong brand awareness. NKS Vector took over everything: from topic research to final sound design. CPA dropped to a third.", img: "/Pic 13.jpg" },
-      { name: "Robert Davies", role: "Real Estate Agency", text: "I doubted if YouTube was right for luxury real estate. I was wrong. We focused on expert reviews. Closed two high-ticket deals.", img: "/Pic 16.jpg" },
-      { name: "Emily Watson", role: "Beauty Brand Owner", text: "I used to spend thousands on ads and shoutouts. Now, views grow organically. These guys know algorithm patterns.", img: "/Pic 14.jpg" }
+      { name: "Alisher", role: "CEO", text: "NKS jamoasi biz uchun o'sish tizimini qurdi. Oxirgi Shorts videolrimiz 1.5M ko'rish yig'di, data-driven yondashuv amalda!", img: "/Pic 15.png" },
+      { name: "Jasur", role: "TechStartup CEO", text: "Yigitlar bashorat qilinadigan tizim qurdilar. Yarim yilda 10 barobar o'sdik. Yaqinda YouTube kumush tugmasini oldik.", img: "/Pic 8.png" },
+      { name: "Rustam", role: "Kripto-infliuyenser", text: "Oldinlari reklamaga minglab dollar sarflardim. Hozir ko'rishlar о'z-o'zidan о'smoqda. Ajoyib natija!", img: "/Pic 18.png" },
+      { name: "Madina", role: "Asoschi", text: "Shaxsiy brendimni kengaytirishda yordam berishdi. Shorts ushlab qolish ssenariylari aql bovar qilmaydi.", img: "/Pic 3.png" },
+      { name: "Aziz", role: "Ko'chmas mulk agentligi", text: "Ekspertlik sharhlari orqali kanalning o'zidan ikkita katta premium obyektni sotdik. YouTube rostdan ishlaydi.", img: "/Pic 1.png" },
+      { name: "Malika", role: "EdTech Platformasi", text: "Bizga kuchli taniqlilik kerak edi. NKS toza montajgacha hammasini qildi. Kostenlar 3 barobar tushdi.", img: "/Pic 7.png" }
     ],
     footer: "Kontentning tizimli o'sishi."
   }
@@ -182,9 +182,9 @@ const translations = {
 
 const partners = ["NEXUS GLOBAL", "AURA FINANCE", "VERTEX MEDIA", "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"];
 
-// Новые тематические фоны
-const imgViralGrowth = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"; // Аналитика данных
-const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=2094&auto=format&fit=crop"; // Монтажный стол
+// Темные, тематические фоны для блоков
+const imgViralGrowth = "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2074&auto=format&fit=crop"; 
+const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=2094&auto=format&fit=crop"; 
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -225,7 +225,7 @@ export default function App() {
     const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
 
     const handleMouseOver = (e) => {
-      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-links span') || e.target.closest('.footer-nav-grid span')) {
+      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-nav-row span')) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -388,7 +388,7 @@ export default function App() {
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
             {t.testimonials.map((tItem, i) => (
-              <div key={i} className="card testimonial-card">
+              <div key={`${lang}-${i}`} className="card testimonial-card">
                 <div className="testimonial-header">
                   <div className="avatar-frame">
                     <img src={tItem.img} className="avatar" alt={tItem.name} />
@@ -405,7 +405,7 @@ export default function App() {
           </div>
           <div className="testimonials-track" aria-hidden="true">
             {t.testimonials.map((tItem, i) => (
-              <div key={i + 100} className="card testimonial-card">
+              <div key={`dup-${lang}-${i}`} className="card testimonial-card">
                 <div className="testimonial-header">
                   <div className="avatar-frame">
                     <img src={tItem.img} className="avatar" alt={tItem.name} />
@@ -423,6 +423,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* ФУТЕР */}
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-brand">
@@ -430,7 +431,7 @@ export default function App() {
             <p className="footer-slogan">{t.footer}</p>
           </div>
           
-          <div className="footer-nav-grid">
+          <div className="footer-nav-row">
             <span onClick={() => scrollToSection('services')}>{t.footerNav.services}</span>
             <span onClick={() => scrollToSection('audience')}>{t.footerNav.audience}</span>
             <span onClick={() => scrollToSection('methodology')}>{t.footerNav.methodology}</span>
@@ -452,10 +453,6 @@ export default function App() {
         
         <div className="footer-bottom">
           <p>© 2026 NKS Vector. All rights reserved.</p>
-          <div className="footer-links">
-            <span onClick={() => window.open("https://t.me/NKSmanager")}>{t.nav.consulting}</span>
-            <span onClick={() => window.open("https://t.me/NKSmanager")}>{t.nav.pricing}</span>
-          </div>
         </div>
       </footer>
     </div>
