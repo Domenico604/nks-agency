@@ -23,6 +23,9 @@ body {
 
 .container { max-width: 1200px; margin: auto; padding: 0 24px; text-align: center; }
 
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
 .header {
   position: fixed; top: 0; left: 0; width: 100%; z-index: 999; background: rgba(5, 5, 8, 0.6);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -60,6 +63,9 @@ body {
 .button:hover::before { left: 150%; }
 .button.main-cta { padding: 18px 48px; font-size: 16px; margin-top: 30px; }
 
+/* =========================================
+   TYPOGRAPHY & HERO
+   ========================================= */
 h2 { font-family: 'Bebas Neue', sans-serif; font-size: 5.5rem; margin-bottom: 24px; line-height: 1.1; letter-spacing: 2px; background: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50px; background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; display: inline-block; }
 
@@ -67,6 +73,9 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .hero-badge { display: inline-block; padding: 8px 16px; border-radius: 100px; background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.2); font-size: 13px; color: #38bdf8; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px; }
 .hero-text { font-size: 1.15rem; max-width: 650px; margin: 0 auto 30px; color: #94a3b8; line-height: 1.7; font-weight: 300; }
 
+/* =========================================
+   STATS & PARTNERS
+   ========================================= */
 .stats-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; padding: 60px 0; margin-bottom: 0px; border-top: 1px solid rgba(255, 255, 255, 0.05); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent); }
 .stat-block { text-align: center; min-width: 180px; }
 .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 1; background: linear-gradient(135deg, #fff 0%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
@@ -79,6 +88,9 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .partner-logo:hover { color: rgba(56, 189, 248, 0.8); }
 @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
+/* =========================================
+   CARDS & GRIDS
+   ========================================= */
 .content-section { padding: 80px 0; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
 .card { padding: 36px 32px; border-radius: 24px; background: linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.2) 100%); border: 1px solid rgba(255, 255, 255, 0.04); backdrop-filter: blur(12px); text-align: left; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); display: flex; flex-direction: column; position: relative; overflow: hidden; }
@@ -94,6 +106,9 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .tag { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 6px 12px; border-radius: 8px; font-size: 12px; color: #cbd5e1; white-space: nowrap; }
 .stats-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; font-size: 13px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 8px 16px; border-radius: 100px; border: 1px solid rgba(52, 211, 153, 0.2); width: fit-content; }
 
+/* =========================================
+   CHART
+   ========================================= */
 .chart-box { height: 400px; margin-top: 60px; padding: 30px; background: rgba(15, 23, 42, 0.4); border-radius: 32px; border: 1px solid rgba(255,255,255,0.04); backdrop-filter: blur(10px); }
 .chart-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; text-align: left; }
 .chart-title { display: block; font-size: 1.2rem; font-weight: 500; color: #fff; margin-bottom: 4px; }
@@ -105,7 +120,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .dot-after { background: #0ea5e9; box-shadow: 0 0 10px rgba(14, 165, 233, 0.5); }
 
 /* =========================================
-   ОТЗЫВЫ (ЯЧЕЙКИ)
+   ОТЗЫВЫ (TESTIMONIALS) И ФИКС ФОТОГРАФИЙ
    ========================================= */
 .testimonials-section { padding: 80px 0; overflow: hidden; }
 
@@ -116,11 +131,12 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 
 .testimonial-header { display: flex; align-items: center; gap: 24px; }
 
+/* Рамка аватара как flex-контейнер для центрирования */
 .avatar-frame {
   width: 110px; height: 110px; border-radius: 50%; padding: 4px; flex-shrink: 0;
   background: linear-gradient(135deg, #38bdf8, #0284c7);
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
+  position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
 
 .avatar-frame::after {
@@ -137,6 +153,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   border-color: rgba(56, 189, 248, 0.5);
 }
 
+/* Идеальное растягивание фото внутри круглой рамки */
 .avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid #050508; }
 
 .testimonial-info h4 { font-size: 1.4rem; margin: 0 0 6px 0; color: #fff; font-weight: 600; line-height: 1.2; }
@@ -151,7 +168,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 @keyframes scrollTestimonialsLTR { 0% { transform: translateX(-100%); } 100% { transform: translateX(0); } }
 
 /* =========================================
-   ИЗОБРАЖЕНИЯ ПРИ ПРОКРУТКЕ
+   ИЗОБРАЖЕНИЯ ПРИ ПРОКРУТКЕ (SHOWCASE)
    ========================================= */
 .image-showcase-container { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; height: 90vh; overflow: hidden; perspective: 1500px; margin-top: 60px; margin-bottom: 60px; background-color: #050508; }
 .image-showcase-inner { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; transform-style: preserve-3d; }
@@ -162,7 +179,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .showcase-headline { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 1.1; letter-spacing: 1px; margin: 0; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); background-image: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
 /* =========================================
-   ОБНОВЛЕННЫЙ FOOTER 
+   ОБНОВЛЕННЫЙ FOOTER
    ========================================= */
 .footer {
   padding: 60px 24px 30px; 
@@ -200,7 +217,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   line-height: 1.5;
 }
 
-/* Красивая навигация-таблетка */
+/* Навигация-таблетка (pill-меню) */
 .footer-nav-row {
   display: flex;
   align-items: center;
@@ -271,7 +288,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   transform: translate(4px, -4px);
 }
 
-/* Копирайт по центру */
+/* Центрированный копирайт */
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
@@ -284,12 +301,10 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   padding-top: 24px;
 }
 
-.footer-bottom p {
-  margin: 0;
-}
+.footer-bottom p { margin: 0; }
 
 /* =========================================
-   АДАПТИВНОСТЬ (МОБИЛЬНЫЕ)
+   АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА)
    ========================================= */
 @media (max-width: 768px) {
   .custom-cursor { display: none; }
@@ -310,15 +325,13 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   .avatar-frame { width: 85px; height: 85px; }
   .testimonial-text { font-size: 0.95rem; }
 
-  /* Адаптив для нового футера */
+  /* Адаптив для Footer */
   .footer-top {
     flex-direction: column;
     text-align: center;
     gap: 32px;
   }
-  .footer-brand {
-    align-items: center;
-  }
+  .footer-brand { align-items: center; }
   .footer-brand .footer-logo { text-align: center; }
   .footer-slogan { text-align: center; margin: 0 auto; }
   
@@ -361,7 +374,7 @@ body.light-theme .lang-btn { color: #64748b; }
 body.light-theme .lang-btn:hover { color: #0f172a; }
 body.light-theme .lang-btn.active { background: #fff; color: #0284c7; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
 
-/* СВЕТЛАЯ ТЕМА (LIGHT THEME) FOOTER FIX */
+/* Светлая тема для Footer */
 body.light-theme .footer { border-top: 1px solid rgba(0, 0, 0, 0.05); background: linear-gradient(180deg, transparent 0%, rgba(14, 165, 233, 0.05) 100%); }
 body.light-theme .footer-top { border-bottom: none; }
 body.light-theme .footer-slogan { color: #475569; }
