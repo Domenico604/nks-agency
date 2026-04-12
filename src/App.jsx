@@ -182,6 +182,7 @@ const translations = {
 
 const partners = ["NEXUS GLOBAL", "AURA FINANCE", "VERTEX MEDIA", "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"];
 
+// Временные ссылки на крутые фото с Unsplash (позже сможешь заменить на свои)
 const imgViralGrowth = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"; 
 const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=2094&auto=format&fit=crop"; 
 
@@ -381,13 +382,14 @@ export default function App() {
       <Section id="methodology" title={t.methodologyTitle} data={t.methodology} isNumbered />
       <ImageShowcase imgUrl={imgRhythmDynamics} headline={t.showcase2} isReversed />
 
-      {/* СЕКЦИЯ ОТЗЫВОВ */}
+      {/* СЕКЦИЯ ОТЗЫВОВ - ИСПРАВЛЕНА ПРОБЛЕМА С КЕШИРОВАНИЕМ КАРТИНОК */}
       <section id="testimonials" className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
         <div className="testimonials-marquee-container">
           <div className="testimonials-track">
             {t.testimonials.map((tItem, i) => (
-              <div key={i} className="card testimonial-card">
+              /* ДОБАВЛЕН ${lang} В КЛЮЧ, ЧТОБЫ REACT ПОЛНОСТЬЮ ПЕРЕРИСОВЫВАЛ БЛОК ПРИ СМЕНЕ ЯЗЫКА */
+              <div key={`${lang}-${i}`} className="card testimonial-card">
                 <div className="testimonial-header">
                   <div className="avatar-frame">
                     <img src={tItem.img} className="avatar" alt={tItem.name} />
@@ -404,7 +406,7 @@ export default function App() {
           </div>
           <div className="testimonials-track" aria-hidden="true">
             {t.testimonials.map((tItem, i) => (
-              <div key={i + 100} className="card testimonial-card">
+              <div key={`dup-${lang}-${i}`} className="card testimonial-card">
                 <div className="testimonial-header">
                   <div className="avatar-frame">
                     <img src={tItem.img} className="avatar" alt={tItem.name} />
