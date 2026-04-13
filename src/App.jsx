@@ -150,7 +150,7 @@ const translations = {
       mainTitle: "DATA-DRIVEN TRANSFORMATSIYA: TIZIMLI O'SISH",
       beforeTitle: "NKS VECTOR'GACHA TURG'UNLIK",
       afterTitle: "NKS VECTOR BILAN TIZIMLI O'SISH",
-      beforeViews: "O'rtacha ko'rishlar: ~1.2k",
+      beforeViews: "Ko'rishlar: ~1.2k",
       beforeSubs: "Obunachilar: +50/hafta",
       afterViews: "Ko'rishlar: ~80k+ (5-hafta)",
       afterSubs: "Obunachilar: +15k+ (5-hafta)",
@@ -293,7 +293,6 @@ export default function App() {
 
   const tgBtnText = lang === 'ru' ? 'Написать в Telegram' : lang === 'en' ? 'Contact on Telegram' : 'Telegram orqali yozish';
 
-  // Данные для графиков ДО и ПОСЛЕ
   const beforeData = [
     { name: t.compare.w1, views: 1200 },
     { name: t.compare.w2, views: 1400 },
