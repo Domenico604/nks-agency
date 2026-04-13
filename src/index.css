@@ -123,22 +123,27 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   filter: drop-shadow(0 0 5px #38bdf8); 
 }
 
+/* ФИКС ДЛЯ ДЛИННОГО УЗБЕКСКОГО ТЕКСТА */
 .compare-stats-row { 
   display: flex; 
-  gap: 16px; 
+  gap: 12px; 
   margin-top: 25px; 
   margin-bottom: 20px; 
-  justify-content: center; 
-  flex-wrap: wrap; 
+  justify-content: space-between; 
+  flex-wrap: nowrap; /* Строго в одну линию */
+  align-items: center;
 }
 
 .compare-stat-pill { 
   background: rgba(255,255,255,0.05); 
   border: 1px solid rgba(255,255,255,0.1); 
-  padding: 10px 20px; 
+  padding: 10px 14px; 
   border-radius: 100px; 
-  font-size: 0.9rem; 
+  font-size: 0.85rem; 
   color: #cbd5e1; 
+  white-space: nowrap; /* Запрещаем перенос текста внутри плашки */
+  flex: 1; /* Растягиваем обе плашки одинаково */
+  text-align: center;
 }
 
 .compare-stat-pill.cyan { 
@@ -434,6 +439,9 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   .stat-number { font-size: 3rem; }
   
   .compare-main-title { font-size: 2.2rem; }
+  
+  /* Разрешаем перенос плашек на мобильных, если экраны совсем узкие */
+  .compare-stats-row { flex-wrap: wrap; }
   
   .image-showcase-container { height: 70vh; }
   .showcase-headline { font-size: 2.5rem; padding: 15px; }
