@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import {
-  LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer
+  LineChart, Line, AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer
 } from "recharts";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
@@ -11,14 +11,22 @@ const translations = {
     nav: { consulting: "Консалтинг", pricing: "Прайс-лист" },
     footerNav: { services: "Наши возможности", audience: "Кому мы помогаем", methodology: "Методология", testimonials: "Отзывы" },
     hero: {
-      badge: "Агентство YouTube & Shorts",
+      badge: "Агентство видеомаркетинга",
       title: "Контент, который превращается<br />в системный рост",
       text: "Мы создаём data-driven стратегию контента, которая пробивает алгоритмы, масштабирует охваты и превращает зрителей в фанатов.",
       btn: "Начать масштабирование"
     },
-    chart: {
-      title: "Динамика просмотров", subtitle: "Органический рост за 5 недель",
-      before: "До нас", after: "С NKS", w1: "Неделя 1", w2: "Неделя 2", w3: "Неделя 3", w4: "Неделя 4", w5: "Неделя 5"
+    compare: {
+      mainTitle: "DATA-DRIVEN ТРАНСФОРМАЦИЯ: СИСТЕМНЫЙ РОСТ",
+      beforeTitle: "СТАГНАЦИЯ ДО NKS VECTOR",
+      afterTitle: "СИСТЕМНЫЙ РОСТ С NKS VECTOR",
+      beforeViews: "Avg. Views: ~1.2k",
+      beforeSubs: "Subscribers: +50/week",
+      afterViews: "Views: ~80k+ (Week 5)",
+      afterSubs: "Subscribers: +15k+ (Week 5)",
+      beforeDesc: "Рассеянный контент, отсутствие стратегии. Низкое удержание. Плоские метрики.",
+      afterDesc: "Data-driven контент-стратегия. Вирусные форматы. Премиальный продакшн.",
+      w1: "Неделя 1", w2: "Неделя 2", w3: "Неделя 3", w4: "Неделя 4", w5: "Неделя 5"
     },
     stats: [
       { number: "4+", label: "Года на рынке" }, { number: "120+", label: "Успешных проектов" },
@@ -68,14 +76,22 @@ const translations = {
     nav: { consulting: "Consulting", pricing: "Pricing" },
     footerNav: { services: "Our Capabilities", audience: "Who We Help", methodology: "Methodology", testimonials: "Reviews" },
     hero: {
-      badge: "YouTube & Shorts Agency",
+      badge: "Video Marketing Agency",
       title: "Content that turns into<br />systemic growth",
       text: "We create a data-driven content strategy that breaks through algorithms, scales reach, and turns viewers into loyal fans.",
       btn: "Start Scaling"
     },
-    chart: {
-      title: "View Dynamics", subtitle: "Organic growth over 5 weeks",
-      before: "Before Us", after: "With NKS", w1: "Week 1", w2: "Week 2", w3: "Week 3", w4: "Week 4", w5: "Week 5"
+    compare: {
+      mainTitle: "DATA-DRIVEN TRANSFORMATION: SYSTEMIC GROWTH",
+      beforeTitle: "STAGNATION BEFORE NKS VECTOR",
+      afterTitle: "SYSTEMIC GROWTH WITH NKS VECTOR",
+      beforeViews: "Avg. Views: ~1.2k",
+      beforeSubs: "Subscribers: +50/week",
+      afterViews: "Views: ~80k+ (Week 5)",
+      afterSubs: "Subscribers: +15k+ (Week 5)",
+      beforeDesc: "Scattered content, lack of strategy. Low retention. Flat metrics.",
+      afterDesc: "Data-driven content strategy. Viral formats. Premium production.",
+      w1: "Week 1", w2: "Week 2", w3: "Week 3", w4: "Week 4", w5: "Week 5"
     },
     stats: [
       { number: "4+", label: "Years on Market" }, { number: "120+", label: "Successful Projects" },
@@ -125,14 +141,22 @@ const translations = {
     nav: { consulting: "Konsalting", pricing: "Narxlar" },
     footerNav: { services: "Bizning imkoniyatlarimiz", audience: "Kimga yordam beramiz", methodology: "Metodologiya", testimonials: "Sharhlar" },
     hero: {
-      badge: "YouTube va Shorts Agentligi",
+      badge: "Videomarketing agentligi",
       title: "Tizimli o'sishga olib keladigan<br />kontent",
       text: "Biz algoritmlarni yorib o'tuvchi, qamrovni kengaytiruvchi va tomoshabinlarni muxlislarga aylantiruvchi data-driven kontent strategiyasini yaratamiz.",
       btn: "Kengaytirishni boshlash"
     },
-    chart: {
-      title: "Ko'rishlar dinamikasi", subtitle: "5 hafta davomidagi organik o'sish",
-      before: "Bizgacha", after: "NKS bilan", w1: "1-hafta", w2: "2-hafta", w3: "3-hafta", w4: "4-hafta", w5: "5-hafta"
+    compare: {
+      mainTitle: "DATA-DRIVEN TRANSFORMATSIYA: TIZIMLI O'SISH",
+      beforeTitle: "NKS VECTOR'GACHA TURG'UNLIK",
+      afterTitle: "NKS VECTOR BILAN TIZIMLI O'SISH",
+      beforeViews: "Avg. Views: ~1.2k",
+      beforeSubs: "Subscribers: +50/hafta",
+      afterViews: "Views: ~80k+ (5-hafta)",
+      afterSubs: "Subscribers: +15k+ (5-hafta)",
+      beforeDesc: "Tarqoq kontent, strategiya yo'qligi. Past ushlab qolish. Yassi ko'rsatkichlar.",
+      afterDesc: "Data-driven kontent strategiyasi. Virusli formatlar. Premium prodakshn.",
+      w1: "1-hafta", w2: "2-hafta", w3: "3-hafta", w4: "4-hafta", w5: "5-hafta"
     },
     stats: [
       { number: "4+", label: "Bozordagi yillar" }, { number: "120+", label: "Muvaffaqiyatli loyihalar" },
@@ -182,7 +206,6 @@ const translations = {
 
 const partners = ["NEXUS GLOBAL", "AURA FINANCE", "VERTEX MEDIA", "ELEVATE E-COM", "LUMINA AI", "QUANTUM DYNAMICS", "PINNACLE VENTURES"];
 
-// Темные, тематические фоны для блоков
 const imgViralGrowth = "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2074&auto=format&fit=crop"; 
 const imgRhythmDynamics = "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=2094&auto=format&fit=crop"; 
 
@@ -225,7 +248,7 @@ export default function App() {
     const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
 
     const handleMouseOver = (e) => {
-      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-nav-row span')) {
+      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-nav-row span') || e.target.closest('.compare-card')) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -270,32 +293,40 @@ export default function App() {
 
   const tgBtnText = lang === 'ru' ? 'Написать в Telegram' : lang === 'en' ? 'Contact on Telegram' : 'Telegram orqali yozish';
 
-  const chartData = [
-    { name: t.chart.w1, before: 1200, after: 1200 },
-    { name: t.chart.w2, before: 1100, after: 1800 },
-    { name: t.chart.w3, before: 900, after: 4200 },
-    { name: t.chart.w4, before: 800, after: 9600 },
-    { name: t.chart.w5, before: 700, after: 18500 }
+  // Данные для графиков ДО и ПОСЛЕ
+  const beforeData = [
+    { name: t.compare.w1, views: 1200 },
+    { name: t.compare.w2, views: 1400 },
+    { name: t.compare.w3, views: 1100 },
+    { name: t.compare.w4, views: 1300 },
+    { name: t.compare.w5, views: 1200 }
+  ];
+
+  const afterData = [
+    { name: t.compare.w1, views: 1200 },
+    { name: t.compare.w2, views: 4000 },
+    { name: t.compare.w3, views: 15000 },
+    { name: t.compare.w4, views: 42000 },
+    { name: t.compare.w5, views: 85000 }
   ];
 
   const axisColor = theme === 'dark' ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
   const gridColor = theme === 'dark' ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)";
-  const tooltipBg = theme === 'dark' ? "rgba(10, 15, 30, 0.9)" : "rgba(255, 255, 255, 0.9)";
+  const tooltipBg = theme === 'dark' ? "rgba(15, 23, 42, 0.95)" : "rgba(255, 255, 255, 0.95)";
   const tooltipText = theme === 'dark' ? "#fff" : "#0f172a";
 
-  const formatYAxis = (tickItem) => tickItem >= 1000 ? (tickItem / 1000) + 'k' : tickItem;
+  const formatYAxisBefore = (tickItem) => tickItem >= 1000 ? (tickItem / 1000) + 'k' : tickItem;
+  const formatYAxisAfter = (tickItem) => tickItem >= 1000 ? (tickItem / 1000) + 'k' : tickItem;
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
-        <div style={{ backgroundColor: tooltipBg, border: `1px solid rgba(14, 165, 233, 0.3)`, padding: "16px", borderRadius: "12px", backdropFilter: "blur(10px)", color: tooltipText, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}>
-          <p style={{ margin: "0 0 10px 0", fontWeight: "600", fontSize: "14px", borderBottom: "1px solid rgba(14,165,233,0.2)", paddingBottom: "6px" }}>{label}</p>
-          {payload.map((entry, index) => (
-            <div key={index} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: index === 0 ? "8px" : "0" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "6px" }}><span style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: entry.color }}></span><span style={{ fontSize: "14px", opacity: 0.8 }}>{entry.name}:</span></div>
-              <span style={{ fontWeight: "700", fontSize: "16px", marginLeft: "auto" }}>{entry.value.toLocaleString('ru-RU')}</span>
-            </div>
-          ))}
+        <div style={{ backgroundColor: tooltipBg, border: `1px solid rgba(14, 165, 233, 0.3)`, padding: "12px", borderRadius: "8px", backdropFilter: "blur(10px)", color: tooltipText, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}>
+          <p style={{ margin: "0 0 6px 0", fontWeight: "600", fontSize: "13px" }}>{label}</p>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <span style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: payload[0].color }}></span>
+            <span style={{ fontWeight: "600", fontSize: "14px" }}>{payload[0].value.toLocaleString('ru-RU')}</span>
+          </div>
         </div>
       );
     }
@@ -342,24 +373,68 @@ export default function App() {
         <h2 dangerouslySetInnerHTML={{ __html: t.hero.title }}></h2>
         <p className="hero-text">{t.hero.text}</p>
         <button className="button main-cta" onClick={() => window.open("https://t.me/NKSmanager")}>{t.hero.btn}</button>
-        <motion.div className="chart-box" variants={fadeUp}>
-          <div className="chart-header">
-            <div><span className="chart-title">{t.chart.title}</span><span className="chart-subtitle">{t.chart.subtitle}</span></div>
-            <div className="chart-legend">
-              <span className="legend-item"><span className="dot dot-before"></span>{t.chart.before}</span>
-              <span className="legend-item"><span className="dot dot-after"></span>{t.chart.after}</span>
+        
+        {/* НОВАЯ СЕКЦИЯ СРАВНЕНИЯ ГРАФИКОВ (ДО и ПОСЛЕ) */}
+        <motion.div className="compare-section" variants={fadeUp}>
+          <h3 className="compare-main-title">{t.compare.mainTitle}</h3>
+          
+          <div className="compare-grid">
+            {/* Карточка ДО */}
+            <div className="compare-card before">
+              <div className="compare-header">
+                <span className="status-triangle"></span>
+                {t.compare.beforeTitle}
+              </div>
+              
+              <ResponsiveContainer width="100%" height={220}>
+                <LineChart data={beforeData} margin={{ top: 20, right: 10, left: -20, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke={gridColor} vertical={false} />
+                  <XAxis dataKey="name" stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dy={10} />
+                  <YAxis tickFormatter={formatYAxisBefore} domain={[0, 20000]} stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dx={-5} />
+                  <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                  <Line type="monotone" dataKey="views" stroke="#64748b" strokeWidth={3} dot={{ r: 4, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 6 }} />
+                </LineChart>
+              </ResponsiveContainer>
+
+              <div className="compare-stats-row">
+                <span className="compare-stat-pill">{t.compare.beforeViews}</span>
+                <span className="compare-stat-pill">{t.compare.beforeSubs}</span>
+              </div>
+              <p className="compare-desc">{t.compare.beforeDesc}</p>
+              <div className="compare-watermark">NKS</div>
+            </div>
+
+            {/* Карточка ПОСЛЕ */}
+            <div className="compare-card after">
+              <div className="compare-header">
+                <span className="status-triangle cyan"></span>
+                {t.compare.afterTitle}
+              </div>
+              
+              <ResponsiveContainer width="100%" height={220}>
+                <AreaChart data={afterData} margin={{ top: 20, right: 10, left: -20, bottom: 0 }}>
+                  <defs>
+                    <linearGradient id="colorViews" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#0ea5e9" stopOpacity={0.4}/>
+                      <stop offset="95%" stopColor="#0ea5e9" stopOpacity={0}/>
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid strokeDasharray="3 3" stroke={gridColor} vertical={false} />
+                  <XAxis dataKey="name" stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dy={10} />
+                  <YAxis tickFormatter={formatYAxisAfter} domain={[0, 100000]} stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dx={-5} />
+                  <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(14, 165, 233, 0.2)', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                  <Area type="monotone" dataKey="views" stroke="#0ea5e9" strokeWidth={4} fillOpacity={1} fill="url(#colorViews)" activeDot={{ r: 7, stroke: "#38bdf8", strokeWidth: 2, boxShadow: "0 0 10px #38bdf8" }} />
+                </AreaChart>
+              </ResponsiveContainer>
+
+              <div className="compare-stats-row">
+                <span className="compare-stat-pill cyan">{t.compare.afterViews}</span>
+                <span className="compare-stat-pill cyan">{t.compare.afterSubs}</span>
+              </div>
+              <p className="compare-desc">{t.compare.afterDesc}</p>
+              <div className="compare-watermark cyan">NKS</div>
             </div>
           </div>
-          <ResponsiveContainer width="100%" height="80%">
-            <LineChart data={chartData} margin={{ top: 10, right: 30, left: 10, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke={gridColor} vertical={false} />
-              <XAxis dataKey="name" stroke={axisColor} fontSize={12} tickLine={false} axisLine={false} dy={15} />
-              <YAxis tickFormatter={formatYAxis} stroke={axisColor} fontSize={12} tickLine={false} axisLine={false} dx={-10} width={40} />
-              <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(14, 165, 233, 0.2)', strokeWidth: 2, strokeDasharray: '5 5' }} />
-              <Line name={t.chart.before} type="monotone" dataKey="before" stroke="#64748b" strokeWidth={3} dot={{ r: 4, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 6 }} />
-              <Line name={t.chart.after} type="monotone" dataKey="after" stroke="#0ea5e9" strokeWidth={4} dot={{ r: 5, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 8, stroke: "#38bdf8", strokeWidth: 2, boxShadow: "0 0 10px #38bdf8" }} />
-            </LineChart>
-          </ResponsiveContainer>
         </motion.div>
       </motion.section>
 
