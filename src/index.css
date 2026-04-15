@@ -33,7 +33,8 @@ body {
 }
 .header-inner { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 15px; }
 
-.logo { display: flex; flex-direction: column; align-items: center; }
+/* ДОБАВЛЕН cursor: pointer; ДЛЯ СКРЫТОЙ КНОПКИ */
+.logo { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
 .logo-main {
   font-size: 46px; font-weight: 700; font-family: 'Bebas Neue', sans-serif; line-height: 1; letter-spacing: 8px; margin-right: -8px; 
   background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -152,22 +153,21 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   font-weight: 500;
 }
 
-/* ОБНОВЛЕННЫЙ СТИЛЬ: ТАЙТЛЫ СТРОГО ПО ЦЕНТРУ НА ВСЮ ШИРИНУ */
 .compare-desc-list { 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрируем блоки списка по горизонтали */
+  align-items: center; 
   gap: 10px;
   position: relative;
   z-index: 2;
   margin-bottom: 10px;
-  width: 100%; /* На всю строчку */
+  width: 100%; 
 }
 
 .compare-desc-item { 
   display: flex;
   align-items: center;
-  justify-content: center; /* Центрируем сам текст и ромбик внутри элемента */
+  justify-content: center; 
   gap: 10px;
   font-size: 0.95rem;
   color: #94a3b8;
@@ -319,10 +319,12 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   align-items: flex-start;
 }
 
+/* ДОБАВЛЕН cursor: pointer; ДЛЯ ФУТЕР-ЛОГОТИПА */
 .footer-brand .footer-logo {
   font-size: 56px;
   margin-bottom: 5px;
   text-align: left;
+  cursor: pointer;
 }
 
 .footer-slogan {
