@@ -152,30 +152,34 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   font-weight: 500;
 }
 
-/* НОВЫЙ СТИЛЬ ДЛЯ СПИСКОВ (ВМЕСТО СТАРОГО compare-desc) */
+/* ОБНОВЛЕННЫЙ СТИЛЬ: ТАЙТЛЫ СТРОГО ПО ЦЕНТРУ НА ВСЮ ШИРИНУ */
 .compare-desc-list { 
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center; /* Центрируем блоки списка по горизонтали */
+  gap: 10px;
   position: relative;
   z-index: 2;
   margin-bottom: 10px;
+  width: 100%; /* На всю строчку */
 }
 
 .compare-desc-item { 
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center; /* Центрируем сам текст и ромбик внутри элемента */
+  gap: 10px;
   font-size: 0.95rem;
   color: #94a3b8;
-  line-height: 1.4;
+  text-align: center;
+  width: 100%;
 }
 
 .desc-bullet {
   width: 5px;
   height: 5px;
   background: #64748b;
-  transform: rotate(45deg); /* Делаем ромбик */
+  transform: rotate(45deg);
   flex-shrink: 0;
 }
 
