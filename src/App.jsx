@@ -251,7 +251,15 @@ export default function App() {
     const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
 
     const handleMouseOver = (e) => {
-      if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button') || e.target.closest('.card') || e.target.closest('.footer-nav-row span') || e.target.closest('.compare-card')) {
+      if (
+        e.target.tagName.toLowerCase() === 'button' || 
+        e.target.closest('button') || 
+        e.target.closest('.card') || 
+        e.target.closest('.footer-nav-row span') || 
+        e.target.closest('.compare-card') ||
+        e.target.closest('.logo') ||
+        e.target.closest('.footer-logo')
+      ) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -355,7 +363,11 @@ export default function App() {
 
       <header className="header">
         <div className="header-inner">
-          <div className="logo"><div className="logo-main">NKS</div><div className="logo-line"></div></div>
+          {/* Скрытая кнопка на логотипе для возврата наверх */}
+          <div className="logo" onClick={() => scrollToSection('hero')}>
+            <div className="logo-main">NKS</div>
+            <div className="logo-line"></div>
+          </div>
           <div className="buttons-group">
             <div className="lang-switcher">
               <button className={`lang-btn ${lang === 'ru' ? 'active' : ''}`} onClick={() => changeLanguage('ru')}>RU</button>
@@ -375,7 +387,8 @@ export default function App() {
         </div>
       </header>
 
-      <motion.section className="hero" initial="hidden" animate="show" variants={fadeUp}>
+      {/* Добавлен id="hero" для скролла */}
+      <motion.section id="hero" className="hero" initial="hidden" animate="show" variants={fadeUp}>
         <div className="hero-badge">{t.hero.badge}</div>
         <h2 dangerouslySetInnerHTML={{ __html: t.hero.title }}></h2>
         <p className="hero-text">{t.hero.text}</p>
@@ -406,7 +419,6 @@ export default function App() {
                 <span className="compare-stat-pill">{t.compare.beforeSubs}</span>
               </div>
               
-              {/* Выровненные по центру списки */}
               <div className="compare-desc-list">
                 {t.compare.beforeDesc.map((item, i) => (
                   <div key={i} className="compare-desc-item">
@@ -446,7 +458,6 @@ export default function App() {
                 <span className="compare-stat-pill cyan">{t.compare.afterSubs}</span>
               </div>
 
-              {/* Выровненные по центру списки */}
               <div className="compare-desc-list">
                 {t.compare.afterDesc.map((item, i) => (
                   <div key={i} className="compare-desc-item">
@@ -524,7 +535,8 @@ export default function App() {
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-brand">
-            <div className="logo-main footer-logo">NKS</div>
+            {/* Скрытая кнопка в футере */}
+            <div className="logo-main footer-logo" onClick={() => scrollToSection('hero')}>NKS</div>
             <p className="footer-slogan">{t.footer}</p>
           </div>
           
