@@ -21,12 +21,12 @@ const translations = {
       mainTitle: "DATA-DRIVEN ТРАНСФОРМАЦИЯ: СИСТЕМНЫЙ РОСТ",
       beforeTitle: "СТАГНАЦИЯ ДО NKS VECTOR",
       afterTitle: "СИСТЕМНЫЙ РОСТ С NKS VECTOR",
-      beforeViews: "Ср. просмотры: ~1.2k",
+      beforeViews: "Просмотры: ~1.2k",
       beforeSubs: "Подписчики: +50/нед",
       afterViews: "Просмотры: ~80k+ (Нед 5)",
       afterSubs: "Подписчики: +15k+ (Нед 5)",
-      beforeDesc: "Рассеянный контент, отсутствие стратегии. Низкое удержание. Плоские метрики.",
-      afterDesc: "Data-driven контент-стратегия. Вирусные форматы. Премиальный продакшн.",
+      beforeDesc: ["Рассеянный контент", "Низкое удержание", "Плоские метрики"],
+      afterDesc: ["Data-driven стратегия", "Вирусные форматы", "Премиальный продакшн"],
       w1: "Неделя 1", w2: "Неделя 2", w3: "Неделя 3", w4: "Неделя 4", w5: "Неделя 5"
     },
     stats: [
@@ -87,12 +87,12 @@ const translations = {
       mainTitle: "DATA-DRIVEN TRANSFORMATION: SYSTEMIC GROWTH",
       beforeTitle: "STAGNATION BEFORE NKS VECTOR",
       afterTitle: "SYSTEMIC GROWTH WITH NKS VECTOR",
-      beforeViews: "Avg. Views: ~1.2k",
+      beforeViews: "Views: ~1.2k",
       beforeSubs: "Subscribers: +50/week",
       afterViews: "Views: ~80k+ (Week 5)",
       afterSubs: "Subscribers: +15k+ (Week 5)",
-      beforeDesc: "Scattered content, lack of strategy. Low retention. Flat metrics.",
-      afterDesc: "Data-driven content strategy. Viral formats. Premium production.",
+      beforeDesc: ["Scattered content", "Low retention", "Flat metrics"],
+      afterDesc: ["Data-driven strategy", "Viral formats", "Premium production"],
       w1: "Week 1", w2: "Week 2", w3: "Week 3", w4: "Week 4", w5: "Week 5"
     },
     stats: [
@@ -157,8 +157,8 @@ const translations = {
       beforeSubs: "Obunachilar: +50/hafta",
       afterViews: "Ko'rishlar: ~80k+ (5-hafta)",
       afterSubs: "Obunachilar: +15k+ (5-hafta)",
-      beforeDesc: "Tarqoq kontent, strategiya yo'qligi. Past ushlab qolish. Yassi ko'rsatkichlar.",
-      afterDesc: "Data-driven kontent strategiyasi. Virusli formatlar. Premium prodakshn.",
+      beforeDesc: ["Tarqoq kontent", "Past ushlab qolish", "Yassi ko'rsatkichlar"],
+      afterDesc: ["Data-driven strategiya", "Virusli formatlar", "Premium prodakshn"],
       w1: "1-hafta", w2: "2-hafta", w3: "3-hafta", w4: "4-hafta", w5: "5-hafta"
     },
     stats: [
@@ -385,6 +385,7 @@ export default function App() {
           <h3 className="compare-main-title">{t.compare.mainTitle}</h3>
           
           <div className="compare-grid">
+            {/* Карточка ДО */}
             <div className="compare-card before">
               <div className="compare-header">
                 <span className="status-triangle"></span>
@@ -392,10 +393,11 @@ export default function App() {
               </div>
               
               <ResponsiveContainer width="100%" height={220}>
+                {/* Изменен domain на [0, 8000], чтобы поднять график */}
                 <LineChart data={beforeData} margin={{ top: 20, right: 10, left: -20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke={gridColor} vertical={false} />
                   <XAxis dataKey="name" stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dy={10} />
-                  <YAxis tickFormatter={formatYAxisBefore} domain={[0, 20000]} stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dx={-5} />
+                  <YAxis tickFormatter={formatYAxisBefore} domain={[0, 8000]} stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dx={-5} />
                   <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 1, strokeDasharray: '3 3' }} />
                   <Line type="monotone" dataKey="views" stroke="#64748b" strokeWidth={3} dot={{ r: 4, fill: theme === 'dark' ? "#0f172a" : "#fff", strokeWidth: 2 }} activeDot={{ r: 6 }} />
                 </LineChart>
@@ -405,10 +407,21 @@ export default function App() {
                 <span className="compare-stat-pill">{t.compare.beforeViews}</span>
                 <span className="compare-stat-pill">{t.compare.beforeSubs}</span>
               </div>
-              <p className="compare-desc">{t.compare.beforeDesc}</p>
+              
+              {/* Обновленный список ДО */}
+              <div className="compare-desc-list">
+                {t.compare.beforeDesc.map((item, i) => (
+                  <div key={i} className="compare-desc-item">
+                    <span className="desc-bullet"></span>
+                    {item}
+                  </div>
+                ))}
+              </div>
+              
               <div className="compare-watermark">NKS</div>
             </div>
 
+            {/* Карточка ПОСЛЕ */}
             <div className="compare-card after">
               <div className="compare-header">
                 <span className="status-triangle cyan"></span>
@@ -435,7 +448,17 @@ export default function App() {
                 <span className="compare-stat-pill cyan">{t.compare.afterViews}</span>
                 <span className="compare-stat-pill cyan">{t.compare.afterSubs}</span>
               </div>
-              <p className="compare-desc">{t.compare.afterDesc}</p>
+
+              {/* Обновленный список ПОСЛЕ */}
+              <div className="compare-desc-list">
+                {t.compare.afterDesc.map((item, i) => (
+                  <div key={i} className="compare-desc-item">
+                    <span className="desc-bullet cyan"></span>
+                    {item}
+                  </div>
+                ))}
+              </div>
+
               <div className="compare-watermark cyan">NKS</div>
             </div>
           </div>
