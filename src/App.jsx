@@ -23,8 +23,8 @@ const translations = {
       afterTitle: "СИСТЕМНЫЙ РОСТ С NKS VECTOR",
       beforeViews: "Просмотры: ~1.2k",
       beforeSubs: "Подписчики: +50/нед",
-      afterViews: "Просмотры: ~80k+ (Нед 5)",
-      afterSubs: "Подписчики: +15k+ (Нед 5)",
+      afterViews: "Просмотры: ~80k+",
+      afterSubs: "Подписчики: +15k/нед",
       beforeDesc: ["Рассеянный контент", "Низкое удержание", "Плоские метрики"],
       afterDesc: ["Data-driven стратегия", "Вирусные форматы", "Премиальный продакшн"],
       w1: "Неделя 1", w2: "Неделя 2", w3: "Неделя 3", w4: "Неделя 4", w5: "Неделя 5"
@@ -89,8 +89,8 @@ const translations = {
       afterTitle: "SYSTEMIC GROWTH WITH NKS VECTOR",
       beforeViews: "Views: ~1.2k",
       beforeSubs: "Subscribers: +50/week",
-      afterViews: "Views: ~80k+ (Week 5)",
-      afterSubs: "Subscribers: +15k+ (Week 5)",
+      afterViews: "Views: ~80k+",
+      afterSubs: "Subscribers: +15k/week",
       beforeDesc: ["Scattered content", "Low retention", "Flat metrics"],
       afterDesc: ["Data-driven strategy", "Viral formats", "Premium production"],
       w1: "Week 1", w2: "Week 2", w3: "Week 3", w4: "Week 4", w5: "Week 5"
@@ -155,8 +155,8 @@ const translations = {
       afterTitle: "NKS VECTOR BILAN TIZIMLI O'SISH",
       beforeViews: "Ko'rishlar: ~1.2k",
       beforeSubs: "Obunachilar: +50/hafta",
-      afterViews: "Ko'rishlar: ~80k+ (5-hafta)",
-      afterSubs: "Obunachilar: +15k+ (5-hafta)",
+      afterViews: "Ko'rishlar: ~80k+",
+      afterSubs: "Obunachilar: +15k/hafta",
       beforeDesc: ["Tarqoq kontent", "Past ushlab qolish", "Yassi ko'rsatkichlar"],
       afterDesc: ["Data-driven strategiya", "Virusli formatlar", "Premium prodakshn"],
       w1: "1-hafta", w2: "2-hafta", w3: "3-hafta", w4: "4-hafta", w5: "5-hafta"
@@ -385,7 +385,6 @@ export default function App() {
           <h3 className="compare-main-title">{t.compare.mainTitle}</h3>
           
           <div className="compare-grid">
-            {/* Карточка ДО */}
             <div className="compare-card before">
               <div className="compare-header">
                 <span className="status-triangle"></span>
@@ -393,7 +392,6 @@ export default function App() {
               </div>
               
               <ResponsiveContainer width="100%" height={220}>
-                {/* Изменен domain на [0, 8000], чтобы поднять график */}
                 <LineChart data={beforeData} margin={{ top: 20, right: 10, left: -20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke={gridColor} vertical={false} />
                   <XAxis dataKey="name" stroke={axisColor} fontSize={11} tickLine={false} axisLine={false} dy={10} />
@@ -408,7 +406,7 @@ export default function App() {
                 <span className="compare-stat-pill">{t.compare.beforeSubs}</span>
               </div>
               
-              {/* Обновленный список ДО */}
+              {/* Выровненные по центру списки */}
               <div className="compare-desc-list">
                 {t.compare.beforeDesc.map((item, i) => (
                   <div key={i} className="compare-desc-item">
@@ -421,7 +419,6 @@ export default function App() {
               <div className="compare-watermark">NKS</div>
             </div>
 
-            {/* Карточка ПОСЛЕ */}
             <div className="compare-card after">
               <div className="compare-header">
                 <span className="status-triangle cyan"></span>
@@ -449,7 +446,7 @@ export default function App() {
                 <span className="compare-stat-pill cyan">{t.compare.afterSubs}</span>
               </div>
 
-              {/* Обновленный список ПОСЛЕ */}
+              {/* Выровненные по центру списки */}
               <div className="compare-desc-list">
                 {t.compare.afterDesc.map((item, i) => (
                   <div key={i} className="compare-desc-item">
