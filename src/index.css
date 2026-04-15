@@ -74,7 +74,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .hero-text { font-size: 1.15rem; max-width: 650px; margin: 0 auto 30px; color: #94a3b8; line-height: 1.7; font-weight: 300; }
 
 /* =========================================
-   COMPARE CHARTS (ДО И ПОСЛЕ)
+   COMPARE CHARTS
    ========================================= */
 .compare-section { margin-top: 80px; width: 100%; position: relative; z-index: 10; padding: 0 10px; box-sizing: border-box; }
 .compare-main-title { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; margin-bottom: 40px; letter-spacing: 1px; color: #ffffff; text-align: center; }
@@ -123,14 +123,13 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   filter: drop-shadow(0 0 5px #38bdf8); 
 }
 
-/* ФИКС ДЛЯ ДЛИННОГО УЗБЕКСКОГО ТЕКСТА */
 .compare-stats-row { 
   display: flex; 
   gap: 12px; 
   margin-top: 25px; 
   margin-bottom: 20px; 
   justify-content: space-between; 
-  flex-wrap: nowrap; /* Строго в одну линию */
+  flex-wrap: nowrap;
   align-items: center;
 }
 
@@ -141,8 +140,8 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   border-radius: 100px; 
   font-size: 0.85rem; 
   color: #cbd5e1; 
-  white-space: nowrap; /* Запрещаем перенос текста внутри плашки */
-  flex: 1; /* Растягиваем обе плашки одинаково */
+  white-space: nowrap;
+  flex: 1;
   text-align: center;
 }
 
@@ -268,7 +267,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .showcase-headline { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 1.1; letter-spacing: 1px; margin: 0; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); background-image: linear-gradient(135deg, #ffffff 10%, #7dd3fc 60%, #0284c7 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
 /* =========================================
-   ОБНОВЛЕННЫЙ FOOTER (ЖЕСТКАЯ 3-КОЛОНОЧНАЯ СЕТКА)
+   FOOTER (С НОВЫМИ КНОПКАМИ)
    ========================================= */
 .footer {
   padding: 60px 24px 30px; 
@@ -280,8 +279,8 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .footer-top {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid; /* ВМЕСТО FLEX ИСПОЛЬЗУЕМ GRID */
-  grid-template-columns: 1fr auto 1fr; /* Три жесткие колонки */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 20px;
   padding-bottom: 40px;
@@ -290,7 +289,7 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 .footer-brand {
   display: flex;
   flex-direction: column;
-  justify-self: start; /* Прижимаем к левому краю */
+  justify-self: start;
   align-items: flex-start;
 }
 
@@ -305,12 +304,11 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   font-size: 15px;
   margin: 0;
   line-height: 1.5;
-  white-space: nowrap; /* Не даем слогану переноситься */
+  white-space: nowrap;
 }
 
-/* Навигация-таблетка (pill-меню) */
 .footer-nav-row {
-  justify-self: center; /* Центрируем во второй колонке */
+  justify-self: center;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -320,12 +318,12 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   border: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  white-space: nowrap; /* ЗАПРЕЩАЕМ ССЫЛКАМ ПЕРЕНОСИТЬСЯ НА ДРУГУЮ СТРОКУ */
+  white-space: nowrap;
 }
 
 .footer-nav-row span {
   color: #94a3b8;
-  font-size: 12px; /* Чуть уменьшен размер, чтобы влез узбекский язык */
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -338,17 +336,21 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   transform: translateY(-1px);
 }
 
+/* Изменения здесь: Блок соцсетей теперь выстраивается в колонку */
 .footer-social {
-  justify-self: end; /* Прижимаем к правому краю */
+  justify-self: end;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: 12px;
+  width: max-content; /* Обе кнопки тянутся по самой широкой */
 }
 
-.tg-button {
+/* Общие стили для обеих кнопок */
+.tg-button, .ig-button {
   display: flex;
   align-items: center;
+  justify-content: center; /* Центрируем контент */
   gap: 12px;
-  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
   color: white;
   border: none;
   padding: 14px 28px;
@@ -358,29 +360,46 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-  white-space: nowrap; /* Не даем тексту кнопки ломаться */
+  white-space: nowrap;
+  width: 100%;
 }
 
+/* Телеграм кнопка */
+.tg-button {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
 .tg-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(14, 165, 233, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
-.tg-icon {
+/* Инстаграм кнопка с градиентом */
+.ig-button {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  box-shadow: 0 4px 15px rgba(253, 29, 29, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+.ig-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(253, 29, 29, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Иконки в кнопках */
+.tg-icon, .ig-icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.tg-icon svg {
+.tg-icon svg, .ig-icon svg {
   width: 22px;
   height: 22px;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
 .tg-button:hover .tg-icon svg {
   transform: translate(4px, -4px);
+}
+.ig-button:hover .ig-icon svg {
+  transform: scale(1.15); /* Эффект зума для Instagram */
 }
 
 /* Центрированный копирайт */
@@ -401,10 +420,9 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
 /* =========================================
    АДАПТИВНОСТЬ (МОБИЛЬНЫЕ И ПЛАНШЕТЫ)
    ========================================= */
-/* Для футера делаем брейкпоинт пошире (992px), чтобы длинные языки не наезжали друг на друга */
 @media (max-width: 992px) {
   .footer-top {
-    grid-template-columns: 1fr; /* Переводим в 1 колонку */
+    grid-template-columns: 1fr;
     gap: 32px;
     text-align: center;
   }
@@ -415,12 +433,20 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   }
   .footer-brand .footer-logo { text-align: center; }
   .footer-nav-row {
-    flex-wrap: wrap; /* Тут уже разрешаем перенос */
+    flex-wrap: wrap;
     white-space: normal;
     padding: 24px;
     border-radius: 24px;
     width: 100%;
     box-sizing: border-box;
+  }
+  
+  /* Делаем кнопки на всю ширину на планшетах/мобильных для красоты */
+  .footer-social {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 300px;
   }
   
   .compare-grid {
@@ -439,8 +465,6 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   .stat-number { font-size: 3rem; }
   
   .compare-main-title { font-size: 2.2rem; }
-  
-  /* Разрешаем перенос плашек на мобильных, если экраны совсем узкие */
   .compare-stats-row { flex-wrap: wrap; }
   
   .image-showcase-container { height: 70vh; }
