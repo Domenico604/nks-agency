@@ -33,7 +33,6 @@ body {
 }
 .header-inner { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 15px; }
 
-/* ДОБАВЛЕН cursor: pointer; ДЛЯ СКРЫТОЙ КНОПКИ */
 .logo { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
 .logo-main {
   font-size: 46px; font-weight: 700; font-family: 'Bebas Neue', sans-serif; line-height: 1; letter-spacing: 8px; margin-right: -8px; 
@@ -319,7 +318,6 @@ h3 { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; margin-bottom: 50
   align-items: flex-start;
 }
 
-/* ДОБАВЛЕН cursor: pointer; ДЛЯ ФУТЕР-ЛОГОТИПА */
 .footer-brand .footer-logo {
   font-size: 56px;
   margin-bottom: 5px;
