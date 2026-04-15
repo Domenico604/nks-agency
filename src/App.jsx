@@ -68,7 +68,7 @@ const translations = {
       { name: "Мария", role: "Fashion Бренд Owner", text: "Мы не просто получаем миллионы просмотров; мы видим реальную конверсию в продажи. NKS полностью трансформировали наше восприятие контент-маркетинга.", img: "/Pic 4.png" },
       { name: "Илья", role: "Крипто-инфлюенсер", text: "Парни знают магические паттерны алгоритмов Shorts. Я раньше тратил тысячи на рекламу, теперь просмотры растут органически. Аудитория выросла на 150к за месяц!", img: "/Pic 6.png" },
       { name: "Елена", role: "EdTech Platform", text: "Нам нужна была сильная узнаваемость в СНГ. NKS Vector взяли на себя всё: от ресерча тем до финального саунд-дизайна. Стабильно по 3-4 вирусных ролика в месяц.", img: "/Pic 17.png" },
-      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспертные обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает!", img: "/Pic 10.png" },
+      { name: "Дмитрий", role: "Агентство Недвижимости", text: "Сделали упор на экспер কর্তৃপক্ষের обзоры с премиальным монтажом. Закрыли две сделки чисто с органики канала. data-driven подход работает!", img: "/Pic 10.png" },
       { name: "Виктор", role: "Владелец сети ресторанов", text: "Бренд стал визуально сильнее. Наши блюда выглядят так вкусно, что столики теперь бронируют на неделю вперед. Анимации и ритмика монтажа — просто космос.", img: "/Pic 11.png" }
     ],
     footer: "Системный рост контента."
@@ -304,6 +304,14 @@ export default function App() {
     }
   };
 
+  // Новая функция для гарантированного скролла в самый-самый верх
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const t = translations[lang];
 
   const tgBtnText = lang === 'ru' ? 'Написать в Telegram' : lang === 'en' ? 'Contact on Telegram' : 'Telegram orqali yozish';
@@ -363,8 +371,8 @@ export default function App() {
 
       <header className="header">
         <div className="header-inner">
-          {/* Скрытая кнопка на логотипе для возврата наверх */}
-          <div className="logo" onClick={() => scrollToSection('hero')}>
+          {/* Кнопка скролла на самый верх */}
+          <div className="logo" onClick={scrollToTop}>
             <div className="logo-main">NKS</div>
             <div className="logo-line"></div>
           </div>
@@ -387,7 +395,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* Добавлен id="hero" для скролла */}
       <motion.section id="hero" className="hero" initial="hidden" animate="show" variants={fadeUp}>
         <div className="hero-badge">{t.hero.badge}</div>
         <h2 dangerouslySetInnerHTML={{ __html: t.hero.title }}></h2>
@@ -535,8 +542,8 @@ export default function App() {
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-brand">
-            {/* Скрытая кнопка в футере */}
-            <div className="logo-main footer-logo" onClick={() => scrollToSection('hero')}>NKS</div>
+            {/* Кнопка скролла на самый верх */}
+            <div className="logo-main footer-logo" onClick={scrollToTop}>NKS</div>
             <p className="footer-slogan">{t.footer}</p>
           </div>
           
