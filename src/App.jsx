@@ -8,6 +8,7 @@ import "./index.css";
 
 const translations = {
   ru: {
+    pageTitle: "NKS Vector — Системный рост YouTube и Shorts",
     nav: { consulting: "Консалтинг", pricing: "Прайс-лист" },
     footerNav: { services: "Наши возможности", audience: "Кому мы помогаем", methodology: "Методология", testimonials: "Отзывы" },
     hero: {
@@ -73,6 +74,7 @@ const translations = {
     footer: "Системный рост контента."
   },
   en: {
+    pageTitle: "NKS Vector — Systemic YouTube and Shorts Growth",
     nav: { consulting: "Consulting", pricing: "Pricing" },
     footerNav: { services: "Our Capabilities", audience: "Who We Help", methodology: "Methodology", testimonials: "Reviews" },
     hero: {
@@ -138,6 +140,7 @@ const translations = {
     footer: "Systemic content growth."
   },
   uz: {
+    pageTitle: "NKS Vector — YouTube va Shorts'ning tizimli o'sishi",
     nav: { consulting: "Konsalting", pricing: "Narxlar" },
     footerNav: { services: "Bizning imkoniyatlarimiz", audience: "Kimga yordam beramiz", methodology: "Metodologiya", testimonials: "Sharhlar" },
     hero: {
@@ -265,6 +268,10 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    document.title = translations[lang].pageTitle;
+  }, [lang]);
+
   const toggleTheme = () => {
     if (theme === "dark") {
       setTheme("light");
@@ -292,6 +299,7 @@ export default function App() {
   const t = translations[lang];
 
   const tgBtnText = lang === 'ru' ? 'Написать в Telegram' : lang === 'en' ? 'Contact on Telegram' : 'Telegram orqali yozish';
+  const igBtnText = lang === 'ru' ? 'Написать в Instagram' : lang === 'en' ? 'Contact on Instagram' : 'Instagram orqali yozish';
 
   const beforeData = [
     { name: t.compare.w1, views: 1200 },
@@ -373,12 +381,10 @@ export default function App() {
         <p className="hero-text">{t.hero.text}</p>
         <button className="button main-cta" onClick={() => window.open("https://t.me/NKSmanager")}>{t.hero.btn}</button>
         
-        {/* НОВАЯ СЕКЦИЯ СРАВНЕНИЯ ГРАФИКОВ (ДО и ПОСЛЕ) */}
         <motion.div className="compare-section" variants={fadeUp}>
           <h3 className="compare-main-title">{t.compare.mainTitle}</h3>
           
           <div className="compare-grid">
-            {/* Карточка ДО */}
             <div className="compare-card before">
               <div className="compare-header">
                 <span className="status-triangle"></span>
@@ -403,7 +409,6 @@ export default function App() {
               <div className="compare-watermark">NKS</div>
             </div>
 
-            {/* Карточка ПОСЛЕ */}
             <div className="compare-card after">
               <div className="compare-header">
                 <span className="status-triangle cyan"></span>
@@ -456,7 +461,6 @@ export default function App() {
       <Section id="methodology" title={t.methodologyTitle} data={t.methodology} isNumbered />
       <ImageShowcase imgUrl={imgRhythmDynamics} headline={t.showcase2} isReversed />
 
-      {/* СЕКЦИЯ ОТЗЫВОВ */}
       <section id="testimonials" className="testimonials-section">
         <h3>{t.testimonialsTitle}</h3>
         <div className="testimonials-marquee-container">
@@ -497,7 +501,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* ФУТЕР */}
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-brand">
@@ -521,6 +524,16 @@ export default function App() {
                 </svg>
               </span>
               <span className="tg-text">{tgBtnText}</span>
+            </button>
+            <button className="ig-button" onClick={() => window.open("https://www.instagram.com/nks_mediaagency?igsh=MXNlbjNnbml1cndlMw==")}>
+              <span className="ig-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </span>
+              <span className="ig-text">{igBtnText}</span>
             </button>
           </div>
         </div>
